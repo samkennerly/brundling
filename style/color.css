@@ -4,7 +4,7 @@
   --color-boxes: rgba(0,0,0,.5);
   --color-code: green;
   --color-dark: #1f1f1f;
-  --color-link: slategrey;
+  --color-link: lightslategrey;
   --color-mark: yellow;
   --color-text: #f1f1f1;
   --transition: 250ms;
@@ -53,8 +53,7 @@ main mark {
 }
 main blockquote,
 main table thead {
-  background: var(--color-text);
-  color: var(--color-dark);
+  background: var(--color-dark);
 }
 main h2,
 main hr {
