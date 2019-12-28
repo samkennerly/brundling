@@ -61,6 +61,7 @@ nav summary {
 #icons,
 #jump,
 #klf {
+  margin: auto 0;
   padding: var(--puffy);
 }
 #icons img {
