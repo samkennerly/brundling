@@ -1,51 +1,55 @@
 {
   "author": "Sam Kennerly",
-  "base": "https://quarto.neocities.org/",
-  "copyright": "© Sam Kennerly 2019.",
-  "description": "Build websites with Python 3. No installation required.",
-  "email": "quarto.sites@gmail.com",
+  "base": "https://brundling.neocities.org/",
+  "copyright": "© Sam Kennerly 2020.",
+  "description": "Formula 1 data visualizations.",
+  "email": "samkennerly@gmail.com",
   "favicon": "favicon.ico",
   "generator": "https://github.com/samkennerly/quarto/",
-  "homelink": "Quarto",
+  "homelink": "Brundling",
   "icons": [
+    [
+      "Email",
+      "media/icons/gmail.svg",
+      "mailto:quarto.sites@gmail.com"
+    ],
     [
       "GitHub",
       "media/icons/github.svg",
-      "https://github.com/samkennerly/quarto/"
+      "https://github.com/samkennerly/brundling/"
     ],
     [
-      "Gmail",
-      "media/icons/gmail.svg",
-      "mailto:quarto.sites@gmail.com"
+      "Instagram",
+      "media/icons/instagram.svg",
+      "https://instagram.com/brundling/"
     ],
     [
       "Neocities",
       "media/icons/neocities.svg",
       "https://neocities.org/site/quarto/"
-    ],
-    [
-      "Twitter",
-      "media/icons/twitter.svg",
-      "https://twitter.com/quartosites/"
     ]
   ],
   "jscripts": [
   ],
-  "klftext": "<a href=\"https://neocities.org/\">Hosted by Neocities</a>.",
+  "klftext": [
+    "Data curated by <a href=\"https://ergast.com/mrd/\">Ergast</a>.",
+    "Icons from <a href=\"https://simpleicons.org\">Simple Icons</a>.",
+    "Hosted by <a href=\"https://neocities.org/\">Neocities</a>."
+  ],
   "language": "en",
   "license": [
     "https://creativecommons.org/licenses/by/4.0",
     "Licensed under a CC BY 4.0 license."
   ],
   "meta": {
-    "keywords": "CSS, HTML, lean web, markdown, python, static website, tidy"
+    "keywords": "data, graph, charts, plots, visualization, formula one, f1"
   },
-  "nextlink": "►►",
-  "prevlink": "◄◄",
+  "nextlink": "forward",
+  "prevlink": "reverse",
   "qlink": "Built by a Quarto.",
   "styles": [
     "style.css"
   ],
-  "title": "Quartos build websites.",
-  "updog": "⇪"
+  "title": "7 Degrees of Martin Brundle",
+  "updog": "neutral"
 }
