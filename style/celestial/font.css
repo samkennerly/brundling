@@ -1,0 +1,58 @@
+/*
+Font family, size, weight, etc.
+https://www.w3schools.com/css/css_font.asp
+*/
+html {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: calc(8px + 1vw);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.25;
+}
+@media all and (min-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+body a {
+  text-decoration: none;
+}
+/* font main */
+main {
+  font-weight: lighter;
+}
+main blockquote {
+  font-family: "Times New Roman", Times, serif;
+}
+main b,
+main dfn,
+main dt,
+main strong,
+main summary {
+  font-style: normal;
+  font-weight: bolder;
+}
+main code,
+main kbd,
+main samp,
+main pre,
+main table,
+main var {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .875rem;
+  font-weight: normal;
+}
+/* font nav */
+nav {
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+nav a[rel="home"] {
+  font-size: 2rem;
+}
+/* font others */
+#jump,
+#klf {
+  font-size: .75rem;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quarto FAQ</title>
+<link rel="canonical" href="https://quarto.neocities.org/faq.html">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sam Kennerly">
+<meta name="description" content="Build websites with Python 3. No installation required.">
+<meta name="generator" content="https://github.com/samkennerly/quarto/">
+<meta name="keywords" content="CSS, HTML, lean web, markdown, python, static website, tidy">
+</head>
+<body>
+<nav>
+<a href="index.html" rel="home">Quarto</a>
+<a href="about.html">about</a>
+<details><summary>boxes</summary>
+<details><summary>can</summary>
+<details><summary>be</summary>
+<a href="boxes/can/be/nested.html">nested</a>
+</details>
+</details>
+</details>
+<details><summary>cat pics</summary>
+<a href="cat_pics/octocats.html">octocats</a>
+<a href="cat_pics/penelope.html">penelope</a>
+</details>
+<details><summary>docs</summary>
+<a href="docs/page_options.html">page options</a>
+<a href="docs/quire_class.html">quire class</a>
+<a href="docs/relative_paths.html">relative paths</a>
+</details>
+<details><summary>examples</summary>
+<a href="examples/adrift.html">adrift</a>
+<a href="examples/burning.html">burning</a>
+<a href="examples/celestial.html">celestial</a>
+<a href="examples/doctoral.html">doctoral</a>
+</details>
+<a href="#">faq</a>
+</nav>
+<main>
+<h1>Frequently Asked Questions</h1>
+<hr>
+<h2 id="installation">Installation</h2>
+<dl>
+  <dt>How do I install a quarto?</dt>
+  <dd>
+    Don't. Download the <a href="https://github.com/samkennerly/quarto">stock quarto</a> or <a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">use it as a template</a>.
+  </dd>
+  <dt>How do I upgrade a quarto?</dt>
+  <dd>Copy the <code>quarto</code> folder from another quarto project.</dd>
+  <dt>Why is <code>requirements.txt</code> blank?</dt>
+  <dd>
+    There are no requirements. There are only <a href="https://www.python.org/dev/peps/pep-0508/#extras">extras</a>.
+  </dd>
+  <dt>What are the <code>Dockerfile</code> and <code>kitchen</code> files?</dt>
+  <dd>
+    These files build and run <a href="https://docs.docker.com/develop/">containers</a> for testing. Delete them if you want to.
+  </dd>
+  <dt>Can I have multiple quartos on one machine?</dt>
+  <dd>Yes. They will not interfere with each other unless you insist.</dd>
+</dl>
+<hr>
+<h2 id="publication">Publication</h2>
+<dl>
+  <dt>How do I publish a website?</dt>
+  <dd>
+    Upload your <code>proof</code> folder to a <a href="https://en.wikipedia.org/wiki/Web_hosting_service">web host</a>. Don't upload anything private!
+  </dd>
+  <dt>Who is the host for this site?</dt>
+  <dd>
+    <a href="https://neocities.org/">Neocities</a> is a nonprofit which offers free and low-cost hosting.
+  </dd>
+  <dt>What address do people use to find my site?</dt>
+  <dd>
+    Hosts usually assign a default address like <a href="https://quarto.neocities.org/">quarto.neocities.org</a>. You can change it if you have a <a href="https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_registration">registered domain name</a>. Many hosts will do this for a small annual fee.
+  </dd>
+  <dt>What do I do if someone else has the domain I want?</dt>
+  <dd>
+    If the registrants are <a href="https://en.wikipedia.org/wiki/Cybersquatting">squatting</a>, then you can sue them. If the domain is used in <a href="https://en.wikipedia.org/wiki/Michael_Urvan">good faith</a>, then you can try to <a href="http://llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogochuchaf.com/">buy it</a>. Otherwise, you must use another domain.
+  </dd>
+  <dt>My host is telling me to buy a bunch of stuff. Do I need it?</dt>
+  <dd>
+    Do what you want, but you don't need <a href="https://en.wikipedia.org/wiki/Upselling">frameworks, plugins, databases, server-side scripts, nor template languages</a> to publish a website. All you need is HTML.
+  </dd>
+</dl>
+<hr>
+<h2 id="options_files">Options files</h2>
+<dl>
+  <dt>How do I edit page options?</dt>
+  <dd>
+    See the <a href="docs/page_options.html">page options docs</a> for details.
+  </dd>
+  <dt>Where are the site options?</dt>
+  <dd>
+    Quartos have no site options. Home options in <code>index.json</code> are applied to all pages unless they are overruled by <a href="docs/page_options.html">page options</a> files.
+  </dd>
+  <dt>Can I add more <code>meta</code> tags?</dt>
+  <dd>
+    Yes. Add them to the <code>"meta"</code> field in <a href="docs/page_options.html">page options</a>. There is some debate about which tags are useful <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> and which are <a href="https://twobithistory.org/2018/05/27/semantic-web.html#semweb-hucksters-and-their-metacrap">metacrap</a>.
+  </dd>
+  <dt>Can I build a site without icons, an email, a license, ...?</dt>
+  <dd>
+    Yes. Leave those options blank. See <a href="docs/page_options.html">page options</a> for details.
+  </dd>
+</dl>
+<hr>
+<h2 id="custom_styles">Custom styles</h2>
+<dl>
+  <dt>How do I change backgrounds, colors, fonts, ... ?</dt>
+  <dd>
+    Edit the <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS files</a> in the <code>style</code> folder.
+  </dd>
+  <dt>Can I add custom stylesheets?</dt>
+  <dd>
+    Yes. Add any <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS files</a> you want to the <code>style</code> folder.
+  </dd>
+  <dt>Can I use external stylesheets?</dt>
+  <dd>
+    Yes. Add <a href="https://en.wikipedia.org/wiki/URL">absolute URLs</a> to the list of <code>styles</code> in your <a href="docs/page_options.html">page options</a>.
+  </dd>
+  <dt>Where are the background images?</dt>
+  <dd>All media files are in the <code>proof/media</code> folder. Delete anything you don't want. We have many backup copies of bitmap galaxies and vectorized tiger stripes.</dd>
+</dl>
+<hr>
+<h2 id="mechanical_roles">Mechanical roles</h2>
+<dl>
+  <dt>Shall I compare thee to a static website generator?</dt>
+  <dd>Quartos are more lazy and more transparent.</dd>
+  <dt>What are some other static website generators?</dt>
+  <dd>
+    Go: <a href="https://gohugo.io/">Hugo</a>
+  </dd>
+  <dd>
+    JavaScript: <a href="https://www.11ty.io/">Eleventy</a>, <a href="https://hexo.io/">Hexo</a>, <a href="https://metalsmith.io/">Metalsmith</a>, <a href="https://vuepress.vuejs.org/">VuePress</a>
+  </dd>
+  <dd>
+    Python: <a href="https://github.com/hyde/hyde">Hyde</a>, <a href="https://www.getlektor.com/">Lektor</a>, <a href="https://www.mkdocs.org/">MkDocs</a>, <a href="https://getnikola.com/">Nikola</a>, <a href="https://blog.getpelican.com/">Pelican</a>
+  </dd>
+  <dd>
+    Ruby: <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://middlemanapp.com/">Middleman</a>, <a href="https://nanoc.ws/">Nanoc</a>, <a href="https://webgen.gettalong.org/">Webgen</a>
+  </dd>
+  <dt>Do quartos build dynamic websites?</dt>
+  <dd>
+    The stock quarto does not, but you could use the <code>Quire</code> class as a <a href="https://en.wikipedia.org/wiki/Dynamic_web_page#Server-side_scripting">server-side</a> page generator for something like <a href="http://bottlepy.org/docs/dev/">bottle</a> or <a href="https://palletsprojects.com/p/flask/">flask</a> or <a href="https://www.tornadoweb.org/en/stable/">tornado</a>.
+  </dd>
+  <dt>Why doesn't Quarto have {x}?</dt>
+  <dd>
+    Quartos favor speed, <a href="https://en.wikipedia.org/wiki/KISS_principle">simplicity</a>, and <a href="https://en.wikipedia.org/wiki/Dependency_hell">independence</a> over <a href="https://en.wikipedia.org/wiki/Feature_creep">completeness</a>.
+  </dd>
+  <dt>How do I request a feature?</dt>
+  <dd>
+    <a href="https://en.wikipedia.org/wiki/Do_it_yourself">DIY</a>. We'll consider adding it to the <a href="https://github.com/samkennerly/quarto">stock quarto</a> if your license allows it.
+  </dd>
+</dl>
+<hr>
+<h2 id="intentions_and_goals">Intentions and goals</h2>
+<dl>
+  <dt>Where are all the modal windows?</dt>
+  <dd>I click to bury pop-ups, not engage them.</dd>
+  <dt>Is Quarto a web application framework?</dt>
+  <dd>
+    No. Quartos avoid <a href="https://en.wikipedia.org/wiki/Inversion_of_control">control inversion</a>, <a href="https://en.wikipedia.org/wiki/Spaghetti_code#Lasagna_code">middleware layers</a>, and <a href="https://en.wikipedia.org/wiki/Obfuscation_(software)">abstraction</a>.
+  </dd>
+  <dt>Why does the logo have cat ears?</dt>
+  <dd>
+    Quartos are meant to be <a href="https://en.wikipedia.org/wiki/Software_bloat">small</a>, <a href="https://en.wikipedia.org/wiki/Installation_(computer_programs)#Clean_installation">clean</a>, <a href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy</a>, <a href="https://en.wikipedia.org/wiki/Dependency_hell">independent</a> string <a href="https://en.wikipedia.org/wiki/Cat_(Unix)">concatenators</a>.
+  </dd>
+  <dt>Wherefore art thou Quarto?</dt>
+  <dd>
+    <blockquote>
+      The more complex your systems become, the more you need a human to look at the bigger picture and make decisions. <cite><a href="http://sysadvent.blogspot.com/2016/12/day-6-no-more-on-call-martyrs.html">Alice Goldfuss</a></cite>
+    </blockquote>
+  </dd>
+  <dd>
+    <blockquote>
+      There will come a point where the accumulated complexity of our existing systems is greater than the complexity of creating a new one. <cite><a href="https://tinyclouds.org/rant.html">Ryan Dahl</a></cite>
+    </blockquote>
+  </dd>
+  <dd>
+    <blockquote>
+      It is time to unmask the computing community as a Secret Society for the Creation and Preservation of Artificial Complexity. <cite><a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD12xx/EWD1243a.html">Edsger W. Dijkstra</a></cite>
+    </blockquote>
+  </dd>
+  <dd>
+    <blockquote>
+      Give the game away. <cite><a href="https://www.enoshop.co.uk/product/oblique-strategies.html">Brian Eno and Peter Schmidt</a></cite>
+    </blockquote>
+  </dd>
+</dl>
+</main>
+<section id="icons">
+<a href="https://github.com/samkennerly/quarto/"><img alt="GitHub" src="media/icons/github.svg" height="32" title="GitHub"></a>
+<a href="mailto:quarto.sites@gmail.com"><img alt="Gmail" src="media/icons/gmail.svg" height="32" title="Gmail"></a>
+<a href="https://neocities.org/site/quarto/"><img alt="Neocities" src="media/icons/neocities.svg" height="32" title="Neocities"></a>
+<a href="https://twitter.com/quartosites/"><img alt="Twitter" src="media/icons/twitter.svg" height="32" title="Twitter"></a>
+</section>
+<section id="jump">
+<a href="examples/doctoral.html" rel="prev">◄◄</a>
+<a href="#" id="updog">⇪</a>
+<a href="index.html" rel="next">►►</a>
+</section>
+<section id="klf">
+<span id="copyright">© Sam Kennerly 2019.</span>
+<a href="https://creativecommons.org/licenses/by/4.0" rel="license">Licensed under a CC BY 4.0 license.</a>
+<a href="https://quarto.neocities.org/">Built by a Quarto.</a>
+<span id="klftext"><a href="https://neocities.org/">Hosted by Neocities</a>.</span>
+<address>quarto.sites@gmail.com</address>
+</section>
+</body>
+</html>

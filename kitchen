@@ -1,0 +1,68 @@
+#!/usr/bin/env sh
+# Build and run temporary containers.
+
+CONTEXT=$PWD                    # Build from CONTEXT folder
+TAGBASE=$(basename "$CONTEXT")  # Name image TAGBASE:sometag
+PKGFILE="requirements.txt"      # Install packages from PKGFILE
+WORKDIR="/context"              # Copy/mount files to WORKDIR in container
+
+help() {
+  echo "Run disposable containers built from $CONTEXT"
+  echo
+  echo "COMMANDS"
+  echo "alamode [TAG] [CMD]   Bake $TAGBASE:TAG, freeze it, and serve CMD"
+  echo "bake [TAG]            Build $TAGBASE:TAG image from $CONTEXT"
+  echo "clean                 Delete all $TAGBASE containers and Docker leftovers"
+  echo "debug TAG SCRIPT      Debug SCRIPT in a $TAGBASE:TAG container"
+  echo "eightysix [TAG]       Delete $TAGBASE:TAG image, containers, and leftovers"
+  echo "freeze [TAG]          Update $PKGFILE and rebuild $TAGBASE:TAG image"
+  echo "help                  Show commands, examples, and Docker inventory"
+  echo "runit [TAG] [CMD]     Run CMD in an interactive $TAGBASE:TAG container"
+  echo "serve [TAG] [CMD]     runit [TAG] [CMD] with $CONTEXT mounted as $WORKDIR"
+  echo
+  echo "EXAMPLES"
+  echo "./kitchen bake latest"
+  echo "./kitchen serve latest"
+  echo "./kitchen serve latest python -m this"
+  echo
+  echo "INVENTORY"
+  echo "---- Images ----" && docker image ls | sort
+  echo "---- Volumes ----" && docker volume ls | sort
+  echo "---- Networks ----" && docker network ls
+  echo "---- Containers ----" && docker ps --all
+}
+alamode() {
+  bake "$1" && freeze "$1" && serve "$@"
+}
+bake() {
+  touch "$PKGFILE" &&
+  docker build --tag "$(tag $1)" --build-arg WORKDIR="$WORKDIR" "$CONTEXT" &&
+  docker image prune --force
+}
+clean() {
+  docker ps --quiet --filter ancestor="$TAGBASE" | xargs docker rm --force &&
+  docker system prune --force
+}
+debug() {
+  serve "${1:-latest}" python -m pdb "${@:2}"
+}
+eightysix() {
+  clean && docker rmi --force "$(tag $1)" && docker image prune --force
+}
+freeze() {
+  docker run --rm "$(tag $1)" pip freeze --exclude-editable > "$PKGFILE" && bake "$1"
+}
+runit() {
+  docker run --rm --interactive --tty "$(tag $1)" "${@:2}"
+}
+serve() {
+  docker run --rm --interactive --tty \
+    --volume "${CONTEXT}:${WORKDIR}:delegated" \
+    --hostname "${TAGBASE}" \
+    "$(tag $1)" "${@:2}"
+}
+tag() {
+  echo "$TAGBASE:${1-latest}"
+}
+
+if [ $# -eq 0 ]; then help; else "$@"; fi

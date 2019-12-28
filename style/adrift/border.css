@@ -1,0 +1,31 @@
+/*
+Border type, thickness, radius, etc.
+https://www.w3schools.com/css/css_border.asp
+*/
+:root {
+  --border: thin solid;
+  --radius: 1rem;
+}
+body a img {
+   border: var(--border);
+   border-radius: var(--radius);
+}
+/* border main */
+main,
+main blockquote,
+main pre {
+  border-radius: var(--radius);
+}
+main hr {
+  border: var(--border);
+}
+main details,
+main .gallery img {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+/* border nav */
+nav details {
+  border: var(--border);
+  border-radius: var(--radius);
+}

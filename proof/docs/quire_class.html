@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quarto docs: Quire class</title>
+<link rel="canonical" href="https://quarto.neocities.org/docs/quire_class.html">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sam Kennerly">
+<meta name="description" content="Build websites with Python 3. No installation required.">
+<meta name="generator" content="https://github.com/samkennerly/quarto/">
+<meta name="keywords" content="CSS, HTML, lean web, markdown, python, static website, tidy">
+</head>
+<body>
+<nav>
+<a href="../index.html" rel="home">Quarto</a>
+<a href="../about.html">about</a>
+<details><summary>boxes</summary>
+<details><summary>can</summary>
+<details><summary>be</summary>
+<a href="../boxes/can/be/nested.html">nested</a>
+</details>
+</details>
+</details>
+<details><summary>cat pics</summary>
+<a href="../cat_pics/octocats.html">octocats</a>
+<a href="../cat_pics/penelope.html">penelope</a>
+</details>
+<details open><summary>docs</summary>
+<a href="page_options.html">page options</a>
+<a href="#">quire class</a>
+<a href="relative_paths.html">relative paths</a>
+</details>
+<details><summary>examples</summary>
+<a href="../examples/adrift.html">adrift</a>
+<a href="../examples/burning.html">burning</a>
+<a href="../examples/celestial.html">celestial</a>
+<a href="../examples/doctoral.html">doctoral</a>
+</details>
+<a href="../faq.html">faq</a>
+</nav>
+<main>
+<h1>Quire class</h1>
+<p>Quarto scripts parse arguments, then build a <code>Quire</code> object to do the actual work.</p>
+<p>For interactive help, <code>cd</code> to your project and run:</p>
+<pre>python3 -m pydoc quarto.quire
+</pre>
+<hr>
+<h2>This be Mapping, yet there are methods in it.</h2>
+<p><code>Quire</code> inherits several <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionary</a> methods from <a href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping">collections.abc.Mapping</a>:</p>
+<ul>
+  <li>
+    <code>.keys()</code> are absolute <a href="https://docs.python.org/3/library/pathlib.html">pathlib.Path</a> objects.
+  </li>
+  <li><code>.values()</code> are HTML pages as strings.</li>
+  <li><code>.items()</code> is an iterable view of (key, value) pairs.</li>
+  <li><code>in</code>, <code>len()</code>, and <code>for x in</code> act on keys, just like an ordinary <code>dict</code>.</li>
+</ul>
+<p><code>Quire</code> values are <a href="https://en.wikipedia.org/wiki/Immutable_object">immutable</a>. Square-bracket <code>[ ]</code> notation can get, but not set.</p>
+<hr>
+<h2>Getting makes it so.</h2>
+<p><code>Quire</code> values are <a href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy</a>:</p>
+<ul>
+  <li>Pages do not exist until accessed with <code>[ ]</code> or <code>.get()</code>.</li>
+  <li>Pages are generated and joined <em>after</em> being accessed.</li>
+  <li>Page input files are read <em>only</em> when generating a page.</li>
+  <li>Pages are never cached. Getting a page twice generates it twice.</li>
+</ul>
+<p>At most one page is stored in RAM at any given time.</p>
+<hr>
+<h2>I yield, I join, I perish.</h2>
+<p><code>Quire</code> uses several methods to generate HTML:</p>
+<ul>
+  <li><code>.links()</code> and <code>.meta()</code> generate &lt;head&gt; tags.</li>
+  <li>HTML &lt;main&gt; elements are read directly from disk.</li>
+  <li>Markdown &lt;main&gt; elements are parsed during page generation.</li>
+  <li><code>.icons()</code>, <code>.jump()</code>, and <code>.klf()</code> each generate a &lt;section&gt; element.</li>
+</ul>
+<p>Lines are joined only after the entire page has been generated.</p>
+<hr>
+<h2>The &lt;nav&gt; is come full circle: I am home.</h2>
+<ul>
+  <li>Links in the <code>#jump</code> section wrap: the next page after the last page is the first page.</li>
+  <li><code>Quire</code> objects do not wrap. Iterating over a <code>Quire</code> returns each key exactly once.</li>
+  <li><code>Quire</code> objects sort pages automatically and retain the sort order.</li>
+  <li>See <a href="relative_paths.html">docs/relative paths</a> to set the page order manually.
+  </li>
+</ul>
+</main>
+<section id="icons">
+<a href="https://github.com/samkennerly/quarto/"><img alt="GitHub" src="../media/icons/github.svg" height="32" title="GitHub"></a>
+<a href="mailto:quarto.sites@gmail.com"><img alt="Gmail" src="../media/icons/gmail.svg" height="32" title="Gmail"></a>
+<a href="https://neocities.org/site/quarto/"><img alt="Neocities" src="../media/icons/neocities.svg" height="32" title="Neocities"></a>
+<a href="https://twitter.com/quartosites/"><img alt="Twitter" src="../media/icons/twitter.svg" height="32" title="Twitter"></a>
+</section>
+<section id="jump">
+<a href="page_options.html" rel="prev">◄◄</a>
+<a href="#" id="updog">⇪</a>
+<a href="relative_paths.html" rel="next">►►</a>
+</section>
+<section id="klf">
+<span id="copyright">© Sam Kennerly 2019.</span>
+<a href="https://creativecommons.org/licenses/by/4.0" rel="license">Licensed under a CC BY 4.0 license.</a>
+<a href="https://quarto.neocities.org/">Built by a Quarto.</a>
+<span id="klftext"><a href="https://neocities.org/">Hosted by Neocities</a>.</span>
+<address>quarto.sites@gmail.com</address>
+</section>
+</body>
+</html>

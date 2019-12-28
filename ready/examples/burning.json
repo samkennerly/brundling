@@ -1,0 +1,5 @@
+{
+  "description": "Quarto example style.",
+  "styles": ["burning.css"],
+  "title": "Quarto style: burning"
+}

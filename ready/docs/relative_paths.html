@@ -1,0 +1,52 @@
+<h1>Relative paths</h1>
+<p>Quartos try to wrangle file <a href="https://en.wikipedia.org/wiki/Path_%28computing%29">paths</a> into valid <a href="https://en.wikipedia.org/wiki/URL">URLs</a>, but sometimes they need help.</p>
+<hr>
+<h2 id="spaces_and_cases">Spaces and Cases</h2>
+<p>Links in the &lt;nav&gt; menu use page filenames as labels. To avoid problems with <a href="https://stackoverflow.com/questions/497908/is-a-url-allowed-to-contain-a-space">whitespace</a> and/or <a href="https://en.wikipedia.org/wiki/Case_sensitivity">capitalization</a> in file names, consider these alternatives:</p>
+<dl>
+  <dt>spaces</dt>
+  <dd>Use underscores instead of spaces in file and folder names.</dd>
+  <dd>Quarto scripts automatically replace each <code>_</code> with a space in &lt;nav&gt; labels.</dd>
+  <dt>cases</dt>
+  <dd>Use lowercase file and folder names.</dd>
+  <dd>
+    Use <a href="https://css-tricks.com/almanac/properties/t/text-transform/">CSS text-transform</a> in stylesheets to capitalize &lt;nav&gt; labels.
+  </dd>
+</dl>
+<p>Quarto scripts do <mark>not</mark> enforce these rules. Break them if you want to.</p>
+<hr>
+<h2 id="relative_urls">Relative URLs</h2>
+<p>Quartos use <a href="https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2">relative URLs</a> to avoid <a href="https://github.com/jekyll/jekyll/issues/5482">problems</a> <a href="https://github.com/jekyll/jekyll/issues/5488">when</a> <a href="https://github.com/jekyll/jekyll/issues/5743">previewing</a> <a href="https://github.com/jekyll/jekyll/issues/5895">pages</a> <a href="https://github.com/jekyll/jekyll/issues/6034">from</a> <a href="https://github.com/jekyll/jekyll/issues/6360">local</a> <a href="https://github.com/jekyll/jekyll/issues/7621">files</a>. Links which work <a href="https://www.lifewire.com/how-to-preview-web-pages-3469885">locally</a> should still work when you upload your site - but test them to be sure!</p>
+<p>Here are some example links from this page's &lt;nav&gt; menu:</p>
+<pre><code>../index.html
+../about.html
+../boxes/can/be/nested.html
+../cat_pics/octocats.html
+</code></pre>
+<p>Each &lt;nav&gt; also has one link to itself which is a <a href="https://stackoverflow.com/questions/4855168/what-is-href-and-why-is-it-used">blank anchor</a>.</p>
+<hr>
+<h2 id="quoted_urls">Quoted URLs</h2>
+<p>Quartos <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.quote">quote</a> any <a href="https://www.w3.org/Addressing/URL/4_Recommentations.html">prohibited characters</a> in file paths whenever they:</p>
+<ul>
+  <li>build a &lt;nav&gt; menu</li>
+  <li>generate &lt;script&gt; tags</li>
+  <li>generate &lt;img&gt; tags in an <code>#icons</code> section</li>
+  <li>generate &lt;link&gt; tags in a &lt;head&gt; element</li>
+</ul>
+<p>Quartos do <mark>not</mark> modify links in page &lt;main&gt; elements.</p>
+<hr>
+<h2 id="pages.txt">pages.txt</h2>
+<p>Quartos find pages <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.rglob">recursively</a>, then <a href="https://en.wikipedia.org/wiki/Lexicographical_order">lexsort</a> them and move <code>index.html</code> to the front of the queue. If you don't like the result, you can find and sort pages yourself:</p>
+<ul>
+  <li>Create a <code>pages.txt</code> file in the <code>ready</code> folder.</li>
+  <li>On each line, type the path from the <code>ready</code> folder to a page.</li>
+  <li>Any blank lines and leading/trailing whitespace will be ignored.</li>
+  <li>Sort pages in whatever order you want. Quartos will respect it.</li>
+</ul>
+<p>In this example, <code>about.html</code> will be the <em>last</em> link in each &lt;nav&gt; menu:</p>
+<pre><code>index.html
+boxes/can/be/nested.html
+cat_pics/octocats.html
+about.html
+</code></pre>
+<p>Sites will build slightly faster if <code>pages.txt</code> exists.</p>

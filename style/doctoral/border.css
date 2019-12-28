@@ -1,0 +1,44 @@
+/*
+Border type, thickness, radius, etc.
+https://www.w3schools.com/css/css_border.asp
+*/
+:root {
+  --border: thin inset;
+  --radius: .2rem;
+}
+body a img,
+body summary {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+/* border main */
+main blockquote {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+main pre {
+  border: none;
+  border-radius: var(--radius);
+}
+main table {
+  border: var(--border);
+  border-radius: 0;
+}
+/* border nav */
+nav {
+  border-radius: var(--radius);
+}
+nav a {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+/* border others */
+#icons {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+#jump {
+  border-radius: var(--radius);
+}
+#klf {
+  border-radius: 0 0 var(--radius) var(--radius);
+}

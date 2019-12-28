@@ -1,0 +1,21 @@
+/*
+Alignment, text indentation, etc.
+https://www.w3schools.com/css/css_text.asp
+*/
+body {
+  text-align: center;
+}
+/* align main */
+main dd,
+main li,
+main pre {
+  text-align: left;
+}
+/* align nav */
+nav details {
+  vertical-align: top;
+}
+/* align others */
+#icons img {
+  vertical-align: middle;
+}

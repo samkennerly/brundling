@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Rebuild Markdown test pages.
+
+repo="$PWD"
+input="$repo/test/input"
+output="$repo/test/output"
+
+quarto/delete html $output && \
+quarto/build $input $output && \
+quarto/apply style/doctoral $output/style.css

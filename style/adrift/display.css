@@ -1,0 +1,35 @@
+/*
+Display behavior: block, inline, none, etc.
+https://www.w3schools.com/css/css_display_visibility.asp
+*/
+body {
+  display: grid;
+}
+/* Chrome hack */
+summary::-webkit-details-marker {
+  display: none;
+}
+/* display main */
+main cite,
+main iframe,
+main .gallery {
+  display: block;
+}
+main ul {
+  list-style: circle;
+}
+/* display nav */
+nav a,
+nav summary {
+  display: block;
+}
+/* display others */
+#icons img {
+  display: block;
+}
+#jump {
+  display: flex;
+}
+#klf address {
+  display: inline-block;
+}

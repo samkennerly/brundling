@@ -1,0 +1,145 @@
+<h1>Quartos build websites.</h1>
+<p>This site is one. Scroll through these stanzas to see how it's done.</p>
+<ul>
+  <li>Write each page's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a> element in <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> or <a href="https://daringfireball.net/projects/markdown/">Markdown</a>.
+  </li>
+  <li>Create <a href="docs/page_options.html">options files</a> for pages if you want to. Options are optional.
+  </li>
+  <li>Choose one of <a href="examples/adrift.html">the</a> <a href="examples/burning.html">four</a> <a href="examples/celestial.html">stock</a> <a href="examples/doctoral.html">styles</a>, customize it, or bring your own <a href="https://www.w3.org/standards/webdesign/htmlcss#whatcss">CSS</a>.
+  </li>
+  <li>Browse your site <a href="https://www.lifewire.com/how-to-preview-web-pages-3469885">locally</a> and upload it to a <a href="https://en.wikipedia.org/wiki/Web_hosting_service">host</a>. (This site is hosted by <a href="https://neocities.org/">Neocities</a>.)
+  </li>
+</ul>
+<p>Follow the steps below to build a <a href="https://github.com/samkennerly/bad-quarto/">bad-quarto</a> in the privacy of your own hard disk.</p>
+<hr>
+<h2 id="copy_this_quarto">Copy this quarto.</h2><!-- -->
+<p>Download the original <q>stock</q> quarto as a ZIP file or use it as a <a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">template</a>:</p>
+<h3><a href="https://github.com/samkennerly/quarto">github.com/samkennerly/quarto</a></h3>
+<p>Quarto scripts require <strong>Python 3.6+</strong>. Some features need <a href="https://www.python.org/dev/peps/pep-0508/#extras">extras</a>:</p>
+<ul>
+  <li><strong><a href="http://www.html-tidy.org/">Tidy 5.6+</a></strong> to run the <code>quarto/clean</code> script</li>
+  <li>
+    <strong><a href="https://mistune.readthedocs.io/en/latest/">Mistune 0.8</a></strong> to build pages from <a href="https://daringfireball.net/projects/markdown/">Markdown</a> files
+  </li>
+</ul>
+<hr>
+<h2 id="install_some_extras">Take a quick look.</h2><!-- -->
+<p>A <dfn>quarto project</dfn> is a <a href="https://en.wikipedia.org/wiki/Directory_(computing)">folder</a> with these four subfolders:</p>
+<ul>
+  <li>
+    <code>proof</code> is a <a href="https://en.wikipedia.org/wiki/Prepress_proofing">proof copy</a> of a <a href="https://en.wikipedia.org/wiki/Static_web_page">static website</a>.
+  </li>
+  <li><code>quarto</code> contains code to build the proof.</li>
+  <li><code>ready</code> contains pages ready to be built.</li>
+  <li>
+    <code>style</code> contains one or more <a href="https://www.w3.org/standards/webdesign/htmlcss#whatcss">stylesheets</a>.
+  </li>
+</ul>
+<p>To <q>uninstall</q> remove a quarto project, delete the folder.</p>
+<hr>
+<h2 id="rewrite_the_pages">Edit the content.</h2><!-- -->
+<p>Any <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> editor can read and write quarto pages, options, styles, and code.</p>
+<dl>
+  <dt>Remove the stock pages.</dt>
+  <dd>Delete everything in the <code>ready</code> folder except these files:</dd>
+  <dd>
+    <pre><code>ready/index.html
+ready/index.json
+</code></pre>
+  </dd>
+  <dd>Delete the <code>test</code> folder and loose files in the top-level folder if you want to.</dd>
+  <dd>
+    Any change you might regret can be undone with <a href="https://git-scm.com/docs/git-reset">git reset</a>.
+  </dd>
+  <dt>Write a new page.</dt>
+  <dd>Create <code>ready/not_found.html</code> with this text:</dd>
+  <dd>
+    <pre><code>&lt;h1&gt;Error 404: Not To Be&lt;/h1&gt;
+
+&lt;p&gt;Ay, there's the point.&lt;/p&gt;
+
+&lt;a href="https://quarto.neocities.org/"&gt;
+  &lt;img alt="Quarto logo" src="media/quarto.svg" width="100%"&gt;
+&lt;/a&gt;
+</code></pre>
+  </dd>
+  <dd>
+    This page has a <a href="https://www.w3schools.com/tags/tag_hn.asp">heading</a>, a <a href="https://www.w3schools.com/tags/tag_p.asp">paragraph</a>, and an <a href="https://www.w3schools.com/tags/tag_img.asp">image</a> inside a <a href="https://www.w3schools.com/tags/tag_a.asp">link</a>.
+  </dd>
+  <dd>It's just an example. Any other valid HTML5 or Markdown will do.</dd>
+  <dt>Edit the home options.</dt>
+  <dd>Replace <code>ready/index.json</code> with this text:</dd>
+  <dd>
+    <pre><code>{
+  "author": "Will Shakespeare?",
+  "base": "https://quarto.neocities.org/",
+  "description": "But, src! What links in yonder website break?",
+  "email": "",
+  "homelink": "Bad Quarto",
+  "qlink": "Built badly by a quarto.",
+  "styles": ["style.css"],
+  "title": "Foul Papers"
+}
+</code></pre>
+  </dd>
+  <dd>
+    <a href="docs/page_options.html">Options</a> are optional. Omit an option or leave it blank if you don't want it.
+  </dd>
+  <dd>This example has a blank <code>email</code> field. The Bard did not have Mail.</dd>
+  <dt>Add some page options.</dt>
+  <dd>Create <code>ready/not_found.json</code> with this text:</dd>
+  <dd>
+    <pre><code>{
+  "description": "No is the status of your GET request.",
+  "title": "The Tragedy of Errors"
+}
+</code></pre>
+  </dd>
+  <dd>Options in <code>not_found.json</code> are only used for the <code>not_found.html</code> page.</dd>
+  <dd>Missing options will be replaced with values from <code>index.json</code>.</dd>
+</dl>
+<hr>
+<h2 id="rebuild_the_site">Rewrite the book.</h2><!-- -->
+<p>Open a <a href="https://en.wikipedia.org/wiki/Command-line_interface">terminal</a>, <a href="https://en.wikipedia.org/wiki/Cd_(command)">cd</a> to your quarto project, and run these commands:</p>
+<dl>
+  <dt>delete</dt>
+  <dd>Delete old pages and styles from the <code>proof</code> folder.</dd>
+  <dd>(For safety, this only deletes files with <code>HTML</code> and <code>CSS</code> suffixes.)</dd>
+  <dd>
+    <pre><code>quarto/delete html &amp;& quarto/delete css</code></pre>
+  </dd>
+  <dd>You'll have to delete the empty folders and cat pictures yourself.</dd>
+  <dt>clean</dt>
+  <dd>Clean and <mark>overwrite</mark> HTML files in the <code>ready</code> folder.</dd>
+  <dd>
+    (Skip this script if you only write <a href="https://daringfireball.net/projects/markdown/">Markdown</a> or don't have <a href="http://www.html-tidy.org/">Tidy</a> installed.)
+  </dd>
+  <dd>
+    <pre><code>quarto/clean
+</code></pre>
+  </dd>
+  <dd>
+    Keep your <a href="https://en.wikipedia.org/wiki/Foul_papers">foul papers</a> in another folder if you want to preserve them.
+  </dd>
+  <dt>build</dt>
+  <dd>Build <code>proof</code> pages and from <code>ready</code> pages.</dd>
+  <dd>(This does not copy, delete, or move files, but it <mark>overwrites</mark> proof pages.)</dd>
+  <dd>
+    <pre><code>quarto/build
+</code></pre>
+  </dd>
+  <dd>Store any media files in the <code>proof</code> folder. Quarto scripts will not touch them.</dd>
+  <dt>apply</dt>
+  <dd>Apply the <em>celestial</em> style from the <code>style</code> folder.</dd>
+  <dd>
+    (Choose another stock style or add your own <a href="https://www.w3.org/standards/webdesign/htmlcss#whatcss">stylesheets</a> if you want to.)
+  </dd>
+  <dd>
+    <pre><code>quarto/apply style/celestial
+</code></pre>
+  </dd>
+  <dd>
+    This script finds CSS files <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.rglob">recursively</a> and <a href="https://en.wikipedia.org/wiki/Cat_(Unix)">cats</a> them into <code>proof/style.css</code>.
+  </dd>
+</dl>
+<p>Open <code>proof/index.html</code> in any browser to behold your brave new quarto.</p>

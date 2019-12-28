@@ -1,0 +1,32 @@
+/*
+Grid layout for each page.
+https://www.w3schools.com/css/css_grid.asp
+*/
+body {
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-areas:
+    'nav  main icons'
+    'jump klf  .    ';
+  grid-template-columns: auto minmax(0,1fr) auto;
+  grid-template-rows: 1fr auto;
+  margin: 0 auto;
+  max-width: 1024px;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+main {
+  grid-area: main;
+}
+nav {
+  grid-area: nav;
+}
+#icons {
+  grid-area: icons;
+}
+#jump {
+  grid-area: jump;
+}
+#klf {
+  grid-area: klf;
+}

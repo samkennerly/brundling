@@ -1,0 +1,21 @@
+{
+  "base": "https://quarto.neocities.org/",
+  "email": "samkennerly@gmail.com",
+  "homelink": "Markdown Tests",
+  "icons": [ ],
+  "jscripts": [ ],
+  "license": [
+    "https://creativecommons.org/licenses/by/4.0",
+    "Licensed under a CC BY 4.0 license."
+  ],
+  "meta": {
+    "author": "Sam Kennerly",
+    "description": "Quarto test site with Markdown inputs."
+  },
+  "nextlink": "next",
+  "prevlink": "prev",
+  "qlink": "Built by a Quarto.",
+  "styles": ["style.css"],
+  "title": "Quartos build websites.",
+  "updog": "up"
+}

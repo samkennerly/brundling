@@ -1,0 +1,49 @@
+/*
+Font family, size, weight, etc.
+https://www.w3schools.com/css/css_font.asp
+*/
+html {
+  font-family: Geneva, Verdana, sans-serif;
+  font-size: calc(8px + 1vw);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.25;
+}
+@media all and (min-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+body a {
+  text-decoration: none;
+}
+/* font main */
+main blockquote {
+  font-family: Palatino, serif;
+}
+main b,
+main dfn,
+main dt,
+main strong,
+main summary {
+  font-style: normal;
+  font-weight: bold;
+}
+main code,
+main kbd,
+main samp,
+main pre,
+main var {
+  font-family:"Lucida Console", Monaco, monospace;
+  font-size: .875em;
+}
+/* font nav */
+nav a[rel="home"] {
+  font-size: 1.5rem;
+}
+/* font others */
+#jump,
+#klf {
+  font-size: .75rem;
+}

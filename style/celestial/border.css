@@ -1,0 +1,20 @@
+/*
+Border type, thickness, radius, etc.
+https://www.w3schools.com/css/css_border.asp
+*/
+:root {
+  --border: thin groove;
+}
+body a img {
+  border: var(--border);
+}
+/* border main */
+main details,
+main .gallery img,
+main hr {
+  border: var(--border);
+}
+/* border nav */
+nav summary {
+  border-bottom: var(--border);
+}

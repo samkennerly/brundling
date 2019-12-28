@@ -1,0 +1,5 @@
+{
+  "description": "Quarto example style.",
+  "styles": ["adrift.css"],
+  "title": "Quarto style: adrift"
+}

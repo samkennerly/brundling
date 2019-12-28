@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quarto docs: Page options</title>
+<link rel="canonical" href="https://quarto.neocities.org/docs/page_options.html">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sam Kennerly">
+<meta name="description" content="Build websites with Python 3. No installation required.">
+<meta name="generator" content="https://github.com/samkennerly/quarto/">
+<meta name="keywords" content="CSS, HTML, lean web, markdown, python, static website, tidy">
+</head>
+<body>
+<nav>
+<a href="../index.html" rel="home">Quarto</a>
+<a href="../about.html">about</a>
+<details><summary>boxes</summary>
+<details><summary>can</summary>
+<details><summary>be</summary>
+<a href="../boxes/can/be/nested.html">nested</a>
+</details>
+</details>
+</details>
+<details><summary>cat pics</summary>
+<a href="../cat_pics/octocats.html">octocats</a>
+<a href="../cat_pics/penelope.html">penelope</a>
+</details>
+<details open><summary>docs</summary>
+<a href="#">page options</a>
+<a href="quire_class.html">quire class</a>
+<a href="relative_paths.html">relative paths</a>
+</details>
+<details><summary>examples</summary>
+<a href="../examples/adrift.html">adrift</a>
+<a href="../examples/burning.html">burning</a>
+<a href="../examples/celestial.html">celestial</a>
+<a href="../examples/doctoral.html">doctoral</a>
+</details>
+<a href="../faq.html">faq</a>
+</nav>
+<main>
+<h1>Page options</h1>
+<p>Scroll down for a complete list of all options.</p>
+<hr>
+<h2 id="the_keys_have_values">The keys have values for those who JSON.</h2>
+<p>Page options are answers to questions like:</p>
+<ul>
+  <li>Who wrote this page?</li>
+  <li>Where are the stylesheet(s) and <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a>?
+  </li>
+  <li>Which icons should be in the <code>#icons</code> section?</li>
+  <li>Do you want to reveal your email to the entire internet?</li>
+</ul>
+<p>Each page's options (if any) must be in a valid <a href="https://www.json.org/">JSON</a> file.</p>
+<hr>
+<h2 id="whats_in_a_name">What's in a name?</h2>
+<p>If the path to a page is:</p>
+<pre>ready/examples/adrift.html</pre>
+<p>then that page's option file (if it exists) must be named:</p>
+<pre>ready/examples/adrift.json</pre>
+<hr>
+<h2 id="sites_are_merriest">Sites are merriest when they have a home.</h2>
+<p>Quarto sites <mark>must</mark> have a home page.</p>
+<ul>
+  <li>The home page must be named <code>index.html</code> or ...</li>
+  <li><code>index.md</code>, <code>index.rst</code>, <code>index.htm</code>, or any suffix but <code>.json</code>.</li>
+  <li>The name <code>index.json</code> is reserved for home page options.</li>
+  <li>Home page options are defaults for any missing page options.</li>
+</ul>
+<p>Any <a href="https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2">relative URLs</a> in options files must be paths <em>from the home page</em>.</p>
+<hr>
+<h2 id="complete_options">Complete Options of Quarto</h2>
+<p>Leave an option blank if you don't want it. Quartos do not <a href="https://www.urbandictionary.com/define.php?term=autocarrot">autocarrot</a> blank options.</p>
+<dl>
+  <dt>author</dt>
+  <dd>Page author name(s).</dd>
+  <dd>
+    <pre>"Will Shakespeare, C. Marlowe"</pre>
+  </dd>
+  <dt>base</dt>
+  <dd>
+    The <a href="https://en.wikipedia.org/wiki/Canonical_link_element">canonical URL</a> for your site with the <a href="https://www.w3.org/TR/WD-html40-970917/htmlweb.html#relative-urls">path component</a> removed.
+  </dd>
+  <dd>
+    <pre>"https://bad-quarto.neocities.org/"</pre>
+  </dd>
+  <dt>copyright</dt>
+  <dd>Copyright statement.</dd>
+  <dd>
+    <pre>"© Will Shakespeare 2019."</pre>
+  </dd>
+  <dt>description</dt>
+  <dd>
+    Page description for <a href="https://moz.com/learn/seo/meta-description">search engines</a>.
+  </dd>
+  <dd>
+    <pre>"In Scotland, no one can hear you scream."</pre>
+  </dd>
+  <dt>email</dt>
+  <dd>Email address to display.</dd>
+  <dd>
+    <pre>"quarto.sites@gmail.com"</pre>
+  </dd>
+  <dt>favicon</dt>
+  <dd>
+    Path to the site's <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a>.
+  </dd>
+  <dd>
+    <pre>"favicon.ico"</pre>
+  </dd>
+  <dt>generator</dt>
+  <dd>Link to the code which built this page.</dd>
+  <dd>
+    <pre>"https://github.com/samkennerly/quarto/"</pre>
+  </dd>
+  <dt>homelink</dt>
+  <dd>Text label for link to home page in &lt;nav&gt; menu.</dd>
+  <dd>
+    <pre>"Quarto"</pre>
+  </dd>
+  <dt>icons</dt>
+  <dd>List of [alt text, image path, link target] for each icon in the <code>#icons</code> section.</dd>
+  <dd>
+    <pre>[
+  ["Neocities", "media/icons/neocities.png", "https://neocities.org/site/quarto/"],
+  ["Twitter", "media/icons/twitter.svg", "https://twitter.com/quartosites/"]
+]
+</pre>
+  </dd>
+  <dt>jscripts</dt>
+  <dd>
+    List of <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> sources.
+  </dd>
+  <dd>
+    <pre>[
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
+  "enterpriseQuality/resources/src/resource/intrusiveDialogBoxes_v2.js"
+]
+</pre>
+  </dd>
+  <dt>klftext</dt>
+  <dd>Extra HTML in <code>#klf</code> section at the bottom of the page.</dd>
+  <dd>
+    <pre>"&lt;a href=\"https://neocities.org/\"&gt;Hosted by Neocities&lt;/a&gt;."</pre>
+  </dd>
+  <dt>language</dt>
+  <dd>
+    <a href="https://www.w3schools.com/tags/ref_language_codes.asp">ISO language code</a> for the page's &lt;html&gt; element.
+  </dd>
+  <dd>
+    <pre>"language": "en"</pre>
+  </dd>
+  <dt>license</dt>
+  <dd>Path to license and text label.</dd>
+  <dd>
+    <pre>[
+  "https://creativecommons.org/licenses/by/4.0",
+  "Licensed under a CC BY 4.0 license."
+]
+</pre>
+  </dd>
+  <dt>meta</dt>
+  <dd>Name and content for any extra &lt;meta&gt; tags.</dd>
+  <dd>
+    <pre>{
+  "keywords": "airdrawndagger, cawdor, macduff, scottish play, spot"
+}
+</pre>
+  </dd>
+  <dt>nextlink</dt>
+  <dd>Text label for link to next page.</dd>
+  <dd>
+    <pre>"fwd ⇢"</pre>
+  </dd>
+  <dt>prevlink</dt>
+  <dd>Text label for link to previous page.</dd>
+  <dd>
+    <pre>"⇠ rev"</pre>
+  </dd>
+  <dt>qlink</dt>
+  <dd>
+    Text label for link to the <a href="https://github.com/samkennerly/quarto/">stock quarto</a>.
+  </dd>
+  <dd>
+    <pre>"Built by a Quarto."</pre>
+  </dd>
+  <dt>styles</dt>
+  <dd>Paths to stylesheet(s) for this page.</dd>
+  <dd>
+    <pre>[
+  "https://www.w3schools.com/html/styles.css",
+  "style.css"
+]
+</pre>
+  </dd>
+  <dt>title</dt>
+  <dd>Page &lt;title&gt;.</dd>
+  <dd>
+    <pre>"Macbeth II: Toil and Trouble"</pre>
+  </dd>
+</dl>
+</main>
+<section id="icons">
+<a href="https://github.com/samkennerly/quarto/"><img alt="GitHub" src="../media/icons/github.svg" height="32" title="GitHub"></a>
+<a href="mailto:quarto.sites@gmail.com"><img alt="Gmail" src="../media/icons/gmail.svg" height="32" title="Gmail"></a>
+<a href="https://neocities.org/site/quarto/"><img alt="Neocities" src="../media/icons/neocities.svg" height="32" title="Neocities"></a>
+<a href="https://twitter.com/quartosites/"><img alt="Twitter" src="../media/icons/twitter.svg" height="32" title="Twitter"></a>
+</section>
+<section id="jump">
+<a href="../cat_pics/penelope.html" rel="prev">◄◄</a>
+<a href="#" id="updog">⇪</a>
+<a href="quire_class.html" rel="next">►►</a>
+</section>
+<section id="klf">
+<span id="copyright">© Sam Kennerly 2019.</span>
+<a href="https://creativecommons.org/licenses/by/4.0" rel="license">Licensed under a CC BY 4.0 license.</a>
+<a href="https://quarto.neocities.org/">Built by a Quarto.</a>
+<span id="klftext"><a href="https://neocities.org/">Hosted by Neocities</a>.</span>
+<address>quarto.sites@gmail.com</address>
+</section>
+</body>
+</html>

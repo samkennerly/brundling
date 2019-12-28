@@ -1,0 +1,66 @@
+/*
+Margin, padding, and size in relative units: em, rem, vh, etc.
+https://www.w3schools.com/css/css_units.asp
+*/
+:root {
+  --marge: .75em auto;
+  --padme: .25em .5em;
+  --puffy: .75rem 1.5rem;
+}
+body dd,
+body ol,
+body ul {
+  margin-left: 4vw;
+  padding-left: 0;
+}
+/* embiggen main */
+main {
+  padding: var(--puffy);
+}
+main blockquote,
+main details,
+main pre {
+  margin: var(--marge);
+  overflow-x: auto;
+  padding: var(--puffy);
+}
+main dt,
+main figure,
+main .gallery,
+main hr,
+main iframe {
+  margin: var(--marge);
+}
+main table {
+  box-sizing: border-box;
+  margin: var(--marge);
+  overflow-x: auto;
+  padding: 0;
+  width: 100%;
+}
+main table td,
+main table th {
+  padding: var(--padme);
+}
+/* embiggen nav */
+nav,
+nav a,
+nav summary {
+  padding: var(--padme);
+}
+/* embiggen others */
+#icons {
+  padding: var(--padme);
+}
+#icons img {
+  box-sizing: border-box;
+  height: 2rem;
+  margin: .5rem 0 1.5rem;
+  width: 2rem;
+}
+#jump a {
+  margin: 0 .5rem;
+}
+#klf {
+  margin: var(--marge);
+}

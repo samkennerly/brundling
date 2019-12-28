@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+# Rebuild and restyle site.
+
+quarto/delete html &&
+quarto/clean &&
+quarto/build &&
+quarto/delete css && \
+quarto/apply style/adrift && \
+quarto/apply style/adrift proof/adrift.css &&  \
+quarto/apply style/burning proof/burning.css && \
+quarto/apply style/celestial proof/celestial.css && \
+quarto/apply style/doctoral proof/doctoral.css

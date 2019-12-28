@@ -1,0 +1,17 @@
+# Apple debris
+.DS_Store*
+.Spotlight-*
+.Trashes
+.fseventsd
+Thumbs.db
+
+# Python caches
+*.egg
+*.egg-info
+*.py[cod]
+*.so
+.cache/
+.pytest_cache/
+.tox/
+.venv/
+__pycache__/
