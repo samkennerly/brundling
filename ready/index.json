@@ -1,9 +1,9 @@
 {
   "author": "Sam Kennerly",
   "base": "https://brundling.neocities.org/",
-  "copyright": "© Sam Kennerly 2020.",
+  "copyright": "© Sam Kennerly 2020",
   "description": "Formula 1 data visualizations.",
-  "email": "",
+  "email": "samkennerly@gmail.com",
   "favicon": "favicon.ico",
   "generator": "https://github.com/samkennerly/quarto/",
   "homelink": "brundling",
@@ -11,7 +11,7 @@
     [
       "Email",
       "media/icons/gmail.svg",
-      "mailto:quarto.sites@gmail.com"
+      "mailto:samkennerly@gmail.com"
     ],
     [
       "Instagram",
@@ -26,7 +26,7 @@
     [
       "Neocities",
       "media/icons/neocities.svg",
-      "https://neocities.org/site/quarto/"
+      "https://neocities.org/site/brundling/"
     ]
   ],
   "jscripts": [
@@ -38,7 +38,7 @@
   "language": "en",
   "license": [
     "https://creativecommons.org/licenses/by/4.0",
-    "Licensed under a CC BY 4.0 license."
+    "CC BY 4.0 license."
   ],
   "meta": {
     "keywords": "data, graph, charts, plots, visualization, formula one, f1"
