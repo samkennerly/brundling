@@ -8,10 +8,59 @@ svg {
   --ftime: 7s;
   --opamin: 0.5;
   --opamax: 0.9;
+  --period: 420s;
 }
 circle {
-  animation: rotate 420s infinite linear;
   stroke: black;
+  fill: none;
+}
+.deg0 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker0 var(--ftime) infinite;
+  fill: #fff;
+}
+.deg1 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker1 var(--ftime) infinite;
+  fill: #def;
+}
+.deg2 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker2 var(--ftime) infinite;
+  fill: #bcd;
+}
+.deg3 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker3 var(--ftime) infinite;
+  fill: #9ab;
+}
+.deg4 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker4 var(--ftime) infinite;
+  fill: #789;
+}
+.deg5 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker5 var(--ftime) infinite;
+  fill: #567;
+}
+.deg6 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker6 var(--ftime) infinite;
+  fill: #345;
+}
+.deg7 {
+  animation:
+    rotate var(--period) infinite linear,
+    flicker7 var(--ftime) infinite;
+  fill: #123;
 }
 @keyframes rotate {
   from {
@@ -22,38 +71,6 @@ circle {
     transform: rotate(360deg);
     transform-origin: 50% 50%;
   }
-}
-.deg0 {
-  animation: flicker0 var(--ftime) infinite;
-  fill: #fff;
-}
-.deg1 {
-  animation: flicker1 var(--ftime) infinite;
-  fill: #def;
-}
-.deg2 {
-  animation: flicker2 var(--ftime) infinite;
-  fill: #bcd;
-}
-.deg3 {
-  animation: flicker3 var(--ftime) infinite;
-  fill: #9ab;
-}
-.deg4 {
-  animation: flicker4 var(--ftime) infinite;
-  fill: #789;
-}
-.deg5 {
-  animation: flicker5 var(--ftime) infinite;
-  fill: #567;
-}
-.deg6 {
-  animation: flicker6 var(--ftime) infinite;
-  fill: #345;
-}
-.deg7 {
-  animation: flicker7 var(--ftime) infinite;
-  fill: #123;
 }
 @keyframes flicker0 {
   0% { fill-opacity: var(--opamax); }
@@ -89,7 +106,7 @@ circle {
 }
 </style>
 
-<circle cx="500" cy="500" r="480" fill="none" stroke="#f1f1f1"/>
+<circle cx="500" cy="500" r="500" />
 
 <a href="https://en.wikipedia.org/wiki/Michael_Schumacher">
 <title>The Michael</title>
