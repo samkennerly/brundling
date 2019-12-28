@@ -3,7 +3,7 @@
   "base": "https://brundling.neocities.org/",
   "copyright": "© Sam Kennerly 2020.",
   "description": "Formula 1 data visualizations.",
-  "email": "samkennerly@gmail.com",
+  "email": "",
   "favicon": "favicon.ico",
   "generator": "https://github.com/samkennerly/quarto/",
   "homelink": "brundling",
@@ -14,14 +14,14 @@
       "mailto:quarto.sites@gmail.com"
     ],
     [
-      "GitHub",
-      "media/icons/github.svg",
-      "https://github.com/samkennerly/brundling/"
-    ],
-    [
       "Instagram",
       "media/icons/instagram.svg",
       "https://instagram.com/brundling/"
+    ],
+    [
+      "GitHub",
+      "media/icons/github.svg",
+      "https://github.com/samkennerly/brundling/"
     ],
     [
       "Neocities",
@@ -35,8 +35,7 @@
     "<br>",
     "Data curated by <a href=\"https://ergast.com/mrd/\">Ergast</a>.",
     "Icons from <a href=\"https://simpleicons.org\">Simple Icons</a>.",
-    "Hosted by <a href=\"https://neocities.org/\">Neocities</a>.",
-    "<br>"
+    "Hosted by <a href=\"https://neocities.org/\">Neocities</a>."
   ],
   "language": "en",
   "license": [
