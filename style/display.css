@@ -1,7 +1,4 @@
-/*
-Display behavior: block, inline, none, etc.
-https://www.w3schools.com/css/css_display_visibility.asp
-*/
+/* display */
 body {
   display: grid;
 }
@@ -19,6 +16,7 @@ main ul {
   list-style: square;
 }
 /* display nav */
+/*
 nav a,
 nav details,
 nav summary {
@@ -28,6 +26,7 @@ nav details > details,
 nav summary ~ a {
   display: block;
 }
+*/
 /* display others */
 #icons img,
 #jump a,

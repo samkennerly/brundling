@@ -1,7 +1,4 @@
-/*
-Font family, size, weight, etc.
-https://www.w3schools.com/css/css_font.asp
-*/
+/* font */
 @font-face {
   font-family: AnonymousPro;
   src:
@@ -13,9 +10,6 @@ https://www.w3schools.com/css/css_font.asp
 html {
   font-family: AnonymousPro, Monaco, monospace;
   font-size: calc(8px + 1vw);
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   line-height: 1.2;
 }
 @media all and (min-width: 800px) {
@@ -27,9 +21,6 @@ body a {
   text-decoration: none;
 }
 /* font main */
-main {
-  font-weight: lighter;
-}
 main b,
 main dfn,
 main dt,
@@ -38,29 +29,14 @@ main summary {
   font-style: normal;
   font-weight: bold;
 }
-main blockquote {
-  font-family: sans-serif;
-}
-main code,
-main kbd,
-main samp,
-main pre,
-main table,
-main var {
-  font-family: Monaco, Consolas, monospace;
-  font-size: .875rem;
-  font-weight: normal;
-}
 /* font nav */
-nav {
-  font-variant: small-caps;
-  text-transform: capitalize;
-}
 nav a[rel="home"] {
-  font-size: 2rem;
+  font-weight: bold;
 }
 /* font others */
-#jump,
+#jump {
+  font-size: 1.25rem;
+}
 #klf {
   font-size: .75rem;
 }

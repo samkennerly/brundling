@@ -1,20 +1,17 @@
-/*
-Border type, thickness, radius, etc.
-https://www.w3schools.com/css/css_border.asp
-*/
+/* border */
 :root {
-  --border: thin groove;
-}
-body a img {
-  border: var(--border);
+  --border: thin solid;
 }
 /* border main */
 main details,
-main .gallery img,
 main hr {
   border: var(--border);
 }
 /* border nav */
 nav summary {
   border-bottom: var(--border);
+}
+/* border others */
+#icons img {
+  border: var(--border);
 }

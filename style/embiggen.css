@@ -1,7 +1,4 @@
-/*
-Margin, padding, and size in relative units: em, rem, vh, etc.
-https://www.w3schools.com/css/css_units.asp
-*/
+/* embiggen */
 :root {
   --marge: 1rem auto;
   --padme: .25rem .5rem;
