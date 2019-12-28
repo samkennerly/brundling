@@ -2,13 +2,21 @@
 Font family, size, weight, etc.
 https://www.w3schools.com/css/css_font.asp
 */
+@font-face {
+  font-family: AnonymousPro;
+  src:
+    url("media/fonts/AnonymousPro-Regular.ttf"),
+    url("media/fonts/AnonymousPro-Bold.ttf"),
+    url("media/fonts/AnonymousPro-Italic.ttf"),
+    url("media/fonts/AnonymousPro-BoldItalic.ttf");
+}
 html {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: AnonymousPro, Monaco, monospace;
   font-size: calc(8px + 1vw);
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 @media all and (min-width: 800px) {
   html {
@@ -22,16 +30,16 @@ body a {
 main {
   font-weight: lighter;
 }
-main blockquote {
-  font-family: "Times New Roman", Times, serif;
-}
 main b,
 main dfn,
 main dt,
 main strong,
 main summary {
   font-style: normal;
-  font-weight: bolder;
+  font-weight: bold;
+}
+main blockquote {
+  font-family: sans-serif;
 }
 main code,
 main kbd,
@@ -39,7 +47,7 @@ main samp,
 main pre,
 main table,
 main var {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Monaco, Consolas, monospace;
   font-size: .875rem;
   font-weight: normal;
 }
