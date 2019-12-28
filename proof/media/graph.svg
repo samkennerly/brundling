@@ -1,0 +1,58 @@
+<svg
+  role="image"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+<style>
+svg {
+  background: black;
+}
+svg circle {
+  animation:
+    rotation 840s infinite linear,
+    twinkle 7s infinite ease-in;
+  fill-opacity: 0.707;
+  stroke: #f1f1f1;
+  stroke-width: 0.1;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+@keyframes twinkle {
+  0%, 100% {
+    fill-opacity: 0.7;
+    stroke-width: 0.05;
+  }
+  25% {
+    fill-opacity: 0.8;
+    stroke-width: 0.1;
+  }
+}
+</style>
+
+<circle cx="50" cy="50" r="48" fill="none" />
+
+<a href="https://en.wikipedia.org/wiki/Michael_Schumacher">
+<title>The Michael</title>
+<circle cx="20.5" cy="20" r="3" fill="#abc" />
+</a>
+
+<a href="https://en.wikipedia.org/wiki/Rubens_Barrichello">
+<title>Rubens Barrichello</title>
+<circle cx="22" cy="22" r="3" fill="#def" />
+</a>
+
+<a href="https://en.wikipedia.org/wiki/Martin_Brundle">
+<title>Martin Brundle</title>
+<circle cx="70" cy="70" r="2" fill="#fff" />
+</a>
+
+</svg>
