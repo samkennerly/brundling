@@ -1,5 +1,0 @@
-```markdown
-    ```yaml
-    -   oh: hai
-    ```
-```
