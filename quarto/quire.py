@@ -202,7 +202,7 @@ class Quire(Mapping):
         yield "</section>"
 
     def klf(
-        self, page, copyright="", email="", klftext="", license=(), qlink="", **kwargs
+        self, page, copyright="", email="", klftext=(), license=(), qlink="", **kwargs
     ):
         """
         Iterator[str]: #klf section for copyright, license, and fine print.
@@ -219,7 +219,9 @@ class Quire(Mapping):
         if qlink:
             yield f'<a href="{self.QHOME}">{qlink}</a>'
         if klftext:
-            yield f'<span id="klftext">{klftext}</span>'
+            yield '<span id="klftext">'
+            yield "\n".join(klftext)
+            yield '</span>'
         if email:
             yield f"<address>{email}</address>"
         yield "</section>"
