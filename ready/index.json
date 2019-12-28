@@ -32,9 +32,11 @@
   "jscripts": [
   ],
   "klftext": [
+    "<br>",
     "Data curated by <a href=\"https://ergast.com/mrd/\">Ergast</a>.",
     "Icons from <a href=\"https://simpleicons.org\">Simple Icons</a>.",
-    "Hosted by <a href=\"https://neocities.org/\">Neocities</a>."
+    "Hosted by <a href=\"https://neocities.org/\">Neocities</a>.",
+    "<br>"
   ],
   "language": "en",
   "license": [
@@ -44,12 +46,12 @@
   "meta": {
     "keywords": "data, graph, charts, plots, visualization, formula one, f1"
   },
-  "nextlink": "forward",
-  "prevlink": "reverse",
+  "nextlink": "D",
+  "prevlink": "R",
   "qlink": "Built by a Quarto.",
   "styles": [
     "style.css"
   ],
   "title": "7 Degrees of Martin Brundle",
-  "updog": "neutral"
+  "updog": "N"
 }
