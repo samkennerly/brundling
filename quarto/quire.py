@@ -39,7 +39,6 @@ class Quire(Mapping):
 
     OPTIONS = "index.json"
     PAGES = "pages.txt"
-    QHOME = "https://quarto.neocities.org/"
 
     def __init__(self, folder="."):
         self.folder = Path(folder).resolve()
@@ -202,7 +201,7 @@ class Quire(Mapping):
         yield "</section>"
 
     def klf(
-        self, page, copyright="", email="", klftext=(), license=(), qlink="", **kwargs
+        self, page, copyright="", email="", klftext=(), license=(), **kwargs
     ):
         """
         Iterator[str]: #klf section for copyright, license, and fine print.
@@ -216,8 +215,6 @@ class Quire(Mapping):
         if license:
             href, text = license
             yield f'<a href="{urlpath(page, href)}" rel="license">{text}</a>'
-        if qlink:
-            yield f'<a href="{self.QHOME}">{qlink}</a>'
         if klftext:
             yield '<span id="klftext">'
             yield "\n".join(klftext)
