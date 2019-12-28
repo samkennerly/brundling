@@ -3,6 +3,7 @@
   --color-active: red;
   --color-boxes: rgba(0,0,0,.5);
   --color-code: green;
+  --color-dark: #1f1f1f;
   --color-link: slategrey;
   --color-mark: yellow;
   --color-text: #f1f1f1;
@@ -51,17 +52,13 @@ main mark {
   color: var(--color-mark);
 }
 main blockquote,
-main pre {
-  background: white;
-  color: black;
-}
-main hr {
-  border-color: var(--color-boxes);
-}
-main table tr,
 main table thead {
-  background: var(--color-boxes);
-  color: var(--color-text);
+  background: var(--color-text);
+  color: var(--color-dark);
+}
+main h2,
+main hr {
+  border-color: var(--color-dark);
 }
 /* color nav */
 nav a[href="#"] {
@@ -69,8 +66,7 @@ nav a[href="#"] {
 }
 /* color others */
 #icons img {
-  /* border-color: transparent; */
-  border-color: pink;
+  border-color: transparent;
   transition: var(--transition);
 }
 #icons img:focus,

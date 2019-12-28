@@ -2,12 +2,12 @@
 :root {
   --marge: 1rem auto;
   --padme: .25rem .5rem;
-  --puffy: .5rem 1rem;
+  --puffy: .75rem 1.5rem;
 }
 body dd,
 body ol,
 body ul {
-  margin-left: 4vw;
+  margin-left: 0;
   padding-left: 0;
 }
 /* embiggen main */
@@ -25,13 +25,11 @@ main details,
 main pre {
   margin: var(--marge);
   overflow-x: auto;
-  padding: var(--puffy);
+  padding: var(--padme);
 }
 main dt,
 main figure,
-main .gallery,
-main hr,
-main iframe {
+main hr {
   margin: var(--marge);
 }
 main table {
@@ -46,26 +44,29 @@ main table th {
   padding: var(--padme);
 }
 /* embiggen nav */
+nav {
+  padding: var(--puffy);
+}
+/*
 nav,
 nav a,
 nav details {
   padding: var(--padme);
 }
+*/
 nav summary {
   width: 100%;
 }
 /* embiggen others */
-#icons {
-  padding: var(--padme);
-}
-#icons img {
-  height: 1.5rem;
-  margin: 0 .75rem;
-  width: 1.5rem;
-}
-#jump a {
-  padding: var(--puffy);
-}
+#icons,
+#jump,
 #klf {
   padding: var(--puffy);
+}
+#icons img {
+  height: 1.25rem;
+  padding: var(--padme);
+}
+#jump a {
+  padding: var(--padme);
 }

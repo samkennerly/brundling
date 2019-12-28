@@ -30,6 +30,9 @@ main summary {
   font-weight: bold;
 }
 /* font nav */
+nav {
+  font-size: 1.25rem;
+}
 nav a[rel="home"] {
   font-weight: bold;
 }

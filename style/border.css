@@ -2,13 +2,9 @@
 :root {
   --border: thin solid;
 }
-/* border main */
-main details,
-main hr {
-  border: var(--border);
-}
-/* border nav */
-nav summary {
+body summary,
+body h2,
+body hr {
   border-bottom: var(--border);
 }
 /* border others */

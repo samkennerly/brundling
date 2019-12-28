@@ -7,11 +7,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 /* display main */
-main cite,
-main iframe,
-main .gallery {
-  display: block;
-}
 main ul {
   list-style: square;
 }
