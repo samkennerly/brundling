@@ -7,8 +7,8 @@
   --color-link: lightslategrey;
   --color-mark: yellow;
   --color-text: #f1f1f1;
-  --marge: 1rem auto .25rem;
-  --padme: .25rem .5rem;
+  --marge: 1em auto 0;
+  --padme: .25em .5em;
   --puffy: .75rem 1.5rem;
   --transition: 250ms;
 }
@@ -33,7 +33,7 @@ body {
   color: var(--color-text);
   display: grid;
   font-family: AnonymousPro, Monaco, monospace;
-  font-size: calc(8px + 1vw);
+  font-size: calc(10px + .5vw);
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas:
@@ -46,13 +46,13 @@ body {
   margin: 0;
   min-height: 100vh;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 1000px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
   main {
-    padding-left: calc(50vw - 30rem);
-    padding-right: calc(50vw - 30rem);
+    padding-left: calc(50vw - 500px);
+    padding-right: calc(50vw - 500px);
   }
 }
 /* anchors */
@@ -98,13 +98,6 @@ pre,
 var {
   color: var(--color-code);
 }
-h1,
-h2 {
-  background: var(--color-boxes);
-}
-table thead {
-  background: var(--color-boxes);
-}
 /* main */
 main {
   grid-area: main;
@@ -113,9 +106,13 @@ main {
 main blockquote,
 main details,
 main pre {
+  background: var(--color-boxes);
   margin: var(--marge);
   overflow-x: auto;
-  padding: var(--padme);
+  padding: var(--puffy);
+}
+main cite {
+  display: block;
 }
 main dd {
   margin-left: 0;
@@ -130,6 +127,8 @@ main figure {
 }
 main h1,
 main h2 {
+  border-bottom: var(--border);
+  border-color: var(--color-boxes);
   text-align: center;
 }
 main ol,
@@ -147,11 +146,14 @@ main table td,
 main table th {
   padding: var(--padme);
 }
+main table thead {
+  background: var(--color-boxes);
+}
 /* nav */
 nav {
   background: var(--color-boxes);
-  grid-area: nav;
   font-size: 1.25rem;
+  grid-area: nav;
   padding: var(--puffy);
   text-align: left;
 }
@@ -172,8 +174,8 @@ nav summary:active {
 /* others */
 #icons {
   background: var(--color-boxes);
-  grid-area: icons;
   font-size: 1.25rem;
+  grid-area: icons;
   padding: var(--puffy);
   text-align: right;
 }
@@ -184,8 +186,8 @@ nav summary:active {
 }
 #jump {
   background: var(--color-boxes);
-  grid-area: jump;
   font-size: 1rem;
+  grid-area: jump;
   padding: var(--puffy);
   text-align: right;
 }
@@ -194,8 +196,8 @@ nav summary:active {
 }
 #klf {
   background: var(--color-boxes);
-  grid-area: klf;
   font-size: .75rem;
+  grid-area: klf;
   padding: var(--puffy);
   text-align: left;
 }
