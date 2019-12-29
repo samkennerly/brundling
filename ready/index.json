@@ -10,22 +10,22 @@
   "icons": [
     [
       "Email",
-      "media/icons/gmail.svg",
+      "icons/gmail.svg",
       "mailto:samkennerly@gmail.com"
     ],
     [
       "Instagram",
-      "media/icons/instagram.svg",
+      "icons/instagram.svg",
       "https://instagram.com/brundling/"
     ],
     [
       "GitHub",
-      "media/icons/github.svg",
+      "icons/github.svg",
       "https://github.com/samkennerly/brundling/"
     ],
     [
       "Neocities",
-      "media/icons/neocities.svg",
+      "icons/neocities.svg",
       "https://neocities.org/site/brundling/"
     ]
   ],

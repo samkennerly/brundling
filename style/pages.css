@@ -16,10 +16,10 @@
 @font-face {
   font-family: AnonymousPro;
   src:
-    url("media/fonts/AnonymousPro-Regular.ttf"),
-    url("media/fonts/AnonymousPro-Bold.ttf"),
-    url("media/fonts/AnonymousPro-Italic.ttf"),
-    url("media/fonts/AnonymousPro-BoldItalic.ttf");
+    url("fonts/AnonymousPro-Regular.ttf"),
+    url("fonts/AnonymousPro-Bold.ttf"),
+    url("fonts/AnonymousPro-Italic.ttf"),
+    url("fonts/AnonymousPro-BoldItalic.ttf");
 }
 /* Chrome hack */
 summary::-webkit-details-marker {
@@ -29,7 +29,7 @@ summary::-webkit-details-marker {
 body {
   background-attachment: fixed;
   background-color: black;
-  background-image: url("media/carbon.jpeg");
+  background-image: url("carbon.jpeg");
   color: var(--color-text);
   display: grid;
   font-family: AnonymousPro, Monaco, monospace;
