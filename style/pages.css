@@ -50,10 +50,6 @@ body {
   html {
     font-size: 15px;
   }
-  main {
-    padding-left: calc(50vw - 500px);
-    padding-right: calc(50vw - 500px);
-  }
 }
 /* anchors */
 a {
@@ -106,12 +102,13 @@ main {
 main blockquote,
 main details,
 main pre {
-  background: var(--color-boxes);
+  border: var(--border);
+  border-color: var(--color-boxes);
   margin: var(--marge);
   overflow-x: auto;
   padding: var(--puffy);
 }
-main cite {
+main blockquote cite {
   display: block;
 }
 main dd {
@@ -127,8 +124,7 @@ main figure {
 }
 main h1,
 main h2 {
-  border-bottom: var(--border);
-  border-color: var(--color-boxes);
+  background: var(--color-boxes);
   text-align: center;
 }
 main ol,
@@ -181,7 +177,7 @@ nav summary:active {
 }
 #icons img {
   display: inline-block;
-  height: 1rem;
+  height: 1em;
   padding: var(--padme);
 }
 #jump {
@@ -204,3 +200,9 @@ nav summary:active {
 #klf address {
   display: inline-block;
 }
+#klf > * {
+  vertical-align: bottom;
+}
+
+
+
