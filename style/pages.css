@@ -1,10 +1,11 @@
 /* variables */
 :root {
-  --border: thin solid;
+  --border: thin dotted black;
   --color-active: red;
-  --color-boxes: rgba(0,0,0,.5);
-  --color-link: lightslategrey;
+  --color-button: green;
+  --color-link: lightsteelblue;
   --color-mark: yellow;
+  --color-head: rgba(0,0,0,.5);
   --color-text: #f1f1f1;
   --font-yuge: 1.5rem;
   --font-smol: .75rem;
@@ -72,14 +73,12 @@ a img:active {
   border-color: var(--color-active);
 }
 details summary {
-  border: var(--border);
-  border-color: var(--color-link);
-  padding: var(--padme);
+  border-bottom: var(--border);
 }
 details summary:focus,
 details summary:hover,
 details summary:active {
-  border-color: var(--color-active);
+  background: var(--color-button);
 }
 /* Chrome hack */
 summary::-webkit-details-marker {
@@ -104,13 +103,15 @@ main {
 main blockquote,
 main pre {
   border: var(--border);
-  border-color: var(--color-boxes);
   margin: var(--marge);
   overflow-x: auto;
   padding: var(--puffy);
 }
 main blockquote cite {
   display: block;
+}
+main details {
+  margin: var(--marge);
 }
 main dd {
   margin-left: 0;
@@ -119,12 +120,11 @@ main dd {
 main dt {
   margin: var(--marge);
 }
-main figure {
-  margin: var(--marge);
+main h2 {
+  background: var(--color-head);
   text-align: center;
 }
-main h2 {
-  background: var(--color-boxes);
+main h3 {
   text-align: center;
 }
 main img {
@@ -146,16 +146,15 @@ main table th {
   padding: var(--padme);
 }
 main table thead {
-  background: var(--color-boxes);
+  background: var(--color-head);
 }
 /* nav */
 nav {
-  background: var(--color-boxes);
+  background: var(--color-head);
   font-size: var(--font-yuge);
   grid-area: nav;
   padding: var(--puffy);
   text-align: left;
-  vertical-align: top;
 }
 nav a {
   padding: var(--padme);
@@ -165,7 +164,7 @@ nav a[href="#"] {
 }
 /* others */
 #icons {
-  background: var(--color-boxes);
+  background: var(--color-head);
   font-size: var(--font-yuge);
   grid-area: icons;
   padding: var(--puffy);
@@ -174,21 +173,19 @@ nav a[href="#"] {
 #icons img {
   height: 1em;
   width: 1em;
-  vertical-align: middle;
+  vertical-align: top;
 }
 #jump {
-  background: var(--color-boxes);
-  font-size: var(--font-smol);
+  background: var(--color-head);
   grid-area: jump;
   padding: var(--puffy);
   text-align: right;
 }
 #jump a {
   padding: var(--padme);
-  vertical-align: middle;
 }
 #klf {
-  background: var(--color-boxes);
+  background: var(--color-head);
   font-size: var(--font-smol);
   grid-area: klf;
   padding: var(--puffy);
