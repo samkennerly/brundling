@@ -1,7 +1,7 @@
 <svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
-  --ftime: 7s;
+  --flicker: 7s infinite ease-out;
   --opamin: 0.5;
   --opamax: 0.9;
   --rotate: 420s infinite linear;
@@ -12,35 +12,35 @@ circle {
   stroke-width: 0.1;
 }
 circle.deg0 {
-  animation: rotate var(--rotate), flicker0 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker0 var(--flicker);
   fill: #fff;
 }
 circle.deg1 {
-  animation: rotate var(--rotate), flicker1 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker1 var(--flicker);
   fill: #def;
 }
 circle.deg2 {
-  animation: rotate var(--rotate), flicker2 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker2 var(--flicker);
   fill: #bcd;
 }
 circle.deg3 {
-  animation: rotate var(--rotate), flicker3 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker3 var(--flicker);
   fill: #9ab;
 }
 circle.deg4 {
-  animation: rotate var(--rotate), flicker4 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker4 var(--flicker);
   fill: #789;
 }
 circle.deg5 {
-  animation: rotate var(--rotate), flicker5 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker5 var(--flicker);
   fill: #567;
 }
 circle.deg6 {
-  animation: rotate var(--rotate), flicker6 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker6 var(--flicker);
   fill: #345;
 }
 circle.deg7 {
-  animation: rotate var(--rotate), flicker7 var(--ftime) infinite;
+  animation: rotate var(--rotate), flicker7 var(--flicker);
   fill: #123;
 }
 @keyframes rotate {
