@@ -2,10 +2,10 @@
   --border: thin dotted black;
   --color-active: red;
   --color-button: green;
-  --color-figure: #f1f1f1;
+  --color-figure: rgba(255,255,255,.75);
   --color-link: lightsteelblue;
   --color-mark: yellow;
-  --color-head: rgba(0,0,0,.5);
+  --color-head: rgba(0,0,0,.25);
   --color-text: #f1f1f1;
   --font-yuge: 1.5rem;
   --font-smol: .75rem;
