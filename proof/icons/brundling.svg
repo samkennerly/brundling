@@ -1,0 +1,21 @@
+<svg role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<title>Brundling icon</title>
+<rect x="0" y="0" width="8" height="8" fill="#090909" />
+<text x="2" y="6" font-family="Monaco" font-size="6" fill="#f1f1f1">0</text>
+<rect x="8" y="0" width="8" height="8" fill="#f1f1f1" />
+<text x="10" y="6" font-family="Monaco" font-size="6" fill="#090909">1</text>
+<rect x="16" y="0" width="8" height="8" fill="#090909" />
+<text x="18" y="6" font-family="Monaco" font-size="6" fill="#f1f1f1">0</text>
+<rect x="0" y="8" width="8" height="8" fill="#f1f1f1" />
+<text x="2" y="14" font-family="Monaco" font-size="6" fill="#090909">1</text>
+<rect x="8" y="8" width="8" height="8" fill="#090909" />
+<text x="10" y="14" font-family="Monaco" font-size="6" fill="#f1f1f1">0</text>
+<rect x="16" y="8" width="8" height="8" fill="#f1f1f1" />
+<text x="18" y="14" font-family="Monaco" font-size="6" fill="#090909">1</text>
+<rect x="0" y="16" width="8" height="8" fill="#090909" />
+<text x="2" y="22" font-family="Monaco" font-size="6" fill="#f1f1f1">0</text>
+<rect x="8" y="16" width="8" height="8" fill="#f1f1f1" />
+<text x="10" y="22" font-family="Monaco" font-size="6" fill="#090909">1</text>
+<rect x="16" y="16" width="8" height="8" fill="#090909" />
+<text x="18" y="22" font-family="Monaco" font-size="6" fill="#f1f1f1">0</text>
+</svg>
