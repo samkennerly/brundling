@@ -122,12 +122,13 @@ main figure {
   margin: 0;
   text-align: center;
 }
-main h2 {
-  background: var(--color-head);
-  text-align: center;
-}
+main h1,
+main h2,
 main h3 {
   text-align: center;
+}
+main h2 {
+  background: var(--color-head);
 }
 main img {
   max-width: 100%;
