@@ -1,8 +1,4 @@
-<svg
-  role="image"
-  viewBox="0 0 1000 1000"
-  xmlns="http://www.w3.org/2000/svg"
->
+<svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <style>
 svg {
   --ftime: 7s;
@@ -11,8 +7,9 @@ svg {
   --period: 420s;
 }
 circle {
-  stroke: black;
   fill: none;
+  stroke: black;
+  stroke-width: 1;
 }
 .deg0 {
   animation:
@@ -106,21 +103,21 @@ circle {
 }
 </style>
 
-<circle cx="500" cy="500" r="500" />
+<circle cx="50" cy="50" r="50" />
 
 <a href="https://en.wikipedia.org/wiki/Michael_Schumacher">
 <title>The Michael</title>
-<circle class="deg1" cx="205" cy="200" r="30" />
+<circle class="deg1" cx="20.5" cy="20.0" r="3" />
 </a>
 
 <a href="https://en.wikipedia.org/wiki/Rubens_Barrichello">
 <title>Rubens Barrichello</title>
-<circle class="deg2" cx="220" cy="220" r="30" />
+<circle class="deg2" cx="22" cy="22" r="3" />
 </a>
 
 <a href="https://en.wikipedia.org/wiki/Martin_Brundle">
 <title>Martin Brundle</title>
-<circle class="deg0" cx="700" cy="700" r="20" />
+<circle class="deg0" cx="70" cy="70" r="2" />
 </a>
 
 </svg>
