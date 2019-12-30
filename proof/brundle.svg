@@ -4,59 +4,43 @@ svg {
   --ftime: 7s;
   --opamin: 0.5;
   --opamax: 0.9;
-  --period: 420s;
+  --rotate: 420s infinite linear;
 }
 circle {
   fill: none;
   stroke: black;
-  stroke-width: 1;
+  stroke-width: 0.1;
 }
-.deg0 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker0 var(--ftime) infinite;
+circle.deg0 {
+  animation: rotate var(--rotate), flicker0 var(--ftime) infinite;
   fill: #fff;
 }
-.deg1 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker1 var(--ftime) infinite;
+circle.deg1 {
+  animation: rotate var(--rotate), flicker1 var(--ftime) infinite;
   fill: #def;
 }
-.deg2 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker2 var(--ftime) infinite;
+circle.deg2 {
+  animation: rotate var(--rotate), flicker2 var(--ftime) infinite;
   fill: #bcd;
 }
-.deg3 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker3 var(--ftime) infinite;
+circle.deg3 {
+  animation: rotate var(--rotate), flicker3 var(--ftime) infinite;
   fill: #9ab;
 }
-.deg4 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker4 var(--ftime) infinite;
+circle.deg4 {
+  animation: rotate var(--rotate), flicker4 var(--ftime) infinite;
   fill: #789;
 }
-.deg5 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker5 var(--ftime) infinite;
+circle.deg5 {
+  animation: rotate var(--rotate), flicker5 var(--ftime) infinite;
   fill: #567;
 }
-.deg6 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker6 var(--ftime) infinite;
+circle.deg6 {
+  animation: rotate var(--rotate), flicker6 var(--ftime) infinite;
   fill: #345;
 }
-.deg7 {
-  animation:
-    rotate var(--period) infinite linear,
-    flicker7 var(--ftime) infinite;
+circle.deg7 {
+  animation: rotate var(--rotate), flicker7 var(--ftime) infinite;
   fill: #123;
 }
 @keyframes rotate {
@@ -104,20 +88,16 @@ circle {
 </style>
 
 <circle cx="50" cy="50" r="50" />
-
-<a href="https://en.wikipedia.org/wiki/Michael_Schumacher">
+<a href="https://en.wikipedia.org/wiki/Michael_Schumacher" target="_blank">
 <title>The Michael</title>
 <circle class="deg1" cx="20.5" cy="20.0" r="3" />
 </a>
-
-<a href="https://en.wikipedia.org/wiki/Rubens_Barrichello">
+<a href="https://en.wikipedia.org/wiki/Rubens_Barrichello" target="_blank">
 <title>Rubens Barrichello</title>
 <circle class="deg2" cx="22" cy="22" r="3" />
 </a>
-
-<a href="https://en.wikipedia.org/wiki/Martin_Brundle">
+<a href="https://en.wikipedia.org/wiki/Martin_Brundle" target="_blank">
 <title>Martin Brundle</title>
 <circle class="deg0" cx="70" cy="70" r="2" />
 </a>
-
 </svg>
