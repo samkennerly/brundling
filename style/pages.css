@@ -1,19 +1,18 @@
-/* variables */
 :root {
   --border: thin dotted black;
   --color-active: red;
   --color-button: green;
+  --color-figure: #f1f1f1;
   --color-link: lightsteelblue;
   --color-mark: yellow;
   --color-head: rgba(0,0,0,.5);
   --color-text: #f1f1f1;
   --font-yuge: 1.5rem;
   --font-smol: .75rem;
-  --marge: 1em auto 0;
+  --marge: 1.5rem auto 0;
   --padme: .25rem .5rem;
-  --puffy: .75rem 1.5rem;
+  --puffy: .5rem 1.5rem;
 }
-/* font */
 @font-face {
   font-family: AnonymousPro;
   src:
@@ -34,10 +33,10 @@ body {
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas:
-    'nav  icons icons'
-    'main main  main'
-    'klf  klf   jump';
-  grid-template-columns: auto auto auto;
+    'nav  icons'
+    'main main '
+    'klf  jump ';
+  grid-template-columns: 1fr auto;
   grid-template-rows: max-content 1fr max-content;
   line-height: 1.25;
   margin: 0;
@@ -72,18 +71,6 @@ a img:hover,
 a img:active {
   border-color: var(--color-active);
 }
-details summary {
-  border-bottom: var(--border);
-}
-details summary:focus,
-details summary:hover,
-details summary:active {
-  background: var(--color-button);
-}
-/* Chrome hack */
-summary::-webkit-details-marker {
-  display: none;
-}
 /* formats */
 b,
 dfn,
@@ -110,8 +97,18 @@ main pre {
 main blockquote cite {
   display: block;
 }
-main details {
-  margin: var(--marge);
+main details header {
+  border: var(--border);
+  padding: var(--puffy);
+}
+main details summary {
+  border-bottom: var(--border);
+  padding: var(--puffy);
+}
+main details summary:focus,
+main details summary:hover,
+main details summary:active {
+  background: var(--color-button);
 }
 main dd {
   margin-left: 0;
@@ -119,6 +116,11 @@ main dd {
 }
 main dt {
   margin: var(--marge);
+}
+main figure {
+  background: var(--color-figure);
+  margin: 0;
+  text-align: center;
 }
 main h2 {
   background: var(--color-head);
@@ -165,14 +167,13 @@ nav a[href="#"] {
 /* others */
 #icons {
   background: var(--color-head);
-  font-size: var(--font-yuge);
   grid-area: icons;
   padding: var(--puffy);
   text-align: right;
 }
 #icons img {
-  height: 1em;
-  width: 1em;
+  height: var(--font-yuge);
+  width: var(--font-yuge);
   vertical-align: top;
 }
 #jump {
