@@ -137,31 +137,30 @@ main ul {
   list-style: square;
 }
 main table {
-  box-sizing: border-box;
-  margin: var(--marge);
-  overflow-x: auto;
-  padding: 0;
-  width: 100%;
-}
-main table {
   border: var(--border);
   border-collapse: collapse;
+  box-sizing: border-box;
   margin: 0;
-  text-align: center;
+  overflow-x: auto;
+  text-align: left;
+  width: 100%;
 }
-main table td,
-main table th {
+main table td {
+  border: var(--border);
   padding: var(--padme);
 }
-main table tr {
-  border: var(--border);
-  text-align: left;
-}
-main table tr:hover {
-  color: var(--color-mark);
+main table th {
+  background: var(--color-head);
+  padding: var(--padme);
 }
 main table thead {
   background: var(--color-head);
+}
+main table tr:nth-child(even) {
+  background: var(--color-head);
+}
+main table tr:hover {
+  color: var(--color-mark);
 }
 /* nav */
 nav {
