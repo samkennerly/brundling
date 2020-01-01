@@ -8,9 +8,9 @@
   --color-text: #f1f1f1;
   --font-yuge: 1.5rem;
   --font-smol: .75rem;
-  --marge: 1.5rem auto 0;
+  --marge: 2em auto 0;
   --padme: .25rem .5rem;
-  --puffy: .5rem 1.5rem;
+  --puffy: 1rem 1.5rem;
 }
 @font-face {
   font-family: AnonymousPro;
@@ -121,12 +121,17 @@ main figure {
   margin: 0;
   text-align: center;
 }
-main h1,
-main h2,
-main h3 {
+main h1 {
   text-align: center;
 }
 main h2 {
+  background: var(--color-head);
+  text-align: center;
+}
+main h3 {
+  text-align: center;
+}
+main header {
   background: var(--color-head);
 }
 main img {
