@@ -2,7 +2,6 @@
   --border: thin dotted black;
   --color-active: red;
   --color-button: green;
-  --color-figure: rgba(255,255,255,.75);
   --color-link: lightsteelblue;
   --color-mark: yellow;
   --color-head: rgba(0,0,0,.25);
@@ -118,7 +117,7 @@ main dt {
   margin: var(--marge);
 }
 main figure {
-  background: var(--color-figure);
+  background: var(--color-head);
   margin: 0;
   text-align: center;
 }
