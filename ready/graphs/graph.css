@@ -1,85 +1,16 @@
-svg {
-  --alphamin: 0.5;
-  --alphamax: 0.9;
-  --flicker: 7s infinite ease-out;
-  --rotate: 420s infinite linear;
-}
 circle {
-  fill: none;
+  animation: spin 720s infinite linear;
+  fill-opacity: 0.5;
   stroke: black;
   stroke-width: 0.1;
+  transform-origin: 50% 50%;
 }
-circle.deg0 {
-  animation: rotate var(--rotate), flicker0 var(--flicker);
-  fill: #fff;
-}
-circle.deg1 {
-  animation: rotate var(--rotate), flicker1 var(--flicker);
-  fill: #def;
-}
-circle.deg2 {
-  animation: rotate var(--rotate), flicker2 var(--flicker);
-  fill: #bcd;
-}
-circle.deg3 {
-  animation: rotate var(--rotate), flicker3 var(--flicker);
-  fill: #9ab;
-}
-circle.deg4 {
-  animation: rotate var(--rotate), flicker4 var(--flicker);
-  fill: #789;
-}
-circle.deg5 {
-  animation: rotate var(--rotate), flicker5 var(--flicker);
-  fill: #567;
-}
-circle.deg6 {
-  animation: rotate var(--rotate), flicker6 var(--flicker);
-  fill: #345;
-}
-circle.deg7 {
-  animation: rotate var(--rotate), flicker7 var(--flicker);
-  fill: #123;
-}
-@keyframes rotate {
+@keyframes spin {
+  transform: rotate(1turn);
   from {
-    transform: rotate(0deg);
-    transform-origin: 50% 50%;
+    transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
-    transform-origin: 50% 50%;
+    transform: rotate(1turn);
   }
-}
-@keyframes flicker0 {
-  0% { fill-opacity: var(--alphamax); }
-  100% { fill-opacity: var(--alphamin); }
-}
-@keyframes flicker1 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  10% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker2 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  20% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker3 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  30% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker4 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  40% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker5 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  50% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker6 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  60% { fill-opacity: var(--alphamax); }
-}
-@keyframes flicker7 {
-  0%, 100% { fill-opacity: var(--alphamin); }
-  70% { fill-opacity: var(--alphamax); }
 }

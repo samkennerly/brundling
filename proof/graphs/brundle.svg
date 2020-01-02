@@ -1,103 +1,2423 @@
 <svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <style>
-svg {
-  --flicker: 7s infinite ease-out;
-  --opamin: 0.5;
-  --opamax: 0.9;
-  --rotate: 420s infinite linear;
-}
 circle {
-  fill: none;
+  animation: spin 720s infinite linear;
+  fill-opacity: 0.5;
   stroke: black;
   stroke-width: 0.1;
+  transform-origin: 50% 50%;
 }
-circle.deg0 {
-  animation: rotate var(--rotate), flicker0 var(--flicker);
-  fill: #fff;
-}
-circle.deg1 {
-  animation: rotate var(--rotate), flicker1 var(--flicker);
-  fill: #def;
-}
-circle.deg2 {
-  animation: rotate var(--rotate), flicker2 var(--flicker);
-  fill: #bcd;
-}
-circle.deg3 {
-  animation: rotate var(--rotate), flicker3 var(--flicker);
-  fill: #9ab;
-}
-circle.deg4 {
-  animation: rotate var(--rotate), flicker4 var(--flicker);
-  fill: #789;
-}
-circle.deg5 {
-  animation: rotate var(--rotate), flicker5 var(--flicker);
-  fill: #567;
-}
-circle.deg6 {
-  animation: rotate var(--rotate), flicker6 var(--flicker);
-  fill: #345;
-}
-circle.deg7 {
-  animation: rotate var(--rotate), flicker7 var(--flicker);
-  fill: #123;
-}
-@keyframes rotate {
+@keyframes spin {
+  transform: rotate(1turn);
   from {
-    transform: rotate(0deg);
-    transform-origin: 50% 50%;
+    transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
-    transform-origin: 50% 50%;
+    transform: rotate(1turn);
   }
 }
-@keyframes flicker0 {
-  0% { fill-opacity: var(--opamax); }
-  100% { fill-opacity: var(--opamin); }
-}
-@keyframes flicker1 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  10% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker2 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  20% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker3 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  30% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker4 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  40% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker5 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  50% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker6 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  60% { fill-opacity: var(--opamax); }
-}
-@keyframes flicker7 {
-  0%, 100% { fill-opacity: var(--opamin); }
-  70% { fill-opacity: var(--opamax); }
-}
 </style>
-
-<circle cx="50" cy="50" r="50" />
-<a href="https://en.wikipedia.org/wiki/Michael_Schumacher" target="_blank">
-<title>The Michael</title>
-<circle class="deg1" cx="20.5" cy="20.0" r="3" />
-</a>
-<a href="https://en.wikipedia.org/wiki/Rubens_Barrichello" target="_blank">
+<a href="">
+<title>Jack Brabham</title>
+<circle cx="68.61" cy="34.13" r="1.48" fill="yellow" /></a>
+<a href="">
 <title>Rubens Barrichello</title>
-<circle class="deg2" cx="22" cy="22" r="3" />
-</a>
-<a href="https://en.wikipedia.org/wiki/Martin_Brundle" target="_blank">
+<circle cx="48.93" cy="69.6" r="1.43" fill="red" /></a>
+<a href="">
+<title>Stirling Moss</title>
+<circle cx="76.31" cy="43.47" r="1.41" fill="green" /></a>
+<a href="">
+<title>Graham Hill</title>
+<circle cx="61.78" cy="26.93" r="1.41" fill="yellow" /></a>
+<a href="">
+<title>Kimi Räikkönen</title>
+<circle cx="47.3" cy="74.84" r="1.4" fill="yellow" /></a>
+<a href="">
+<title>Fernando Alonso</title>
+<circle cx="46.18" cy="76.77" r="1.4" fill="yellow" /></a>
+<a href="">
+<title>Jenson Button</title>
+<circle cx="49.02" cy="75.86" r="1.39" fill="orange" /></a>
+<a href="">
+<title>Michael Schumacher</title>
+<circle cx="49.27" cy="67.15" r="1.39" fill="red" /></a>
+<a href="">
+<title>Maurice Trintignant</title>
+<circle cx="76.13" cy="41.62" r="1.37" fill="green" /></a>
+<a href="">
+<title>Jo Bonnier</title>
+<circle cx="68.78" cy="35.1" r="1.36" fill="green" /></a>
+<a href="">
+<title>Harry Schell</title>
+<circle cx="79.3" cy="47.54" r="1.32" fill="green" /></a>
+<a href="">
+<title>Jean Behra</title>
+<circle cx="77.78" cy="48.38" r="1.31" fill="green" /></a>
+<a href="">
+<title>Felipe Massa</title>
+<circle cx="47.96" cy="76.37" r="1.3" fill="orange" /></a>
+<a href="">
+<title>Jo Siffert</title>
+<circle cx="60.84" cy="27.79" r="1.28" fill="green" /></a>
+<a href="">
+<title>Juan Fangio</title>
+<circle cx="80.75" cy="49.78" r="1.27" fill="blue" /></a>
+<a href="">
+<title>Riccardo Patrese</title>
+<circle cx="41.09" cy="41.68" r="1.26" fill="red" /></a>
+<a href="">
+<title>Jarno Trulli</title>
+<circle cx="49.07" cy="72.81" r="1.26" fill="orange" /></a>
+<a href="">
+<title>Ronnie Peterson</title>
+<circle cx="45.82" cy="24.89" r="1.26" fill="yellow" /></a>
+<a href="">
+<title>Bruce McLaren</title>
+<circle cx="68.86" cy="34.83" r="1.25" fill="green" /></a>
+<a href="">
+<title>Lewis Hamilton</title>
+<circle cx="51.52" cy="75.44" r="1.25" fill="yellow" /></a>
+<a href="">
+<title>David Coulthard</title>
+<circle cx="46.93" cy="69.07" r="1.24" fill="orange" /></a>
+<a href="">
+<title>Sebastian Vettel</title>
+<circle cx="45.81" cy="75.02" r="1.23" fill="green" /></a>
+<a href="">
+<title>Louis Rosier</title>
+<circle cx="79.29" cy="55.84" r="1.22" fill="green" /></a>
+<a href="">
+<title>Niki Lauda</title>
+<circle cx="43.37" cy="30.28" r="1.21" fill="yellow" /></a>
+<a href="">
+<title>Giancarlo Fisichella</title>
+<circle cx="48.79" cy="80.06" r="1.2" fill="yellow" /></a>
+<a href="">
+<title>Johnnie Parsons</title>
+<circle cx="12.6" cy="60.21" r="1.2" fill="indigo" /></a>
+<a href="">
+<title>Jim Clark</title>
+<circle cx="73.09" cy="30.0" r="1.18" fill="green" /></a>
+<a href="">
+<title>Nelson Piquet</title>
+<circle cx="39.14" cy="41.88" r="1.16" fill="orange" /></a>
+<a href="">
+<title>Michele Alboreto</title>
+<circle cx="34.65" cy="50.82" r="1.16" fill="orange" /></a>
+<a href="">
+<title>Mark Webber</title>
+<circle cx="49.83" cy="72.0" r="1.16" fill="yellow" /></a>
+<a href="">
+<title>Carlos Reutemann</title>
+<circle cx="43.63" cy="27.28" r="1.15" fill="yellow" /></a>
+<a href="">
+<title>Nico Rosberg</title>
+<circle cx="52.31" cy="72.88" r="1.13" fill="orange" /></a>
+<a href="">
+<title>Gerhard Berger</title>
+<circle cx="38.47" cy="50.47" r="1.13" fill="yellow" /></a>
+<a href="">
+<title>Jean Alesi</title>
+<circle cx="42.06" cy="55.76" r="1.12" fill="orange" /></a>
+<a href="">
+<title>Alain Prost</title>
+<circle cx="38.66" cy="43.03" r="1.12" fill="orange" /></a>
+<a href="">
+<title>Andrea de Cesaris</title>
+<circle cx="40.48" cy="46.84" r="1.11" fill="orange" /></a>
+<a href="">
+<title>Sam Hanks</title>
+<circle cx="11.55" cy="57.71" r="1.1" fill="indigo" /></a>
+<a href="">
+<title>Nigel Mansell</title>
+<circle cx="40.63" cy="41.25" r="1.1" fill="orange" /></a>
+<a href="">
+<title>Masten Gregory</title>
+<circle cx="73.04" cy="37.01" r="1.1" fill="green" /></a>
+<a href="">
+<title>Paul Russo</title>
+<circle cx="14.68" cy="62.93" r="1.08" fill="indigo" /></a>
+<a href="">
+<title>Andy Linden</title>
+<circle cx="14.36" cy="60.93" r="1.08" fill="indigo" /></a>
+<a href="">
+<title>Luigi Villoresi</title>
+<circle cx="82.4" cy="52.38" r="1.08" fill="green" /></a>
+<a href="">
+<title>Jim Rathmann</title>
+<circle cx="14.29" cy="58.58" r="1.08" fill="indigo" /></a>
+<a href="">
+<title>Nick Heidfeld</title>
+<circle cx="53.92" cy="71.13" r="1.07" fill="yellow" /></a>
+<a href="">
+<title>Roy Salvadori</title>
+<circle cx="74.32" cy="41.99" r="1.07" fill="green" /></a>
+<a href="">
+<title>Mario Andretti</title>
+<circle cx="47.56" cy="30.57" r="1.07" fill="yellow" /></a>
+<a href="">
+<title>Fred Agabashian</title>
+<circle cx="12.73" cy="59.16" r="1.06" fill="indigo" /></a>
+<a href="">
+<title>Ralf Schumacher</title>
+<circle cx="45.35" cy="72.26" r="1.06" fill="yellow" /></a>
+<a href="">
+<title>Nico Hülkenberg</title>
+<circle cx="42.39" cy="83.23" r="1.06" fill="orange" /></a>
+<a href="">
+<title>Sergio Pérez</title>
+<circle cx="44.1" cy="84.33" r="1.05" fill="yellow" /></a>
+<a href="">
+<title>Innes Ireland</title>
+<circle cx="71.71" cy="31.6" r="1.05" fill="green" /></a>
+<a href="">
+<title>Mike Hawthorn</title>
+<circle cx="79.11" cy="52.8" r="1.04" fill="blue" /></a>
+<a href="">
+<title>Tony Bettenhausen</title>
+<circle cx="11.61" cy="61.63" r="1.04" fill="indigo" /></a>
+<a href="">
+<title>Daniel Ricciardo</title>
+<circle cx="38.09" cy="82.28" r="1.03" fill="yellow" /></a>
+<a href="">
+<title>John Surtees</title>
+<circle cx="65.83" cy="28.92" r="1.03" fill="yellow" /></a>
+<a href="">
+<title>Alberto Ascari</title>
+<circle cx="85.24" cy="55.18" r="1.03" fill="blue" /></a>
+<a href="">
+<title>Denny Hulme</title>
+<circle cx="59.29" cy="28.99" r="1.02" fill="yellow" /></a>
+<a href="">
+<title>Romain Grosjean</title>
+<circle cx="46.75" cy="80.31" r="1.02" fill="yellow" /></a>
+<a href="">
+<title>Jacques Villeneuve</title>
+<circle cx="47.94" cy="67.46" r="1.02" fill="orange" /></a>
+<a href="">
+<title>Mika Häkkinen</title>
+<circle cx="45.79" cy="65.17" r="1.02" fill="red" /></a>
+<a href="">
+<title>Johnny Herbert</title>
+<circle cx="43.89" cy="65.54" r="1.02" fill="orange" /></a>
+<a href="">
+<title>Nino Farina</title>
+<circle cx="85.27" cy="52.87" r="1.02" fill="blue" /></a>
+<a href="">
+<title>Derek Warwick</title>
+<circle cx="36.09" cy="39.1" r="1.01" fill="orange" /></a>
+<a href="">
 <title>Martin Brundle</title>
-<circle class="deg0" cx="70" cy="70" r="2" />
-</a>
+<circle cx="46.57" cy="61.4" r="1.01" fill="white" /></a>
+<a href="">
+<title>Thierry Boutsen</title>
+<circle cx="38.25" cy="47.41" r="1.01" fill="orange" /></a>
+<a href="">
+<title>Ayrton Senna</title>
+<circle cx="35.44" cy="45.99" r="1.0" fill="orange" /></a>
+<a href="">
+<title>Jackie Stewart</title>
+<circle cx="58.16" cy="22.47" r="1.0" fill="green" /></a>
+<a href="">
+<title>Heinz-Harald Frentzen</title>
+<circle cx="48.84" cy="64.02" r="0.99" fill="yellow" /></a>
+<a href="">
+<title>Olivier Panis</title>
+<circle cx="44.28" cy="68.58" r="0.99" fill="red" /></a>
+<a href="">
+<title>John Watson</title>
+<circle cx="40.81" cy="31.3" r="0.99" fill="yellow" /></a>
+<a href="">
+<title>Jochen Rindt</title>
+<circle cx="61.57" cy="30.2" r="0.99" fill="green" /></a>
+<a href="">
+<title>Clay Regazzoni</title>
+<circle cx="45.25" cy="28.02" r="0.98" fill="yellow" /></a>
+<a href="">
+<title>René Arnoux</title>
+<circle cx="34.43" cy="43.59" r="0.98" fill="orange" /></a>
+<a href="">
+<title>Luigi Musso</title>
+<circle cx="78.03" cy="51.28" r="0.96" fill="blue" /></a>
+<a href="">
+<title>Eddie Irvine</title>
+<circle cx="51.0" cy="68.4" r="0.96" fill="orange" /></a>
+<a href="">
+<title>Jochen Mass</title>
+<circle cx="37.83" cy="28.8" r="0.96" fill="orange" /></a>
+<a href="">
+<title>Jimmy Daywalt</title>
+<circle cx="14.01" cy="63.55" r="0.95" fill="indigo" /></a>
+<a href="">
+<title>Jacky Ickx</title>
+<circle cx="49.79" cy="26.07" r="0.95" fill="yellow" /></a>
+<a href="">
+<title>José Froilán González</title>
+<circle cx="81.53" cy="54.71" r="0.95" fill="blue" /></a>
+<a href="">
+<title>Jean-Pierre Jarier</title>
+<circle cx="30.83" cy="26.23" r="0.95" fill="yellow" /></a>
+<a href="">
+<title>Dan Gurney</title>
+<circle cx="67.57" cy="31.7" r="0.94" fill="green" /></a>
+<a href="">
+<title>Valtteri Bottas</title>
+<circle cx="50.94" cy="77.31" r="0.94" fill="yellow" /></a>
+<a href="">
+<title>Jack McGrath</title>
+<circle cx="11.71" cy="55.23" r="0.93" fill="indigo" /></a>
+<a href="">
+<title>Patrick Tambay</title>
+<circle cx="37.45" cy="32.75" r="0.93" fill="orange" /></a>
+<a href="">
+<title>Carlos Pace</title>
+<circle cx="43.8" cy="24.74" r="0.92" fill="yellow" /></a>
+<a href="">
+<title>Jacques Laffite</title>
+<circle cx="37.52" cy="34.44" r="0.91" fill="orange" /></a>
+<a href="">
+<title>Peter Collins</title>
+<circle cx="74.24" cy="52.48" r="0.91" fill="blue" /></a>
+<a href="">
+<title>Adrian Sutil</title>
+<circle cx="48.14" cy="87.66" r="0.89" fill="green" /></a>
+<a href="">
+<title>Emerson Fittipaldi</title>
+<circle cx="48.72" cy="24.3" r="0.89" fill="yellow" /></a>
+<a href="">
+<title>Henri Pescarolo</title>
+<circle cx="45.82" cy="22.69" r="0.89" fill="yellow" /></a>
+<a href="">
+<title>James Hunt</title>
+<circle cx="35.53" cy="26.63" r="0.89" fill="yellow" /></a>
+<a href="">
+<title>Eddie Cheever</title>
+<circle cx="37.31" cy="40.15" r="0.89" fill="orange" /></a>
+<a href="">
+<title>Jean-Pierre Beltoise</title>
+<circle cx="50.17" cy="22.02" r="0.88" fill="green" /></a>
+<a href="">
+<title>Horace Gould</title>
+<circle cx="78.06" cy="46.54" r="0.87" fill="green" /></a>
+<a href="">
+<title>Jimmy Davies</title>
+<circle cx="10.12" cy="58.92" r="0.87" fill="indigo" /></a>
+<a href="">
+<title>Damon Hill</title>
+<circle cx="44.09" cy="62.1" r="0.87" fill="yellow" /></a>
+<a href="">
+<title>Marshall Teague</title>
+<circle cx="11.19" cy="62.3" r="0.87" fill="indigo" /></a>
+<a href="">
+<title>Chris Amon</title>
+<circle cx="55.8" cy="24.76" r="0.86" fill="green" /></a>
+<a href="">
+<title>Duane Carter</title>
+<circle cx="10.02" cy="60.65" r="0.86" fill="indigo" /></a>
+<a href="">
+<title>Phil Hill</title>
+<circle cx="67.19" cy="39.62" r="0.86" fill="green" /></a>
+<a href="">
+<title>Alan Jones</title>
+<circle cx="40.49" cy="28.84" r="0.86" fill="orange" /></a>
+<a href="">
+<title>Keke Rosberg</title>
+<circle cx="35.99" cy="33.91" r="0.85" fill="yellow" /></a>
+<a href="">
+<title>Pat O'Connor</title>
+<circle cx="12.15" cy="65.22" r="0.85" fill="indigo" /></a>
+<a href="">
+<title>Paco Godia</title>
+<circle cx="76.07" cy="47.01" r="0.84" fill="green" /></a>
+<a href="">
+<title>Jerry Hoyt</title>
+<circle cx="9.42" cy="56.74" r="0.84" fill="indigo" /></a>
+<a href="">
+<title>Elio de Angelis</title>
+<circle cx="39.83" cy="39.11" r="0.84" fill="orange" /></a>
+<a href="">
+<title>Heikki Kovalainen</title>
+<circle cx="53.45" cy="76.17" r="0.84" fill="yellow" /></a>
+<a href="">
+<title>Toulo de Graffenried</title>
+<circle cx="83.63" cy="56.82" r="0.84" fill="blue" /></a>
+<a href="">
+<title>Mika Salo</title>
+<circle cx="50.28" cy="61.26" r="0.83" fill="yellow" /></a>
+<a href="">
+<title>Roberto Mieres</title>
+<circle cx="80.6" cy="50.71" r="0.83" fill="blue" /></a>
+<a href="">
+<title>Patrick Depailler</title>
+<circle cx="40.12" cy="25.78" r="0.83" fill="yellow" /></a>
+<a href="">
+<title>Gene Hartley</title>
+<circle cx="15.89" cy="59.84" r="0.82" fill="indigo" /></a>
+<a href="">
+<title>Pierluigi Martini</title>
+<circle cx="33.41" cy="64.1" r="0.82" fill="orange" /></a>
+<a href="">
+<title>Vittorio Brambilla</title>
+<circle cx="37.2" cy="22.74" r="0.82" fill="yellow" /></a>
+<a href="">
+<title>Jos Verstappen</title>
+<circle cx="57.96" cy="70.18" r="0.82" fill="orange" /></a>
+<a href="">
+<title>Pedro de la Rosa</title>
+<circle cx="55.6" cy="77.17" r="0.82" fill="yellow" /></a>
+<a href="">
+<title>Art Cross</title>
+<circle cx="13.24" cy="56.53" r="0.82" fill="indigo" /></a>
+<a href="">
+<title>Bill Vukovich</title>
+<circle cx="13.75" cy="56.51" r="0.82" fill="indigo" /></a>
+<a href="">
+<title>Richie Ginther</title>
+<circle cx="65.48" cy="31.47" r="0.81" fill="green" /></a>
+<a href="">
+<title>Jody Scheckter</title>
+<circle cx="41.09" cy="25.8" r="0.81" fill="green" /></a>
+<a href="">
+<title>Hans-Joachim Stuck</title>
+<circle cx="39.29" cy="23.44" r="0.8" fill="green" /></a>
+<a href="">
+<title>Trevor Taylor</title>
+<circle cx="75.17" cy="30.38" r="0.8" fill="green" /></a>
+<a href="">
+<title>Kevin Magnussen</title>
+<circle cx="44.62" cy="80.52" r="0.8" fill="yellow" /></a>
+<a href="">
+<title>Tony Brooks</title>
+<circle cx="70.95" cy="40.23" r="0.8" fill="green" /></a>
+<a href="">
+<title>Max Verstappen</title>
+<circle cx="36.14" cy="83.43" r="0.8" fill="green" /></a>
+<a href="">
+<title>Carlos Sainz</title>
+<circle cx="36.53" cy="85.48" r="0.8" fill="yellow" /></a>
+<a href="">
+<title>Philippe Alliot</title>
+<circle cx="33.66" cy="56.03" r="0.79" fill="red" /></a>
+<a href="">
+<title>Pedro Rodríguez</title>
+<circle cx="64.42" cy="22.83" r="0.79" fill="green" /></a>
+<a href="">
+<title>Rolf Stommelen</title>
+<circle cx="50.99" cy="29.57" r="0.79" fill="orange" /></a>
+<a href="">
+<title>Johnny Claes</title>
+<circle cx="76.15" cy="59.38" r="0.79" fill="blue" /></a>
+<a href="">
+<title>Pedro Diniz</title>
+<circle cx="43.63" cy="59.05" r="0.79" fill="orange" /></a>
+<a href="">
+<title>Brett Lunger</title>
+<circle cx="35.82" cy="26.76" r="0.78" fill="yellow" /></a>
+<a href="">
+<title>Ukyo Katayama</title>
+<circle cx="46.53" cy="58.23" r="0.78" fill="orange" /></a>
+<a href="">
+<title>Stefan Johansson</title>
+<circle cx="36.24" cy="49.29" r="0.78" fill="red" /></a>
+<a href="">
+<title>Marcus Ericsson</title>
+<circle cx="49.32" cy="90.89" r="0.78" fill="green" /></a>
+<a href="">
+<title>Robert Kubica</title>
+<circle cx="58.64" cy="72.86" r="0.78" fill="green" /></a>
+<a href="">
+<title>Pastor Maldonado</title>
+<circle cx="52.1" cy="79.79" r="0.77" fill="orange" /></a>
+<a href="">
+<title>Jackie Oliver</title>
+<circle cx="61.77" cy="21.39" r="0.77" fill="yellow" /></a>
+<a href="">
+<title>Juan Pablo Montoya</title>
+<circle cx="43.5" cy="73.0" r="0.77" fill="green" /></a>
+<a href="">
+<title>Timo Glock</title>
+<circle cx="58.94" cy="79.75" r="0.77" fill="yellow" /></a>
+<a href="">
+<title>Daniil Kvyat</title>
+<circle cx="34.3" cy="84.04" r="0.77" fill="green" /></a>
+<a href="">
+<title>Rodger Ward</title>
+<circle cx="19.41" cy="58.29" r="0.77" fill="blue" /></a>
+<a href="">
+<title>Piercarlo Ghinzani</title>
+<circle cx="31.0" cy="53.28" r="0.77" fill="orange" /></a>
+<a href="">
+<title>Prince Bira</title>
+<circle cx="81.11" cy="56.84" r="0.77" fill="blue" /></a>
+<a href="">
+<title>Takuma Sato</title>
+<circle cx="53.91" cy="83.33" r="0.75" fill="yellow" /></a>
+<a href="">
+<title>Mike Hailwood</title>
+<circle cx="52.59" cy="23.17" r="0.75" fill="yellow" /></a>
+<a href="">
+<title>Troy Ruttman</title>
+<circle cx="20.94" cy="56.95" r="0.75" fill="blue" /></a>
+<a href="">
+<title>Johnny Boyd</title>
+<circle cx="12.63" cy="67.65" r="0.75" fill="indigo" /></a>
+<a href="">
+<title>Bob Sweikert</title>
+<circle cx="8.22" cy="59.57" r="0.74" fill="indigo" /></a>
+<a href="">
+<title>Hector Rebaque</title>
+<circle cx="43.85" cy="31.9" r="0.74" fill="yellow" /></a>
+<a href="">
+<title>Aguri Suzuki</title>
+<circle cx="36.23" cy="55.58" r="0.74" fill="orange" /></a>
+<a href="">
+<title>Eddie Johnson</title>
+<circle cx="17.38" cy="65.41" r="0.73" fill="indigo" /></a>
+<a href="">
+<title>Carlos Menditeguy</title>
+<circle cx="81.26" cy="45.47" r="0.73" fill="blue" /></a>
+<a href="">
+<title>Mike Beuttler</title>
+<circle cx="41.75" cy="22.26" r="0.73" fill="yellow" /></a>
+<a href="">
+<title>Al Keller</title>
+<circle cx="14.67" cy="67.75" r="0.73" fill="indigo" /></a>
+<a href="">
+<title>Ian Burgess</title>
+<circle cx="74.56" cy="34.65" r="0.73" fill="green" /></a>
+<a href="">
+<title>Arturo Merzario</title>
+<circle cx="36.88" cy="20.44" r="0.72" fill="yellow" /></a>
+<a href="">
+<title>Piero Taruffi</title>
+<circle cx="87.63" cy="53.55" r="0.72" fill="blue" /></a>
+<a href="">
+<title>Wolfgang von Trips</title>
+<circle cx="71.05" cy="45.07" r="0.72" fill="blue" /></a>
+<a href="">
+<title>Stefano Modena</title>
+<circle cx="39.17" cy="64.49" r="0.71" fill="red" /></a>
+<a href="">
+<title>Vitantonio Liuzzi</title>
+<circle cx="44.62" cy="87.61" r="0.71" fill="yellow" /></a>
+<a href="">
+<title>Bruno Giacomelli</title>
+<circle cx="39.85" cy="35.04" r="0.71" fill="yellow" /></a>
+<a href="">
+<title>Maurício Gugelmin</title>
+<circle cx="39.79" cy="62.55" r="0.71" fill="orange" /></a>
+<a href="">
+<title>Satoru Nakajima</title>
+<circle cx="41.22" cy="49.45" r="0.71" fill="orange" /></a>
+<a href="">
+<title>Tony Maggs</title>
+<circle cx="69.43" cy="31.88" r="0.71" fill="green" /></a>
+<a href="">
+<title>Ivan Capelli</title>
+<circle cx="40.84" cy="61.27" r="0.71" fill="red" /></a>
+<a href="">
+<title>Wolfgang Seidel</title>
+<circle cx="70.99" cy="36.41" r="0.7" fill="green" /></a>
+<a href="">
+<title>Pat Flaherty</title>
+<circle cx="7.4" cy="57.59" r="0.7" fill="indigo" /></a>
+<a href="">
+<title>Louis Chiron</title>
+<circle cx="79.29" cy="60.63" r="0.7" fill="blue" /></a>
+<a href="">
+<title>François Cevert</title>
+<circle cx="55.25" cy="22.64" r="0.7" fill="green" /></a>
+<a href="">
+<title>Eugenio Castellotti</title>
+<circle cx="75.85" cy="53.39" r="0.7" fill="blue" /></a>
+<a href="">
+<title>Henry Taylor</title>
+<circle cx="75.63" cy="36.4" r="0.7" fill="green" /></a>
+<a href="">
+<title>Bob Christie</title>
+<circle cx="15.98" cy="69.93" r="0.69" fill="indigo" /></a>
+<a href="">
+<title>Alessandro Nannini</title>
+<circle cx="39.2" cy="50.19" r="0.69" fill="yellow" /></a>
+<a href="">
+<title>Jonathan Palmer</title>
+<circle cx="44.76" cy="52.96" r="0.69" fill="orange" /></a>
+<a href="">
+<title>Sergio Mantovani</title>
+<circle cx="84.03" cy="49.86" r="0.69" fill="blue" /></a>
+<a href="">
+<title>Kamui Kobayashi</title>
+<circle cx="48.61" cy="83.39" r="0.69" fill="yellow" /></a>
+<a href="">
+<title>Howden Ganley</title>
+<circle cx="53.74" cy="19.56" r="0.68" fill="green" /></a>
+<a href="">
+<title>Giorgio Scarlatti</title>
+<circle cx="74.01" cy="48.44" r="0.68" fill="green" /></a>
+<a href="">
+<title>Bruce Halford</title>
+<circle cx="74.72" cy="44.82" r="0.68" fill="green" /></a>
+<a href="">
+<title>Chuck Stevenson</title>
+<circle cx="15.89" cy="54.09" r="0.68" fill="indigo" /></a>
+<a href="">
+<title>Robert Manzon</title>
+<circle cx="76.57" cy="55.51" r="0.68" fill="blue" /></a>
+<a href="">
+<title>Lucien Bianchi</title>
+<circle cx="72.24" cy="34.28" r="0.67" fill="green" /></a>
+<a href="">
+<title>Didier Pironi</title>
+<circle cx="34.71" cy="29.33" r="0.67" fill="yellow" /></a>
+<a href="">
+<title>Gilles Villeneuve</title>
+<circle cx="38.2" cy="26.45" r="0.67" fill="yellow" /></a>
+<a href="">
+<title>Roberto Moreno</title>
+<circle cx="29.42" cy="46.45" r="0.67" fill="yellow" /></a>
+<a href="">
+<title>Felice Bonetto</title>
+<circle cx="86.83" cy="57.27" r="0.67" fill="indigo" /></a>
+<a href="">
+<title>Ed Elisian</title>
+<circle cx="15.53" cy="66.01" r="0.67" fill="indigo" /></a>
+<a href="">
+<title>Cesare Perdisa</title>
+<circle cx="75.49" cy="50.61" r="0.67" fill="green" /></a>
+<a href="">
+<title>Onofre Marimón</title>
+<circle cx="86.08" cy="51.12" r="0.66" fill="blue" /></a>
+<a href="">
+<title>Gianni Morbidelli</title>
+<circle cx="35.21" cy="72.78" r="0.66" fill="yellow" /></a>
+<a href="">
+<title>Walt Faulkner</title>
+<circle cx="10.07" cy="54.44" r="0.66" fill="indigo" /></a>
+<a href="">
+<title>Jyrki Järvilehto</title>
+<circle cx="38.39" cy="59.0" r="0.66" fill="orange" /></a>
+<a href="">
+<title>Duke Dinsmore</title>
+<circle cx="16.52" cy="57.4" r="0.66" fill="indigo" /></a>
+<a href="">
+<title>Luigi Piotti</title>
+<circle cx="79.47" cy="44.05" r="0.66" fill="blue" /></a>
+<a href="">
+<title>Alexander Wurz</title>
+<circle cx="50.31" cy="79.52" r="0.66" fill="yellow" /></a>
+<a href="">
+<title>Umberto Maglioli</title>
+<circle cx="81.53" cy="47.33" r="0.65" fill="green" /></a>
+<a href="">
+<title>Hans Herrmann</title>
+<circle cx="74.66" cy="40.25" r="0.65" fill="blue" /></a>
+<a href="">
+<title>Peter Gethin</title>
+<circle cx="56.54" cy="20.67" r="0.65" fill="green" /></a>
+<a href="">
+<title>Bertrand Gachot</title>
+<circle cx="41.55" cy="52.09" r="0.65" fill="orange" /></a>
+<a href="">
+<title>Duke Nalon</title>
+<circle cx="13.81" cy="52.44" r="0.65" fill="indigo" /></a>
+<a href="">
+<title>Olivier Gendebien</title>
+<circle cx="70.55" cy="42.38" r="0.64" fill="green" /></a>
+<a href="">
+<title>Teo Fabi</title>
+<circle cx="37.39" cy="45.34" r="0.64" fill="yellow" /></a>
+<a href="">
+<title>Lorenzo Bandini</title>
+<circle cx="66.77" cy="25.85" r="0.64" fill="green" /></a>
+<a href="">
+<title>Marc Surer</title>
+<circle cx="34.35" cy="41.67" r="0.64" fill="yellow" /></a>
+<a href="">
+<title>André Simon</title>
+<circle cx="83.61" cy="47.86" r="0.64" fill="blue" /></a>
+<a href="">
+<title>Mike Spence</title>
+<circle cx="70.33" cy="22.2" r="0.63" fill="blue" /></a>
+<a href="">
+<title>Philippe Étancelin</title>
+<circle cx="77.16" cy="62.89" r="0.63" fill="blue" /></a>
+<a href="">
+<title>Yves Cabantous</title>
+<circle cx="75.4" cy="61.69" r="0.63" fill="blue" /></a>
+<a href="">
+<title>Érik Comas</title>
+<circle cx="32.86" cy="48.15" r="0.63" fill="orange" /></a>
+<a href="">
+<title>Mark Blundell</title>
+<circle cx="48.19" cy="60.3" r="0.63" fill="red" /></a>
+<a href="">
+<title>Lance Stroll</title>
+<circle cx="41.58" cy="85.51" r="0.62" fill="yellow" /></a>
+<a href="">
+<title>Giancarlo Baghetti</title>
+<circle cx="64.81" cy="34.73" r="0.62" fill="green" /></a>
+<a href="">
+<title>Johnny Thomson</title>
+<circle cx="18.34" cy="63.5" r="0.61" fill="indigo" /></a>
+<a href="">
+<title>Paul di Resta</title>
+<circle cx="46.24" cy="89.11" r="0.61" fill="yellow" /></a>
+<a href="">
+<title>Gabriele Tarquini</title>
+<circle cx="30.0" cy="72.24" r="0.61" fill="orange" /></a>
+<a href="">
+<title>Esteban Gutiérrez</title>
+<circle cx="45.98" cy="85.18" r="0.61" fill="yellow" /></a>
+<a href="">
+<title>Jean-Éric Vergne</title>
+<circle cx="35.62" cy="81.34" r="0.6" fill="green" /></a>
+<a href="">
+<title>Vitaly Petrov</title>
+<circle cx="58.53" cy="76.11" r="0.6" fill="green" /></a>
+<a href="">
+<title>Luca Badoer</title>
+<circle cx="31.52" cy="58.94" r="0.6" fill="yellow" /></a>
+<a href="">
+<title>Nicola Larini</title>
+<circle cx="34.17" cy="59.62" r="0.6" fill="orange" /></a>
+<a href="">
+<title>Bill Homeier</title>
+<circle cx="7.09" cy="62.34" r="0.6" fill="indigo" /></a>
+<a href="">
+<title>Ian Scheckter</title>
+<circle cx="32.7" cy="18.48" r="0.59" fill="yellow" /></a>
+<a href="">
+<title>Bob Scott</title>
+<circle cx="17.72" cy="55.25" r="0.59" fill="indigo" /></a>
+<a href="">
+<title>Sébastien Buemi</title>
+<circle cx="21.65" cy="45.9" r="0.59" fill="indigo" /></a>
+<a href="">
+<title>Cal Niday</title>
+<circle cx="18.44" cy="60.22" r="0.59" fill="indigo" /></a>
+<a href="">
+<title>Jack Fairman</title>
+<circle cx="67.8" cy="42.08" r="0.58" fill="green" /></a>
+<a href="">
+<title>Alex Ribeiro</title>
+<circle cx="33.27" cy="16.55" r="0.58" fill="green" /></a>
+<a href="">
+<title>Ken Wharton</title>
+<circle cx="83.63" cy="53.99" r="0.58" fill="blue" /></a>
+<a href="">
+<title>Carel Godin de Beaufort</title>
+<circle cx="73.18" cy="28.06" r="0.58" fill="green" /></a>
+<a href="">
+<title>Piers Courage</title>
+<circle cx="62.5" cy="23.3" r="0.56" fill="green" /></a>
+<a href="">
+<title>Eddie Russo</title>
+<circle cx="18.21" cy="68.19" r="0.56" fill="indigo" /></a>
+<a href="">
+<title>Christian Klien</title>
+<circle cx="52.35" cy="69.53" r="0.56" fill="yellow" /></a>
+<a href="">
+<title>Rupert Keegan</title>
+<circle cx="39.25" cy="20.77" r="0.56" fill="yellow" /></a>
+<a href="">
+<title>Tony Marsh</title>
+<circle cx="76.14" cy="32.44" r="0.56" fill="green" /></a>
+<a href="">
+<title>Yannick Dalmas</title>
+<circle cx="30.67" cy="65.99" r="0.56" fill="orange" /></a>
+<a href="">
+<title>Esteban Ocon</title>
+<circle cx="42.51" cy="88.39" r="0.56" fill="green" /></a>
+<a href="">
+<title>Mike Nazaruk</title>
+<circle cx="7.91" cy="52.96" r="0.56" fill="indigo" /></a>
+<a href="">
+<title>Cliff Allison</title>
+<circle cx="69.21" cy="38.35" r="0.55" fill="green" /></a>
+<a href="">
+<title>Brian Henton</title>
+<circle cx="32.72" cy="32.99" r="0.55" fill="yellow" /></a>
+<a href="">
+<title>Peter Whitehead</title>
+<circle cx="88.49" cy="59.79" r="0.55" fill="blue" /></a>
+<a href="">
+<title>Jimmy Jackson</title>
+<circle cx="5.56" cy="54.94" r="0.55" fill="indigo" /></a>
+<a href="">
+<title>Jackie Lewis</title>
+<circle cx="70.28" cy="29.09" r="0.55" fill="green" /></a>
+<a href="">
+<title>Johnnie Tolan</title>
+<circle cx="18.21" cy="70.3" r="0.55" fill="indigo" /></a>
+<a href="">
+<title>Narain Karthikeyan</title>
+<circle cx="54.88" cy="86.74" r="0.55" fill="green" /></a>
+<a href="">
+<title>Éric Bernard</title>
+<circle cx="37.08" cy="60.82" r="0.54" fill="orange" /></a>
+<a href="">
+<title>John Miles</title>
+<circle cx="57.37" cy="29.63" r="0.54" fill="green" /></a>
+<a href="">
+<title>Carl Scarborough</title>
+<circle cx="14.81" cy="50.49" r="0.54" fill="indigo" /></a>
+<a href="">
+<title>Pierre Gasly</title>
+<circle cx="31.69" cy="81.65" r="0.54" fill="green" /></a>
+<a href="">
+<title>Bruno Senna</title>
+<circle cx="57.89" cy="82.68" r="0.54" fill="yellow" /></a>
+<a href="">
+<title>Al Herman</title>
+<circle cx="10.14" cy="67.82" r="0.54" fill="indigo" /></a>
+<a href="">
+<title>Christijan Albers</title>
+<circle cx="55.6" cy="93.91" r="0.54" fill="green" /></a>
+<a href="">
+<title>Alex Caffi</title>
+<circle cx="36.31" cy="52.84" r="0.54" fill="yellow" /></a>
+<a href="">
+<title>Ron Flockhart</title>
+<circle cx="78.77" cy="39.65" r="0.54" fill="green" /></a>
+<a href="">
+<title>Peter Revson</title>
+<circle cx="54.88" cy="28.18" r="0.54" fill="green" /></a>
+<a href="">
+<title>Jaime Alguersuari</title>
+<circle cx="19.8" cy="42.65" r="0.54" fill="violet" /></a>
+<a href="">
+<title>Christian Danner</title>
+<circle cx="44.62" cy="55.15" r="0.53" fill="red" /></a>
+<a href="">
+<title>Ray Crawford</title>
+<circle cx="8.19" cy="66.89" r="0.53" fill="indigo" /></a>
+<a href="">
+<title>Jack Turner</title>
+<circle cx="13.3" cy="69.98" r="0.53" fill="indigo" /></a>
+<a href="">
+<title>Jimmy Bryan</title>
+<circle cx="8.82" cy="64.26" r="0.53" fill="indigo" /></a>
+<a href="">
+<title>Gerino Gerini</title>
+<circle cx="71.8" cy="48.35" r="0.53" fill="blue" /></a>
+<a href="">
+<title>Jimmy Reece</title>
+<circle cx="20.52" cy="62.29" r="0.52" fill="indigo" /></a>
+<a href="">
+<title>Alessandro Zanardi</title>
+<circle cx="41.38" cy="67.41" r="0.52" fill="yellow" /></a>
+<a href="">
+<title>Wilson Fittipaldi</title>
+<circle cx="48.86" cy="27.77" r="0.52" fill="yellow" /></a>
+<a href="">
+<title>Christian Fittipaldi</title>
+<circle cx="33.08" cy="74.24" r="0.52" fill="yellow" /></a>
+<a href="">
+<title>Derek Daly</title>
+<circle cx="28.83" cy="29.23" r="0.52" fill="yellow" /></a>
+<a href="">
+<title>Jim Hall</title>
+<circle cx="62.67" cy="36.17" r="0.52" fill="green" /></a>
+<a href="">
+<title>Andrea de Adamich</title>
+<circle cx="50.82" cy="18.29" r="0.52" fill="green" /></a>
+<a href="">
+<title>Willy Mairesse</title>
+<circle cx="65.84" cy="37.67" r="0.51" fill="green" /></a>
+<a href="">
+<title>Reine Wisell</title>
+<circle cx="49.14" cy="19.56" r="0.51" fill="green" /></a>
+<a href="">
+<title>Rudi Fischer</title>
+<circle cx="90.09" cy="56.26" r="0.51" fill="blue" /></a>
+<a href="">
+<title>Karl Wendlinger</title>
+<circle cx="41.24" cy="57.7" r="0.51" fill="yellow" /></a>
+<a href="">
+<title>Stoffel Vandoorne</title>
+<circle cx="42.71" cy="77.83" r="0.51" fill="yellow" /></a>
+<a href="">
+<title>Charles Leclerc</title>
+<circle cx="49.26" cy="85.8" r="0.51" fill="blue" /></a>
+<a href="">
+<title>Lance Macklin</title>
+<circle cx="70.18" cy="53.33" r="0.51" fill="blue" /></a>
+<a href="">
+<title>Patrick Nève</title>
+<circle cx="30.55" cy="16.3" r="0.51" fill="green" /></a>
+<a href="">
+<title>Bob Anderson</title>
+<circle cx="62.83" cy="32.98" r="0.51" fill="green" /></a>
+<a href="">
+<title>Tom Pryce</title>
+<circle cx="27.5" cy="24.92" r="0.5" fill="green" /></a>
+<a href="">
+<title>Tim Schenken</title>
+<circle cx="54.06" cy="17.32" r="0.5" fill="green" /></a>
+<a href="">
+<title>Felipe Nasr</title>
+<circle cx="49.66" cy="93.22" r="0.5" fill="blue" /></a>
+<a href="">
+<title>Bill Cheesbourg</title>
+<circle cx="16.6" cy="72.93" r="0.5" fill="violet" /></a>
+<a href="">
+<title>Emanuele Pirro</title>
+<circle cx="39.51" cy="54.06" r="0.5" fill="yellow" /></a>
+<a href="">
+<title>Jacques Swaters</title>
+<circle cx="81.28" cy="59.36" r="0.5" fill="blue" /></a>
+<a href="">
+<title>Philippe Streiff</title>
+<circle cx="47.23" cy="52.78" r="0.49" fill="red" /></a>
+<a href="">
+<title>Bob Veith</title>
+<circle cx="11.89" cy="71.73" r="0.49" fill="indigo" /></a>
+<a href="">
+<title>Pascal Wehrlein</title>
+<circle cx="46.0" cy="93.77" r="0.49" fill="blue" /></a>
+<a href="">
+<title>Don Freeland</title>
+<circle cx="19.47" cy="72.48" r="0.49" fill="violet" /></a>
+<a href="">
+<title>Jean-Pierre Jabouille</title>
+<circle cx="32.93" cy="37.41" r="0.49" fill="yellow" /></a>
+<a href="">
+<title>Charles Pic</title>
+<circle cx="63.79" cy="85.54" r="0.49" fill="green" /></a>
+<a href="">
+<title>Pierre Levegh</title>
+<circle cx="74.94" cy="64.26" r="0.49" fill="blue" /></a>
+<a href="">
+<title>Chico Landi</title>
+<circle cx="86.19" cy="59.59" r="0.49" fill="blue" /></a>
+<a href="">
+<title>Ricardo Zonta</title>
+<circle cx="51.59" cy="65.03" r="0.49" fill="orange" /></a>
+<a href="">
+<title>Guy Ligier</title>
+<circle cx="64.18" cy="27.46" r="0.49" fill="green" /></a>
+<a href="">
+<title>George Fonder</title>
+<circle cx="4.59" cy="61.92" r="0.48" fill="indigo" /></a>
+<a href="">
+<title>Jolyon Palmer</title>
+<circle cx="40.7" cy="81.58" r="0.48" fill="yellow" /></a>
+<a href="">
+<title>Tiago Monteiro</title>
+<circle cx="56.24" cy="91.67" r="0.48" fill="blue" /></a>
+<a href="">
+<title>Gerry Ashmore</title>
+<circle cx="78.15" cy="29.98" r="0.48" fill="green" /></a>
+<a href="">
+<title>Chet Miller</title>
+<circle cx="13.55" cy="47.74" r="0.47" fill="indigo" /></a>
+<a href="">
+<title>Dick Rathmann</title>
+<circle cx="22.13" cy="64.52" r="0.47" fill="indigo" /></a>
+<a href="">
+<title>Marc Gené</title>
+<circle cx="28.42" cy="57.52" r="0.47" fill="green" /></a>
+<a href="">
+<title>Mike Magill</title>
+<circle cx="14.24" cy="73.32" r="0.47" fill="violet" /></a>
+<a href="">
+<title>Kazuki Nakajima</title>
+<circle cx="56.35" cy="73.71" r="0.47" fill="yellow" /></a>
+<a href="">
+<title>Cliff Griffith</title>
+<circle cx="11.44" cy="48.28" r="0.47" fill="indigo" /></a>
+<a href="">
+<title>Chuck Weyant</title>
+<circle cx="20.4" cy="67.29" r="0.47" fill="violet" /></a>
+<a href="">
+<title>Emilio de Villota</title>
+<circle cx="32.65" cy="25.84" r="0.47" fill="yellow" /></a>
+<a href="">
+<title>Ernie McCoy</title>
+<circle cx="4.08" cy="59.53" r="0.47" fill="indigo" /></a>
+<a href="">
+<title>Alfonso de Portago</title>
+<circle cx="72.97" cy="55.16" r="0.47" fill="blue" /></a>
+<a href="">
+<title>Raul Boesel</title>
+<circle cx="31.16" cy="23.6" r="0.47" fill="yellow" /></a>
+<a href="">
+<title>Ottorino Volonterio</title>
+<circle cx="84.22" cy="44.61" r="0.46" fill="blue" /></a>
+<a href="">
+<title>Frank Armi</title>
+<circle cx="4.85" cy="64.35" r="0.46" fill="indigo" /></a>
+<a href="">
+<title>Max Chilton</title>
+<circle cx="31.59" cy="95.14" r="0.46" fill="black" /></a>
+<a href="">
+<title>Larry Crockett</title>
+<circle cx="4.09" cy="57.01" r="0.46" fill="indigo" /></a>
+<a href="">
+<title>Johnny McDowell</title>
+<circle cx="6.37" cy="51.21" r="0.46" fill="indigo" /></a>
+<a href="">
+<title>Tim Parnell</title>
+<circle cx="79.15" cy="34.78" r="0.46" fill="green" /></a>
+<a href="">
+<title>Jules Bianchi</title>
+<circle cx="33.25" cy="95.79" r="0.46" fill="black" /></a>
+<a href="">
+<title>Bill Holland</title>
+<circle cx="11.66" cy="51.21" r="0.45" fill="indigo" /></a>
+<a href="">
+<title>Travis Webb</title>
+<circle cx="17.55" cy="50.75" r="0.45" fill="indigo" /></a>
+<a href="">
+<title>Olivier Grouillard</title>
+<circle cx="32.55" cy="45.39" r="0.45" fill="yellow" /></a>
+<a href="">
+<title>Shinji Nakano</title>
+<circle cx="51.79" cy="84.04" r="0.45" fill="orange" /></a>
+<a href="">
+<title>Bernard Collomb</title>
+<circle cx="70.28" cy="26.42" r="0.45" fill="green" /></a>
+<a href="">
+<title>Bernd Schneider</title>
+<circle cx="30.92" cy="55.86" r="0.45" fill="yellow" /></a>
+<a href="">
+<title>Pedro Lamy</title>
+<circle cx="37.87" cy="68.78" r="0.45" fill="yellow" /></a>
+<a href="">
+<title>Karl Kling</title>
+<circle cx="85.23" cy="42.34" r="0.45" fill="blue" /></a>
+<a href="">
+<title>Luis Pérez-Sala</title>
+<circle cx="31.03" cy="63.82" r="0.45" fill="yellow" /></a>
+<a href="">
+<title>Johnny Mantz</title>
+<circle cx="20.75" cy="54.37" r="0.44" fill="indigo" /></a>
+<a href="">
+<title>Jackie Holmes</title>
+<circle cx="19.42" cy="52.38" r="0.44" fill="indigo" /></a>
+<a href="">
+<title>Gunnar Nilsson</title>
+<circle cx="49.36" cy="33.61" r="0.44" fill="green" /></a>
+<a href="">
+<title>Pete Lovely</title>
+<circle cx="57.0" cy="26.67" r="0.44" fill="green" /></a>
+<a href="">
+<title>Mauro Baldi</title>
+<circle cx="31.77" cy="41.83" r="0.43" fill="yellow" /></a>
+<a href="">
+<title>Ricardo Rosset</title>
+<circle cx="62.64" cy="75.89" r="0.43" fill="yellow" /></a>
+<a href="">
+<title>Paul Frère</title>
+<circle cx="72.92" cy="57.79" r="0.43" fill="blue" /></a>
+<a href="">
+<title>André Pilette</title>
+<circle cx="70.68" cy="55.47" r="0.43" fill="blue" /></a>
+<a href="">
+<title>Cecil Green</title>
+<circle cx="6.1" cy="48.18" r="0.43" fill="indigo" /></a>
+<a href="">
+<title>Richard Attwood</title>
+<circle cx="67.24" cy="22.72" r="0.43" fill="green" /></a>
+<a href="">
+<title>Michael May</title>
+<circle cx="78.97" cy="32.5" r="0.43" fill="blue" /></a>
+<a href="">
+<title>Walt Brown</title>
+<circle cx="7.8" cy="46.48" r="0.43" fill="indigo" /></a>
+<a href="">
+<title>Helmut Marko</title>
+<circle cx="54.39" cy="14.66" r="0.43" fill="blue" /></a>
+<a href="">
+<title>Eric van de Poele</title>
+<circle cx="33.98" cy="67.27" r="0.43" fill="yellow" /></a>
+<a href="">
+<title>George Eaton</title>
+<circle cx="62.48" cy="16.05" r="0.43" fill="green" /></a>
+<a href="">
+<title>Toranosuke Takagi</title>
+<circle cx="61.91" cy="78.44" r="0.43" fill="green" /></a>
+<a href="">
+<title>Stuart Lewis-Evans</title>
+<circle cx="68.95" cy="45.52" r="0.43" fill="blue" /></a>
+<a href="">
+<title>Enrique Bernoldi</title>
+<circle cx="59.11" cy="66.01" r="0.43" fill="yellow" /></a>
+<a href="">
+<title>Alex Soler-Roig</title>
+<circle cx="52.47" cy="26.09" r="0.43" fill="green" /></a>
+<a href="">
+<title>Silvio Moser</title>
+<circle cx="60.37" cy="24.8" r="0.43" fill="green" /></a>
+<a href="">
+<title>Scott Speed</title>
+<circle cx="41.83" cy="91.49" r="0.42" fill="green" /></a>
+<a href="">
+<title>Cristiano da Matta</title>
+<circle cx="39.69" cy="72.43" r="0.42" fill="orange" /></a>
+<a href="">
+<title>Nelson Piquet Jr.</title>
+<circle cx="40.31" cy="77.53" r="0.42" fill="green" /></a>
+<a href="">
+<title>Andrea Montermini</title>
+<circle cx="29.85" cy="52.29" r="0.42" fill="yellow" /></a>
+<a href="">
+<title>Manfred Winkelhock</title>
+<circle cx="23.68" cy="40.15" r="0.42" fill="orange" /></a>
+<a href="">
+<title>Dave Charlton</title>
+<circle cx="52.87" cy="31.51" r="0.42" fill="yellow" /></a>
+<a href="">
+<title>David Brabham</title>
+<circle cx="36.34" cy="76.29" r="0.42" fill="orange" /></a>
+<a href="">
+<title>Manny Ayulo</title>
+<circle cx="10.74" cy="45.56" r="0.41" fill="indigo" /></a>
+<a href="">
+<title>Paul Belmondo</title>
+<circle cx="45.11" cy="50.59" r="0.41" fill="yellow" /></a>
+<a href="">
+<title>Boy Lunger</title>
+<circle cx="31.51" cy="14.16" r="0.41" fill="green" /></a>
+<a href="">
+<title>Harald Ertl</title>
+<circle cx="39.76" cy="18.0" r="0.41" fill="yellow" /></a>
+<a href="">
+<title>Carroll Shelby</title>
+<circle cx="67.49" cy="48.11" r="0.41" fill="blue" /></a>
+<a href="">
+<title>Sébastien Bourdais</title>
+<circle cx="36.43" cy="66.16" r="0.41" fill="blue" /></a>
+<a href="">
+<title>Tarso Marques</title>
+<circle cx="41.32" cy="70.57" r="0.4" fill="yellow" /></a>
+<a href="">
+<title>Luigi Fagioli</title>
+<circle cx="90.52" cy="50.25" r="0.4" fill="indigo" /></a>
+<a href="">
+<title>Lella Lombardi</title>
+<circle cx="33.41" cy="21.49" r="0.4" fill="yellow" /></a>
+<a href="">
+<title>Peter Hirt</title>
+<circle cx="91.4" cy="53.92" r="0.4" fill="blue" /></a>
+<a href="">
+<title>John Love</title>
+<circle cx="56.94" cy="32.46" r="0.4" fill="green" /></a>
+<a href="">
+<title>Raymond Sommer</title>
+<circle cx="77.58" cy="66.06" r="0.4" fill="blue" /></a>
+<a href="">
+<title>Jan Magnussen</title>
+<circle cx="54.32" cy="64.91" r="0.4" fill="orange" /></a>
+<a href="">
+<title>Brendon Hartley</title>
+<circle cx="28.88" cy="81.7" r="0.4" fill="blue" /></a>
+<a href="">
+<title>François Migault</title>
+<circle cx="46.85" cy="17.64" r="0.4" fill="yellow" /></a>
+<a href="">
+<title>Alan Brown</title>
+<circle cx="83.6" cy="64.77" r="0.4" fill="blue" /></a>
+<a href="">
+<title>Eliseo Salazar</title>
+<circle cx="21.47" cy="34.49" r="0.39" fill="yellow" /></a>
+<a href="">
+<title>George Follmer</title>
+<circle cx="60.64" cy="17.97" r="0.39" fill="green" /></a>
+<a href="">
+<title>Reg Parnell</title>
+<circle cx="85.95" cy="62.82" r="0.39" fill="blue" /></a>
+<a href="">
+<title>Anthony Davidson</title>
+<circle cx="57.4" cy="85.41" r="0.39" fill="yellow" /></a>
+<a href="">
+<title>Maria de Filippis</title>
+<circle cx="81.5" cy="40.85" r="0.39" fill="blue" /></a>
+<a href="">
+<title>Len Sutton</title>
+<circle cx="23.3" cy="68.82" r="0.38" fill="indigo" /></a>
+<a href="">
+<title>Johnny Servoz-Gavin</title>
+<circle cx="56.95" cy="18.12" r="0.38" fill="green" /></a>
+<a href="">
+<title>Shorty Templeman</title>
+<circle cx="16.78" cy="75.9" r="0.38" fill="violet" /></a>
+<a href="">
+<title>Keith Andrews</title>
+<circle cx="7.62" cy="70.34" r="0.38" fill="indigo" /></a>
+<a href="">
+<title>Clemar Bucci</title>
+<circle cx="87.62" cy="45.15" r="0.38" fill="blue" /></a>
+<a href="">
+<title>Gene Force</title>
+<circle cx="17.33" cy="48.27" r="0.38" fill="indigo" /></a>
+<a href="">
+<title>Antonio Giovinazzi</title>
+<circle cx="54.66" cy="80.59" r="0.38" fill="green" /></a>
+<a href="">
+<title>Johnny Cecotto</title>
+<circle cx="20.25" cy="38.52" r="0.38" fill="yellow" /></a>
+<a href="">
+<title>John Campbell-Jones</title>
+<circle cx="72.5" cy="25.02" r="0.38" fill="green" /></a>
+<a href="">
+<title>Franco Rol</title>
+<circle cx="86.23" cy="65.59" r="0.38" fill="indigo" /></a>
+<a href="">
+<title>Alberto Uria</title>
+<circle cx="88.42" cy="47.43" r="0.38" fill="blue" /></a>
+<a href="">
+<title>Paul Goldsmith</title>
+<circle cx="12.52" cy="75.74" r="0.38" fill="violet" /></a>
+<a href="">
+<title>Jan Lammers</title>
+<circle cx="31.46" cy="39.02" r="0.38" fill="yellow" /></a>
+<a href="">
+<title>Skip Barber</title>
+<circle cx="43.59" cy="16.99" r="0.37" fill="green" /></a>
+<a href="">
+<title>Kenneth McAlpine</title>
+<circle cx="68.21" cy="57.0" r="0.37" fill="blue" /></a>
+<a href="">
+<title>Nanni Galli</title>
+<circle cx="45.81" cy="14.78" r="0.37" fill="green" /></a>
+<a href="">
+<title>Stefan Bellof</title>
+<circle cx="49.95" cy="57.54" r="0.37" fill="red" /></a>
+<a href="">
+<title>Hernando da Silva Ramos</title>
+<circle cx="71.77" cy="61.13" r="0.37" fill="blue" /></a>
+<a href="">
+<title>Sakon Yamamoto</title>
+<circle cx="57.32" cy="88.39" r="0.36" fill="green" /></a>
+<a href="">
+<title>Adrián Campos</title>
+<circle cx="33.76" cy="53.65" r="0.36" fill="green" /></a>
+<a href="">
+<title>Chris Irwin</title>
+<circle cx="65.8" cy="15.95" r="0.36" fill="blue" /></a>
+<a href="">
+<title>Sergey Sirotkin</title>
+<circle cx="39.22" cy="89.53" r="0.36" fill="green" /></a>
+<a href="">
+<title>Gastón Mazzacane</title>
+<circle cx="26.77" cy="55.06" r="0.36" fill="yellow" /></a>
+<a href="">
+<title>Alexander Albon</title>
+<circle cx="31.7" cy="86.13" r="0.36" fill="blue" /></a>
+<a href="">
+<title>Derek Bell</title>
+<circle cx="44.79" cy="19.66" r="0.36" fill="yellow" /></a>
+<a href="">
+<title>Keith Greene</title>
+<circle cx="81.98" cy="32.82" r="0.36" fill="green" /></a>
+<a href="">
+<title>Don Edmunds</title>
+<circle cx="9.25" cy="72.99" r="0.36" fill="violet" /></a>
+<a href="">
+<title>George Connor</title>
+<circle cx="9.01" cy="48.98" r="0.36" fill="indigo" /></a>
+<a href="">
+<title>Elmer George</title>
+<circle cx="21.94" cy="71.53" r="0.36" fill="violet" /></a>
+<a href="">
+<title>George Russell</title>
+<circle cx="63.46" cy="73.48" r="0.36" fill="blue" /></a>
+<a href="">
+<title>Lando Norris</title>
+<circle cx="33.9" cy="88.41" r="0.36" fill="green" /></a>
+<a href="">
+<title>François Hesnault</title>
+<circle cx="44.14" cy="45.59" r="0.36" fill="yellow" /></a>
+<a href="">
+<title>Fabrizio Barbazza</title>
+<circle cx="30.39" cy="75.9" r="0.35" fill="yellow" /></a>
+<a href="">
+<title>Jérôme d'Ambrosio</title>
+<circle cx="61.89" cy="81.49" r="0.35" fill="green" /></a>
+<a href="">
+<title>Julian Bailey</title>
+<circle cx="49.38" cy="54.49" r="0.35" fill="orange" /></a>
+<a href="">
+<title>Eugène Chaboud</title>
+<circle cx="72.15" cy="67.08" r="0.35" fill="blue" /></a>
+<a href="">
+<title>Joe James</title>
+<circle cx="15.19" cy="45.79" r="0.35" fill="indigo" /></a>
+<a href="">
+<title>Antônio Pizzonia</title>
+<circle cx="55.76" cy="69.03" r="0.35" fill="green" /></a>
+<a href="">
+<title>Zsolt Baumgartner</title>
+<circle cx="63.23" cy="93.81" r="0.35" fill="green" /></a>
+<a href="">
+<title>Jay Chamberlain</title>
+<circle cx="79.86" cy="27.69" r="0.35" fill="green" /></a>
+<a href="">
+<title>Ludovico Scarfiotti</title>
+<circle cx="68.09" cy="17.89" r="0.35" fill="green" /></a>
+<a href="">
+<title>Nino Vaccarella</title>
+<circle cx="76.7" cy="23.44" r="0.35" fill="green" /></a>
+<a href="">
+<title>Billy Garrett</title>
+<circle cx="10.08" cy="75.49" r="0.35" fill="violet" /></a>
+<a href="">
+<title>Ricardo Rodríguez</title>
+<circle cx="62.21" cy="39.58" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Hap Sharp</title>
+<circle cx="56.67" cy="37.98" r="0.34" fill="green" /></a>
+<a href="">
+<title>Peter Arundell</title>
+<circle cx="73.9" cy="19.67" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Piero Carini</title>
+<circle cx="91.81" cy="58.93" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Giedo van der Garde</title>
+<circle cx="65.61" cy="88.09" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Lucas di Grassi</title>
+<circle cx="63.97" cy="82.61" r="0.34" fill="green" /></a>
+<a href="">
+<title>Will Stevens</title>
+<circle cx="60.98" cy="5.11" r="0.34" fill="green" /></a>
+<a href="">
+<title>Ivor Bueb</title>
+<circle cx="83.4" cy="37.78" r="0.34" fill="green" /></a>
+<a href="">
+<title>Moisés Solana</title>
+<circle cx="66.3" cy="19.75" r="0.34" fill="green" /></a>
+<a href="">
+<title>Brian Redman</title>
+<circle cx="57.05" cy="15.61" r="0.34" fill="yellow" /></a>
+<a href="">
+<title>Alan Stacey</title>
+<circle cx="74.01" cy="22.53" r="0.34" fill="green" /></a>
+<a href="">
+<title>Taki Inoue</title>
+<circle cx="36.45" cy="87.8" r="0.34" fill="yellow" /></a>
+<a href="">
+<title>Duncan Hamilton</title>
+<circle cx="68.37" cy="60.16" r="0.34" fill="blue" /></a>
+<a href="">
+<title>David Murray</title>
+<circle cx="83.31" cy="70.67" r="0.34" fill="indigo" /></a>
+<a href="">
+<title>Corrado Fabi</title>
+<circle cx="26.79" cy="51.22" r="0.34" fill="yellow" /></a>
+<a href="">
+<title>Vic Elford</title>
+<circle cx="56.55" cy="35.76" r="0.34" fill="green" /></a>
+<a href="">
+<title>Consalvo Sanesi</title>
+<circle cx="92.97" cy="50.87" r="0.34" fill="indigo" /></a>
+<a href="">
+<title>Gianmaria Bruni</title>
+<circle cx="64.4" cy="96.01" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Chico Serra</title>
+<circle cx="28.15" cy="32.76" r="0.34" fill="green" /></a>
+<a href="">
+<title>Guy Mairesse</title>
+<circle cx="75.13" cy="67.74" r="0.34" fill="blue" /></a>
+<a href="">
+<title>Allan McNish</title>
+<circle cx="55.36" cy="60.06" r="0.33" fill="green" /></a>
+<a href="">
+<title>Brian Naylor</title>
+<circle cx="83.83" cy="31.47" r="0.33" fill="green" /></a>
+<a href="">
+<title>Pierre-Henri Raphanel</title>
+<circle cx="26.86" cy="47.32" r="0.33" fill="orange" /></a>
+<a href="">
+<title>Bill Schindler</title>
+<circle cx="10.77" cy="42.01" r="0.33" fill="indigo" /></a>
+<a href="">
+<title>Mack Hellings</title>
+<circle cx="2.45" cy="51.08" r="0.33" fill="violet" /></a>
+<a href="">
+<title>Lloyd Ruby</title>
+<circle cx="49.09" cy="47.78" r="0.32" fill="blue" /></a>
+<a href="">
+<title>Justin Wilson</title>
+<circle cx="61.58" cy="68.79" r="0.32" fill="yellow" /></a>
+<a href="">
+<title>Lee Wallard</title>
+<circle cx="8.31" cy="42.79" r="0.32" fill="indigo" /></a>
+<a href="">
+<title>Ernesto Prinoth</title>
+<circle cx="83.16" cy="28.58" r="0.32" fill="blue" /></a>
+<a href="">
+<title>Esteban Tuero</title>
+<circle cx="53.67" cy="90.32" r="0.32" fill="yellow" /></a>
+<a href="">
+<title>Alex Yoong</title>
+<circle cx="56.84" cy="66.82" r="0.32" fill="green" /></a>
+<a href="">
+<title>Johnny Dumfries</title>
+<circle cx="28.58" cy="43.32" r="0.32" fill="yellow" /></a>
+<a href="">
+<title>Jim McWithey</title>
+<circle cx="15.42" cy="78.42" r="0.32" fill="violet" /></a>
+<a href="">
+<title>Rikky von Opel</title>
+<circle cx="31.66" cy="29.35" r="0.32" fill="green" /></a>
+<a href="">
+<title>Chris Bristow</title>
+<circle cx="81.08" cy="36.35" r="0.32" fill="green" /></a>
+<a href="">
+<title>Beppe Gabbiani</title>
+<circle cx="22.23" cy="28.65" r="0.32" fill="yellow" /></a>
+<a href="">
+<title>Red Amick</title>
+<circle cx="19.74" cy="76.01" r="0.32" fill="violet" /></a>
+<a href="">
+<title>Charles de Tornaco</title>
+<circle cx="93.71" cy="55.57" r="0.32" fill="blue" /></a>
+<a href="">
+<title>Carl Forberg</title>
+<circle cx="13.33" cy="42.5" r="0.32" fill="indigo" /></a>
+<a href="">
+<title>Oscar Larrauri</title>
+<circle cx="36.05" cy="70.24" r="0.32" fill="orange" /></a>
+<a href="">
+<title>Ian Ashley</title>
+<circle cx="40.7" cy="15.51" r="0.31" fill="yellow" /></a>
+<a href="">
+<title>Tony Shelly</title>
+<circle cx="79.55" cy="24.4" r="0.31" fill="green" /></a>
+<a href="">
+<title>Luciano Burti</title>
+<circle cx="52.83" cy="58.79" r="0.31" fill="yellow" /></a>
+<a href="">
+<title>Anthony Foyt</title>
+<circle cx="18.08" cy="80.15" r="0.31" fill="violet" /></a>
+<a href="">
+<title>Martin Donnelly</title>
+<circle cx="28.75" cy="36.17" r="0.31" fill="yellow" /></a>
+<a href="">
+<title>Jerry Unser</title>
+<circle cx="12.36" cy="78.63" r="0.31" fill="violet" /></a>
+<a href="">
+<title>Bob Bondurant</title>
+<circle cx="59.72" cy="13.87" r="0.31" fill="green" /></a>
+<a href="">
+<title>Bob Gerard</title>
+<circle cx="79.57" cy="68.63" r="0.31" fill="green" /></a>
+<a href="">
+<title>Guy Edwards</title>
+<circle cx="51.84" cy="13.48" r="0.31" fill="green" /></a>
+<a href="">
+<title>Eric Brandon</title>
+<circle cx="85.23" cy="68.22" r="0.31" fill="blue" /></a>
+<a href="">
+<title>Paolo Barilla</title>
+<circle cx="29.88" cy="68.83" r="0.31" fill="yellow" /></a>
+<a href="">
+<title>Paul Pietsch</title>
+<circle cx="56.56" cy="50.38" r="0.31" fill="indigo" /></a>
+<a href="">
+<title>David Hobbs</title>
+<circle cx="62.29" cy="13.14" r="0.31" fill="green" /></a>
+<a href="">
+<title>Jorge Daponte</title>
+<circle cx="83.25" cy="61.56" r="0.31" fill="blue" /></a>
+<a href="">
+<title>Gino Bianco</title>
+<circle cx="88.93" cy="68.53" r="0.31" fill="blue" /></a>
+<a href="">
+<title>Danny Sullivan</title>
+<circle cx="28.87" cy="49.3" r="0.31" fill="yellow" /></a>
+<a href="">
+<title>David Walker</title>
+<circle cx="49.09" cy="15.16" r="0.31" fill="green" /></a>
+<a href="">
+<title>Mike Taylor</title>
+<circle cx="84.99" cy="34.83" r="0.31" fill="green" /></a>
+<a href="">
+<title>Ernie Pieterse</title>
+<circle cx="89.93" cy="29.99" r="0.3" fill="blue" /></a>
+<a href="">
+<title>Claudio Langes</title>
+<circle cx="20.94" cy="43.93" r="0.3" fill="green" /></a>
+<a href="">
+<title>Jud Larson</title>
+<circle cx="23.82" cy="74.22" r="0.3" fill="violet" /></a>
+<a href="">
+<title>Joie Chitwood</title>
+<circle cx="2.7" cy="48.26" r="0.3" fill="violet" /></a>
+<a href="">
+<title>Dick Gibson</title>
+<circle cx="86.52" cy="32.56" r="0.3" fill="green" /></a>
+<a href="">
+<title>Giorgio Pantano</title>
+<circle cx="61.58" cy="71.6" r="0.3" fill="green" /></a>
+<a href="">
+<title>Neville Lederle</title>
+<circle cx="90.51" cy="27.27" r="0.3" fill="blue" /></a>
+<a href="">
+<title>Peter Walker</title>
+<circle cx="69.42" cy="64.0" r="0.3" fill="blue" /></a>
+<a href="">
+<title>Hans Binder</title>
+<circle cx="29.21" cy="18.82" r="0.3" fill="yellow" /></a>
+<a href="">
+<title>Ralph Firman</title>
+<circle cx="52.01" cy="88.07" r="0.3" fill="green" /></a>
+<a href="">
+<title>Leo Kinnunen</title>
+<circle cx="29.42" cy="21.28" r="0.29" fill="yellow" /></a>
+<a href="">
+<title>Siegfried Stohr</title>
+<circle cx="45.56" cy="42.56" r="0.29" fill="orange" /></a>
+<a href="">
+<title>Huub Rothengatter</title>
+<circle cx="50.03" cy="51.13" r="0.29" fill="yellow" /></a>
+<a href="">
+<title>Roberto Merhi</title>
+<circle cx="60.03" cy="2.29" r="0.29" fill="blue" /></a>
+<a href="">
+<title>Michael Andretti</title>
+<circle cx="26.92" cy="41.14" r="0.29" fill="yellow" /></a>
+<a href="">
+<title>Franco Comotti</title>
+<circle cx="90.63" cy="62.46" r="0.29" fill="blue" /></a>
+<a href="">
+<title>Roberto Guerrero</title>
+<circle cx="14.46" cy="37.19" r="0.29" fill="green" /></a>
+<a href="">
+<title>Renato Pirocchi</title>
+<circle cx="76.67" cy="20.27" r="0.29" fill="green" /></a>
+<a href="">
+<title>Geoff Lees</title>
+<circle cx="43.97" cy="38.78" r="0.29" fill="yellow" /></a>
+<a href="">
+<title>Edgar Barth</title>
+<circle cx="81.75" cy="26.24" r="0.29" fill="blue" /></a>
+<a href="">
+<title>Theo Helfrich</title>
+<circle cx="30.86" cy="34.11" r="0.27" fill="blue" /></a>
+<a href="">
+<title>Chuck Daigh</title>
+<circle cx="61.76" cy="46.66" r="0.27" fill="green" /></a>
+<a href="">
+<title>Ricardo Zunino</title>
+<circle cx="27.9" cy="38.35" r="0.27" fill="yellow" /></a>
+<a href="">
+<title>Eitel Cantoni</title>
+<circle cx="91.94" cy="65.64" r="0.27" fill="blue" /></a>
+<a href="">
+<title>Tony Rolt</title>
+<circle cx="66.87" cy="64.16" r="0.27" fill="blue" /></a>
+<a href="">
+<title>Rio Haryanto</title>
+<circle cx="42.17" cy="95.94" r="0.27" fill="indigo" /></a>
+<a href="">
+<title>David Purley</title>
+<circle cx="27.71" cy="16.1" r="0.27" fill="green" /></a>
+<a href="">
+<title>Henri Louveau</title>
+<circle cx="75.88" cy="70.27" r="0.27" fill="blue" /></a>
+<a href="">
+<title>Walt Hansgen</title>
+<circle cx="71.23" cy="19.59" r="0.27" fill="green" /></a>
+<a href="">
+<title>Roger Penske</title>
+<circle cx="59.8" cy="38.77" r="0.27" fill="green" /></a>
+<a href="">
+<title>Eddie Sachs</title>
+<circle cx="23.29" cy="77.07" r="0.27" fill="violet" /></a>
+<a href="">
+<title>Bobby Grim</title>
+<circle cx="20.09" cy="78.69" r="0.27" fill="violet" /></a>
+<a href="">
+<title>Peter Ashdown</title>
+<circle cx="88.24" cy="36.46" r="0.26" fill="green" /></a>
+<a href="">
+<title>Mike Parkes</title>
+<circle cx="65.5" cy="12.69" r="0.26" fill="blue" /></a>
+<a href="">
+<title>Gregor Foitek</title>
+<circle cx="32.95" cy="61.75" r="0.26" fill="orange" /></a>
+<a href="">
+<title>Patrick Friesacher</title>
+<circle cx="56.46" cy="97.13" r="0.26" fill="blue" /></a>
+<a href="">
+<title>Bill Moss</title>
+<circle cx="89.17" cy="33.96" r="0.26" fill="green" /></a>
+<a href="">
+<title>Dempsey Wilson</title>
+<circle cx="21.03" cy="81.95" r="0.26" fill="violet" /></a>
+<a href="">
+<title>Hans von Stuck</title>
+<circle cx="95.15" cy="58.52" r="0.26" fill="blue" /></a>
+<a href="">
+<title>David Hampshire</title>
+<circle cx="86.72" cy="71.14" r="0.26" fill="indigo" /></a>
+<a href="">
+<title>Robert Doornbos</title>
+<circle cx="59.64" cy="90.45" r="0.26" fill="yellow" /></a>
+<a href="">
+<title>Chuck Arnold</title>
+<circle cx="22.83" cy="79.41" r="0.26" fill="violet" /></a>
+<a href="">
+<title>Jean-Christophe Boullion</title>
+<circle cx="57.35" cy="62.3" r="0.26" fill="green" /></a>
+<a href="">
+<title>Tony Gaze</title>
+<circle cx="71.9" cy="64.61" r="0.26" fill="indigo" /></a>
+<a href="">
+<title>Élie Bayol</title>
+<circle cx="65.25" cy="67.62" r="0.26" fill="blue" /></a>
+<a href="">
+<title>Lance Reventlow</title>
+<circle cx="63.45" cy="48.45" r="0.26" fill="green" /></a>
+<a href="">
+<title>Karun Chandhok</title>
+<circle cx="61.87" cy="88.17" r="0.26" fill="green" /></a>
+<a href="">
+<title>Giovanni Lavaggi</title>
+<circle cx="28.66" cy="62.93" r="0.25" fill="green" /></a>
+<a href="">
+<title>André Testut</title>
+<circle cx="91.26" cy="45.79" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Hermann Lang</title>
+<circle cx="95.34" cy="48.82" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Ian Raby</title>
+<circle cx="59.17" cy="34.65" r="0.25" fill="green" /></a>
+<a href="">
+<title>Sam Tingle</title>
+<circle cx="91.63" cy="36.62" r="0.25" fill="green" /></a>
+<a href="">
+<title>Jacques Pollet</title>
+<circle cx="72.29" cy="72.77" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Mikko Kozarowitzky</title>
+<circle cx="28.13" cy="12.08" r="0.25" fill="green" /></a>
+<a href="">
+<title>Geoff Duke</title>
+<circle cx="79.03" cy="18.95" r="0.25" fill="green" /></a>
+<a href="">
+<title>Frank Gardner</title>
+<circle cx="53.94" cy="34.62" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Mark Donohue</title>
+<circle cx="26.33" cy="21.92" r="0.25" fill="green" /></a>
+<a href="">
+<title>Roger Laurent</title>
+<circle cx="89.13" cy="65.08" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Olivier Beretta</title>
+<circle cx="24.35" cy="46.08" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Andrea Chiesa</title>
+<circle cx="27.82" cy="78.03" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Volker Weidler</title>
+<circle cx="52.45" cy="54.68" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Eugène Martin</title>
+<circle cx="78.63" cy="71.2" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Gerhard Mitter</title>
+<circle cx="80.87" cy="16.06" r="0.25" fill="blue" /></a>
+<a href="">
+<title>François Picard</title>
+<circle cx="63.21" cy="51.09" r="0.25" fill="green" /></a>
+<a href="">
+<title>Luigi Taramazzo</title>
+<circle cx="94.16" cy="45.97" r="0.25" fill="blue" /></a>
+<a href="">
+<title>David Piper</title>
+<circle cx="76.29" cy="16.67" r="0.25" fill="green" /></a>
+<a href="">
+<title>Tom Bridger</title>
+<circle cx="86.41" cy="39.19" r="0.25" fill="green" /></a>
+<a href="">
+<title>Christian Goethals</title>
+<circle cx="86.88" cy="29.86" r="0.25" fill="green" /></a>
+<a href="">
+<title>André Guelfi</title>
+<circle cx="65.18" cy="53.37" r="0.25" fill="green" /></a>
+<a href="">
+<title>Allen Berg</title>
+<circle cx="26.65" cy="60.79" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Alessandro de Tomaso</title>
+<circle cx="79.94" cy="64.58" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Alessandro Pesenti-Rossi</title>
+<circle cx="38.1" cy="13.42" r="0.25" fill="green" /></a>
+<a href="">
+<title>Tony Brise</title>
+<circle cx="46.52" cy="34.02" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Óscar González</title>
+<circle cx="91.07" cy="40.18" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Jean-Marc Gounon</title>
+<circle cx="30.53" cy="83.08" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Robert La Caze</title>
+<circle cx="66.48" cy="51.06" r="0.25" fill="green" /></a>
+<a href="">
+<title>Michael Bleekemolen</title>
+<circle cx="32.34" cy="11.32" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Ken Miles</title>
+<circle cx="76.75" cy="26.27" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Peter Ryan</title>
+<circle cx="59.44" cy="42.04" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ken Kavanagh</title>
+<circle cx="90.31" cy="42.3" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Juan Manuel Bordeu</title>
+<circle cx="63.87" cy="42.48" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Giulio Cabianca</title>
+<circle cx="65.46" cy="57.6" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Charles Pozzi</title>
+<circle cx="72.11" cy="70.22" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Tony Settember</title>
+<circle cx="65.08" cy="45.14" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Riccardo Paletti</title>
+<circle cx="22.79" cy="23.95" r="0.25" fill="green" /></a>
+<a href="">
+<title>Jo Gartner</title>
+<circle cx="25.86" cy="57.89" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Roberto Bussinello</title>
+<circle cx="69.34" cy="14.16" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bill Brack</title>
+<circle cx="59.66" cy="10.37" r="0.25" fill="green" /></a>
+<a href="">
+<title>John Fitch</title>
+<circle cx="92.95" cy="43.69" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Mike Thackwell</title>
+<circle cx="23.53" cy="32.1" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Max de Terra</title>
+<circle cx="95.9" cy="53.53" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Alfonso Thiele</title>
+<circle cx="61.17" cy="43.95" r="0.25" fill="green" /></a>
+<a href="">
+<title>Kurt Adolff</title>
+<circle cx="97.19" cy="50.85" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Leslie Marr</title>
+<circle cx="32.73" cy="70.3" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Gérard Larrousse</title>
+<circle cx="26.13" cy="19.68" r="0.25" fill="green" /></a>
+<a href="">
+<title>Ronnie Bucknum</title>
+<circle cx="71.45" cy="16.25" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Larry Perkins</title>
+<circle cx="41.91" cy="12.21" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Alain de Changy</title>
+<circle cx="85.76" cy="25.59" r="0.25" fill="green" /></a>
+<a href="">
+<title>Michel Leclère</title>
+<circle cx="45.04" cy="11.93" r="0.25" fill="green" /></a>
+<a href="">
+<title>Jean Lucienbonnet</title>
+<circle cx="87.65" cy="27.27" r="0.25" fill="green" /></a>
+<a href="">
+<title>Otto Stuppacher</title>
+<circle cx="36.4" cy="10.64" r="0.25" fill="green" /></a>
+<a href="">
+<title>Willi Heeks</title>
+<circle cx="51.89" cy="45.84" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Alberto Crespo</title>
+<circle cx="89.47" cy="72.25" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Brian Shawe Taylor</title>
+<circle cx="87.74" cy="75.14" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Carlo Abate</title>
+<circle cx="82.94" cy="18.42" r="0.25" fill="green" /></a>
+<a href="">
+<title>Colin Davis</title>
+<circle cx="84.31" cy="21.25" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Richard Robarts</title>
+<circle cx="39.82" cy="10.59" r="0.25" fill="green" /></a>
+<a href="">
+<title>Mário de Araújo Cabral</title>
+<circle cx="83.49" cy="23.43" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Gijs van Lennep</title>
+<circle cx="49.49" cy="8.04" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Perry McCarthy</title>
+<circle cx="17.37" cy="40.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Fred Wacker</title>
+<circle cx="97.19" cy="45.51" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Menato Boffa</title>
+<circle cx="80.48" cy="21.43" r="0.25" fill="green" /></a>
+<a href="">
+<title>Franck Montagny</title>
+<circle cx="59.11" cy="92.96" r="0.25" fill="green" /></a>
+<a href="">
+<title>Eddie Keizan</title>
+<circle cx="25.5" cy="25.84" r="0.25" fill="green" /></a>
+<a href="">
+<title>Rodney Nuckey</title>
+<circle cx="81.76" cy="72.82" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Syd van der Vyver</title>
+<circle cx="92.77" cy="30.47" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Domenico Schiattarella</title>
+<circle cx="60.82" cy="84.38" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Hubert Hahne</title>
+<circle cx="56.04" cy="11.13" r="0.25" fill="green" /></a>
+<a href="">
+<title>Dave Kennedy</title>
+<circle cx="47.6" cy="45.07" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Massimiliano Papis</title>
+<circle cx="38.62" cy="96.2" r="0.25" fill="green" /></a>
+<a href="">
+<title>Giovanni de Riu</title>
+<circle cx="82.22" cy="67.61" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Gary Hocking</title>
+<circle cx="93.25" cy="33.29" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Renzo Zorzi</title>
+<circle cx="22.41" cy="20.61" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Rob Schroeder</title>
+<circle cx="59.2" cy="47.67" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Vic Wilson</title>
+<circle cx="44.5" cy="8.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Vern Schuppan</title>
+<circle cx="42.65" cy="34.7" r="0.25" fill="green" /></a>
+<a href="">
+<title>Tony Trimmer</title>
+<circle cx="34.86" cy="13.3" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Roger Williamson</title>
+<circle cx="25.61" cy="13.84" r="0.25" fill="green" /></a>
+<a href="">
+<title>Toni Branca</title>
+<circle cx="96.6" cy="62.77" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Toni Ulmen</title>
+<circle cx="16.51" cy="29.51" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Rudolf Schoeller</title>
+<circle cx="92.07" cy="68.65" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Adolf Brudes</title>
+<circle cx="13.06" cy="34.66" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Joachim Winkelhock</title>
+<circle cx="26.53" cy="83.65" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Andy Sutcliffe</title>
+<circle cx="32.02" cy="8.15" r="0.25" fill="green" /></a>
+<a href="">
+<title>Erwin Bauer</title>
+<circle cx="63.3" cy="18.55" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ernst Loof</title>
+<circle cx="53.8" cy="43.69" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ignazio Giunti</title>
+<circle cx="50.66" cy="10.65" r="0.25" fill="green" /></a>
+<a href="">
+<title>Joe Fry</title>
+<circle cx="83.6" cy="77.1" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Hans Klenk</title>
+<circle cx="14.01" cy="29.75" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Josef Peters</title>
+<circle cx="12.42" cy="31.9" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Jan Flinterman</title>
+<circle cx="83.5" cy="80.01" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Emanuele Naspetti</title>
+<circle cx="24.59" cy="43.18" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Enrico Bertaggia</title>
+<circle cx="17.2" cy="37.86" r="0.25" fill="green" /></a>
+<a href="">
+<title>Ingo Hoffmann</title>
+<circle cx="46.76" cy="6.97" r="0.25" fill="green" /></a>
+<a href="">
+<title>Eppie Wietzes</title>
+<circle cx="47.74" cy="10.63" r="0.25" fill="green" /></a>
+<a href="">
+<title>Fritz Riess</title>
+<circle cx="15.52" cy="33.02" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Oswald Karch</title>
+<circle cx="53.92" cy="40.65" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Danny Ongais</title>
+<circle cx="51.11" cy="39.34" r="0.25" fill="green" /></a>
+<a href="">
+<title>Günther Bechem</title>
+<circle cx="81.73" cy="83.13" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Cuth Harrison</title>
+<circle cx="79.74" cy="79.39" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Georges Grignard</title>
+<circle cx="80.86" cy="75.91" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Dennis Poore</title>
+<circle cx="65.14" cy="61.89" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Loris Kessel</title>
+<circle cx="19.42" cy="28.88" r="0.25" fill="green" /></a>
+<a href="">
+<title>Günther Seiffert</title>
+<circle cx="56.65" cy="43.11" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Helmuth Koinigg</title>
+<circle cx="38.2" cy="6.36" r="0.25" fill="green" /></a>
+<a href="">
+<title>Sam Posey</title>
+<circle cx="51.87" cy="6.5" r="0.25" fill="green" /></a>
+<a href="">
+<title>Mauri Rose</title>
+<circle cx="2.96" cy="41.53" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Gino Munaron</title>
+<circle cx="72.98" cy="79.79" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Miguel Ángel Guerra</title>
+<circle cx="11.37" cy="27.32" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bernard de Dryver</title>
+<circle cx="23.87" cy="10.01" r="0.25" fill="green" /></a>
+<a href="">
+<title>Wayne Weiler</title>
+<circle cx="0.71" cy="56.78" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Nello Pagani</title>
+<circle cx="91.6" cy="73.69" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Nicolas Kiesa</title>
+<circle cx="66.67" cy="76.29" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Alfredo Pián</title>
+<circle cx="84.95" cy="74.05" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Alexander Rossi</title>
+<circle cx="63.98" cy="3.22" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Paul England</title>
+<circle cx="90.96" cy="24.35" r="0.25" fill="green" /></a>
+<a href="">
+<title>José Dolhem</title>
+<circle cx="29.51" cy="9.36" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Giacomo Russo</title>
+<circle cx="80.58" cy="13.11" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Rudolf Krause</title>
+<circle cx="71.72" cy="92.8" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Giorgio Bassi</title>
+<circle cx="63.47" cy="9.23" r="0.25" fill="green" /></a>
+<a href="">
+<title>Heinz Schiller</title>
+<circle cx="59.48" cy="51.27" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ian Stewart</title>
+<circle cx="96.71" cy="42.71" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Jackie Pretorius</title>
+<circle cx="70.03" cy="9.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Heini Walter</title>
+<circle cx="78.11" cy="13.8" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Dorino Serafini</title>
+<circle cx="93.45" cy="71.53" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>George Abecassis</title>
+<circle cx="75.34" cy="73.13" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Chris Craft</title>
+<circle cx="58.28" cy="7.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Alan Rees</title>
+<circle cx="56.48" cy="46.03" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Yuji Ide</title>
+<circle cx="53.5" cy="97.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Antonio Creus</title>
+<circle cx="71.9" cy="85.39" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Art Bisch</title>
+<circle cx="22.57" cy="89.19" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Ben Pon</title>
+<circle cx="75.6" cy="11.52" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Bill Whitehouse</title>
+<circle cx="5.17" cy="43.45" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Torsten Palm</title>
+<circle cx="23.7" cy="17.15" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Tony Crook</title>
+<circle cx="95.03" cy="68.44" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Ettore Chimeri</title>
+<circle cx="73.97" cy="87.53" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Clemente Biondetti</title>
+<circle cx="86.91" cy="77.79" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Clive Puzey</title>
+<circle cx="95.38" cy="34.94" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Tom Belsø</title>
+<circle cx="35.61" cy="4.18" r="0.25" fill="green" /></a>
+<a href="">
+<title>Teddy Pilette</title>
+<circle cx="45.81" cy="36.96" r="0.25" fill="green" /></a>
+<a href="">
+<title>Don Beauman</title>
+<circle cx="13.95" cy="81.87" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Ernst Klodwig</title>
+<circle cx="73.45" cy="91.03" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Slim Borgudd</title>
+<circle cx="26.99" cy="65.77" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Rob Slotemaker</title>
+<circle cx="72.91" cy="11.12" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Jimmy Stewart</title>
+<circle cx="89.8" cy="77.7" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>John Cannon</title>
+<circle cx="54.59" cy="5.91" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Mike Wilds</title>
+<circle cx="17.68" cy="20.97" r="0.25" fill="green" /></a>
+<a href="">
+<title>Les Leston</title>
+<circle cx="74.35" cy="14.67" r="0.25" fill="green" /></a>
+<a href="">
+<title>Leslie Johnson</title>
+<circle cx="85.69" cy="81.07" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Leslie Thorne</title>
+<circle cx="2.54" cy="45.35" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>John Riseley-Prichard</title>
+<circle cx="16.36" cy="83.45" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Massimo Natili</title>
+<circle cx="67.09" cy="8.81" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Michael Bartels</title>
+<circle cx="24.25" cy="50.59" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Kevin Cogan</title>
+<circle cx="49.6" cy="36.84" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Nasif Estéfano</title>
+<circle cx="75.42" cy="85.25" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Norberto Fontana</title>
+<circle cx="43.89" cy="92.01" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Paul Hawkins</title>
+<circle cx="77.64" cy="9.79" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Eric Thompson</title>
+<circle cx="68.27" cy="82.31" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Peter de Klerk</title>
+<circle cx="62.45" cy="57.19" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Dieter Quester</title>
+<circle cx="18.03" cy="33.79" r="0.25" fill="green" /></a>
+<a href="">
+<title>Oscar Gálvez</title>
+<circle cx="98.01" cy="57.99" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Aldo Gordini</title>
+<circle cx="95.03" cy="64.81" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Alberto Colombo</title>
+<circle cx="32.71" cy="5.51" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Lamberto Leoni</title>
+<circle cx="53.93" cy="51.16" r="0.25" fill="green" /></a>
+<a href="">
+<title>Len Duncan</title>
+<circle cx="19.05" cy="84.44" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Desiré Wilson</title>
+<circle cx="26.34" cy="8.9" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Kurt Ahrens</title>
+<circle cx="20.07" cy="22.52" r="0.25" fill="green" /></a>
+<a href="">
+<title>Piero Drogo</title>
+<circle cx="20.35" cy="17.93" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Frank Dochnal</title>
+<circle cx="61.62" cy="54.4" r="0.25" fill="blue" /></a>
+<a href="">
+<title>François Mazet</title>
+<circle cx="62.01" cy="62.93" r="0.25" fill="green" /></a>
+<a href="">
+<title>Alex Blignaut</title>
+<circle cx="58.62" cy="54.39" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Dennis Taylor</title>
+<circle cx="70.59" cy="6.2" r="0.25" fill="green" /></a>
+<a href="">
+<title>Arthur Owen</title>
+<circle cx="23.14" cy="12.65" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Thomas Monarch</title>
+<circle cx="67.42" cy="5.78" r="0.25" fill="blue" /></a>
+<a href="">
+<title>David Prophet</title>
+<circle cx="63.89" cy="6.58" r="0.25" fill="green" /></a>
+<a href="">
+<title>Timmy Mayer</title>
+<circle cx="25.83" cy="29.39" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Peter Westbury</title>
+<circle cx="51.05" cy="3.48" r="0.25" fill="green" /></a>
+<a href="">
+<title>Fritz d'Orey</title>
+<circle cx="61.16" cy="60.11" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Tomáš Enge</title>
+<circle cx="36.51" cy="17.17" r="0.25" fill="green" /></a>
+<a href="">
+<title>Marcel Balsa</title>
+<circle cx="76.12" cy="90.59" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Colin Chapman</title>
+<circle cx="78.46" cy="75.06" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Carlo Facetti</title>
+<circle cx="49.8" cy="42.39" r="0.25" fill="green" /></a>
+<a href="">
+<title>Max Jean</title>
+<circle cx="58.7" cy="57.79" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bob Evans</title>
+<circle cx="52.79" cy="48.09" r="0.25" fill="green" /></a>
+<a href="">
+<title>Azdrubal Fontes</title>
+<circle cx="25.91" cy="34.81" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Divina Galica</title>
+<circle cx="40.65" cy="7.25" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Paddy Driver</title>
+<circle cx="48.03" cy="39.58" r="0.25" fill="green" /></a>
+<a href="">
+<title>Jim Crawford</title>
+<circle cx="21.23" cy="15.44" r="0.25" fill="green" /></a>
+<a href="">
+<title>Roland Ratzenberger</title>
+<circle cx="36.08" cy="94.7" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>George Amick</title>
+<circle cx="6.71" cy="39.22" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Guy Tunmer</title>
+<circle cx="19.7" cy="31.27" r="0.25" fill="green" /></a>
+<a href="">
+<title>Georges Berger</title>
+<circle cx="72.81" cy="76.44" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ken Downing</title>
+<circle cx="94.56" cy="40.83" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Henry Banks</title>
+<circle cx="3.92" cy="38.06" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Jean-Denis Délétraz</title>
+<circle cx="14.66" cy="24.1" r="0.25" fill="green" /></a>
+<a href="">
+<title>Kazuyoshi Hoshino</title>
+<circle cx="27.25" cy="70.31" r="0.25" fill="green" /></a>
+<a href="">
+<title>Giovanna Amati</title>
+<circle cx="29.99" cy="88.64" r="0.25" fill="green" /></a>
+<a href="">
+<title>Hideki Noda</title>
+<circle cx="13.7" cy="26.45" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Giorgio Francia</title>
+<circle cx="28.52" cy="6.69" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bobby Rahal</title>
+<circle cx="55.67" cy="54.7" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Bobby Unser</title>
+<circle cx="87.28" cy="19.19" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Toshio Suzuki</title>
+<circle cx="67.85" cy="11.59" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Kenny Acheson</title>
+<circle cx="45.39" cy="96.14" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Brian Gubby</title>
+<circle cx="94.59" cy="60.9" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Bernie Ecclestone</title>
+<circle cx="10.44" cy="39.08" r="0.25" fill="black" /></a>
+<a href="">
+<title>Bruce Johnstone</title>
+<circle cx="20.61" cy="25.59" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bruce Kessler</title>
+<circle cx="22.46" cy="85.85" r="0.25" fill="black" /></a>
+<a href="">
+<title>John Barber</title>
+<circle cx="76.21" cy="76.57" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Bobby Ball</title>
+<circle cx="5.56" cy="35.61" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Jo Schlesser</title>
+<circle cx="66.06" cy="78.27" r="0.25" fill="green" /></a>
+<a href="">
+<title>Mike MacDowel</title>
+<circle cx="66.55" cy="69.98" r="0.25" fill="green" /></a>
+<a href="">
+<title>Basil van Rooyen</title>
+<circle cx="57.96" cy="4.71" r="0.25" fill="green" /></a>
+<a href="">
+<title>Mike Sparken</title>
+<circle cx="78.53" cy="82.32" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Archie Scott Brown</title>
+<circle cx="17.23" cy="25.35" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Damien Magee</title>
+<circle cx="11.6" cy="20.52" r="0.25" fill="green" /></a>
+<a href="">
+<title>André Milhoux</title>
+<circle cx="71.83" cy="82.4" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Adolfo Cruz</title>
+<circle cx="88.81" cy="23.47" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Noritake Takahara</title>
+<circle cx="25.24" cy="81.38" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Jacques Villeneuve Sr.</title>
+<circle cx="27.76" cy="74.48" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Jean Lucas</title>
+<circle cx="68.81" cy="90.05" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Alberto Rodriguez Larreta</title>
+<circle cx="55.91" cy="2.79" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Albert Scherrer</title>
+<circle cx="54.9" cy="9.11" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Paul Emery</title>
+<circle cx="19.6" cy="87.4" r="0.25" fill="black" /></a>
+<a href="">
+<title>Conny Andersson</title>
+<circle cx="47.61" cy="3.49" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Jesús Iglesias</title>
+<circle cx="33.21" cy="78.61" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>John Rhodes</title>
+<circle cx="67.8" cy="67.15" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Dries van der Lof</title>
+<circle cx="23.24" cy="36.99" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>John Taylor</title>
+<circle cx="36.46" cy="7.73" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Desmond Titterington</title>
+<circle cx="17.03" cy="18.26" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Gus Hutchison</title>
+<circle cx="73.24" cy="7.92" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Theo Fitzau</title>
+<circle cx="99.02" cy="54.97" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Luki Botha</title>
+<circle cx="68.9" cy="71.35" r="0.25" fill="green" /></a>
+<a href="">
+<title>Luiz Bueno</title>
+<circle cx="14.37" cy="21.07" r="0.25" fill="green" /></a>
+<a href="">
+<title>Roger Loyer</title>
+<circle cx="76.45" cy="79.51" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Philip Fotheringham-Parker</title>
+<circle cx="84.42" cy="84.41" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Jean-Louis Schlesser</title>
+<circle cx="42.65" cy="5.68" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Pablo Birger</title>
+<circle cx="43.4" cy="98.11" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Juan Jover</title>
+<circle cx="75.35" cy="82.09" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Kunimitsu Takahashi</title>
+<circle cx="42.7" cy="2.74" r="0.25" fill="green" /></a>
+<a href="">
+<title>Franck Lagorce</title>
+<circle cx="38.05" cy="92.85" r="0.25" fill="orange" /></a>
+<a href="">
+<title>John James</title>
+<circle cx="78.79" cy="88.66" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Roelof Wunderink</title>
+<circle cx="39.82" cy="3.09" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Franco Forini</title>
+<circle cx="34.62" cy="91.04" r="0.25" fill="green" /></a>
+<a href="">
+<title>Philippe Adams</title>
+<circle cx="25.79" cy="86.55" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Jac Nelleman</title>
+<circle cx="52.24" cy="94.51" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Warwick Brown</title>
+<circle cx="69.77" cy="77.26" r="0.25" fill="green" /></a>
+<a href="">
+<title>Jo Vonlanthen</title>
+<circle cx="52.24" cy="1.44" r="0.25" fill="yellow" /></a>
+<a href="">
+<title>Stéphane Sarrazin</title>
+<circle cx="19.65" cy="12.13" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Danny Kladis</title>
+<circle cx="9.9" cy="24.17" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Graham McRae</title>
+<circle cx="67.9" cy="73.84" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Robert O'Brien</title>
+<circle cx="61.34" cy="95.35" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>André Lotterer</title>
+<circle cx="64.76" cy="91.38" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Stephen South</title>
+<circle cx="45.52" cy="1.86" r="0.25" fill="green" /></a>
+<a href="">
+<title>Ernie de Vos</title>
+<circle cx="7.86" cy="26.32" r="0.25" fill="black" /></a>
+<a href="">
+<title>Jonathan Williams</title>
+<circle cx="49.99" cy="96.34" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Ken Richardson</title>
+<circle cx="81.61" cy="86.51" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Ricardo Londoño</title>
+<circle cx="9.45" cy="35.56" r="0.25" fill="green" /></a>
+<a href="">
+<title>Bertil Roos</title>
+<circle cx="31.36" cy="91.45" r="0.25" fill="green" /></a>
+<a href="">
+<title>Doug Serrurier</title>
+<circle cx="78.66" cy="85.42" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Bayliss Levrett</title>
+<circle cx="68.92" cy="94.93" r="0.25" fill="black" /></a>
+<a href="">
+<title>Helmut Niedermayr</title>
+<circle cx="25.71" cy="90.82" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Robin Widdows</title>
+<circle cx="28.53" cy="92.12" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Marco Apicella</title>
+<circle cx="70.13" cy="88.22" r="0.25" fill="orange" /></a>
+<a href="">
+<title>Geoff Crossley</title>
+<circle cx="97.43" cy="38.02" r="0.25" fill="black" /></a>
+<a href="">
+<title>Dave Morgan</title>
+<circle cx="68.88" cy="80.29" r="0.25" fill="green" /></a>
+<a href="">
+<title>Peter Broeker</title>
+<circle cx="6.31" cy="28.96" r="0.25" fill="black" /></a>
+<a href="">
+<title>Carlo Franchi</title>
+<circle cx="67.75" cy="85.25" r="0.25" fill="green" /></a>
+<a href="">
+<title>Herbert MacKay-Fraser</title>
+<circle cx="85.54" cy="16.26" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Bud Tingelstad</title>
+<circle cx="9.11" cy="30.61" r="0.25" fill="violet" /></a>
+<a href="">
+<title>Brian Hart</title>
+<circle cx="5.13" cy="32.15" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Hans Heyer</title>
+<circle cx="8.19" cy="32.9" r="0.25" fill="green" /></a>
+<a href="">
+<title>Brausch Niemann</title>
+<circle cx="27.63" cy="88.05" r="0.25" fill="green" /></a>
+<a href="">
+<title>Joe Kelly</title>
+<circle cx="95.38" cy="29.73" r="0.25" fill="black" /></a>
+<a href="">
+<title>Roberto Bonomi</title>
+<circle cx="18.23" cy="14.69" r="0.25" fill="indigo" /></a>
+<a href="">
+<title>Bill Cantrell</title>
+<circle cx="59.63" cy="97.93" r="0.25" fill="black" /></a>
+<a href="">
+<title>Mike Fisher</title>
+<circle cx="14.79" cy="16.89" r="0.25" fill="blue" /></a>
+<a href="">
+<title>Vincenzo Sospiri</title>
+<circle cx="67.02" cy="93.19" r="0.25" fill="green" /></a>
+<a href="">
+<title>Markus Winkelhock</title>
+<circle cx="48.54" cy="98.97" r="0.25" fill="blue" /></a>
 </svg>

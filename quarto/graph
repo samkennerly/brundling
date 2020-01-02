@@ -5,28 +5,28 @@ from csv import reader
 from itertools import starmap
 from math import sqrt
 from pathlib import Path
+from sys import argv
 
 REPO = Path(__file__).resolve().parent.parent
-OUTPATH = REPO / 'proof/graphs/brundle.svg'
 LAYOUT = REPO / 'ready/graphs/brundle.csv'
 STYLE = REPO / 'ready/graphs/graph.css'
-VIEWBOX = "0 0 100 100"
 COLORS = 'white red orange yellow green blue indigo violet black'.split()
 
-def readlines(path):
-    with open(path) as file:
-        yield from file
-
 def readrows(path):
+    """ Iterator[namedtuple]: Generate rows from a CSV file. """
     with open(path) as file:
         rows = reader(file)
         Row = namedtuple('Row', next(rows))
         yield from starmap(Row, rows)
 
-def lines(layout=LAYOUT, style=STYLE):
+def svglines(layout, style):
+    """ Iterator[str]: Generate rows of an SVG file. """
+    yield '<svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
 
-    yield f'<svg role="image" viewBox="{VIEWBOX}" xmlns="http://www.w3.org/2000/svg">'
-    yield from ('<style>', *map(str.rstrip, readlines(style)), '</style>')
+    yield '<style>'
+    with open(style) as style:
+        yield from map(str.rstrip, style)
+    yield '</style>'
 
     for row in readrows(layout):
         x = 50 * (1 + float(row.x))
@@ -37,25 +37,23 @@ def lines(layout=LAYOUT, style=STYLE):
 
         yield f'<a href="">'
         yield f'<title>{row.driver}</title>'
-        yield f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" />'
-        yield f'</a>'
+        yield f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" /></a>'
 
     yield '</svg>'
 
-def main(outpath=OUTPATH, *args):
+def main(layout=LAYOUT, style=STYLE):
+    """ None: Generate SVG from layout and save a proof copy. """
+    layout = Path(layout)
 
-    print("Save", outpath)
-    with open(outpath, 'w') as file:
-        file.write("\n".join(lines(*args)))
-
+    joined = "\n".join
+    outpath = (REPO / 'proof/graphs' / layout.name).with_suffix('.svg')
+    with open(outpath, "w") as file:
+        print("Save", outpath)
+        file.write(joined(svglines(layout, style)))
 
 if __name__ == '__main__':
-    main()
-
-
-
-
-
+    script, *args = argv
+    main(*args)
 
 """
 Copyright © 2019 Sam Kennerly
