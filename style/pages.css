@@ -96,19 +96,6 @@ main pre {
 main blockquote cite {
   display: block;
 }
-main details header {
-  border: var(--border);
-  padding: var(--puffy);
-}
-main details summary {
-  border-bottom: var(--border);
-  padding: var(--puffy);
-}
-main details summary:focus,
-main details summary:hover,
-main details summary:active {
-  background: var(--color-button);
-}
 main dd {
   margin-left: 0;
   padding-left: 0;
@@ -133,6 +120,8 @@ main h3 {
 }
 main header {
   background: var(--color-head);
+  border: var(--border);
+  padding: var(--puffy);
 }
 main img {
   max-width: 100%;
@@ -140,6 +129,15 @@ main img {
 main ol,
 main ul {
   list-style: square;
+}
+main summary {
+  border-bottom: var(--border);
+  padding: var(--puffy);
+}
+main summary:focus,
+main summary:hover,
+main summary:active {
+  background: var(--color-button);
 }
 main table {
   border: var(--border);
