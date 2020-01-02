@@ -36,7 +36,7 @@ def svglines(layout, style):
     for row in readrows(layout):
         x = 50 * (1 + float(row.x))
         y = 50 * (1 + float(row.y))
-        r = 0.25 * max(1, sqrt(float(row.nraces) / 10))
+        r = 0.33 * max(1, sqrt(float(row.nraces) / 20))
         color = COLORS[int(row.degree)]
         x, y, r = (round(z, 2) for z in (x, y, r))
 
