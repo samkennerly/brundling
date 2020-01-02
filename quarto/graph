@@ -36,9 +36,10 @@ def svglines(layout, outpath):
         y = 50 * (1 + float(row.y))
         r = 0.5 * max(1, sqrt(float(row.nraces) / 25))
         x, y, r = (round(z, 2) for z in (x, y, r))
+        href = row.url.replace("http://", "https://")
 
-        yield f'<a href="{row.url}" target="_blank">'
-        yield f"<title>{row.driver}</title>"
+        yield f'<a href="{href}" target="_blank">'
+        yield f'<title>{row.driver}</title>'
         yield f'<circle class="d{row.degree}" cx="{x}" cy="{y}" r="{r}" /></a>'
 
     yield "</svg>"
