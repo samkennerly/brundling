@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+
+from collections import namedtuple
+from csv import reader
+from itertools import starmap
+from math import sqrt
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+OUTPATH = REPO / 'proof/graphs/brundle.svg'
+LAYOUT = REPO / 'ready/graphs/brundle.csv'
+STYLE = REPO / 'ready/graphs/graph.css'
+VIEWBOX = "0 0 100 100"
+COLORS = 'white red orange yellow green blue indigo violet black'.split()
+
+def readlines(path):
+    with open(path) as file:
+        yield from file
+
+def readrows(path):
+    with open(path) as file:
+        rows = reader(file)
+        Row = namedtuple('Row', next(rows))
+        yield from starmap(Row, rows)
+
+def lines(layout=LAYOUT, style=STYLE):
+
+    yield f'<svg role="image" viewBox="{VIEWBOX}" xmlns="http://www.w3.org/2000/svg">'
+    yield from ('<style>', *map(str.rstrip, readlines(style)), '</style>')
+
+    for row in readrows(layout):
+        x = 50 * (1 + float(row.x))
+        y = 50 * (1 + float(row.y))
+        r = 0.25 * max(1, sqrt(float(row.nraces) / 10))
+        color = COLORS[int(row.degree)]
+        x, y, r = ( round(z, 2) for z in (x, y, r) )
+
+        yield f'<a href="">'
+        yield f'<title>{row.driver}</title>'
+        yield f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" />'
+        yield f'</a>'
+
+    yield '</svg>'
+
+def main(outpath=OUTPATH, *args):
+
+    print("Save", outpath)
+    with open(outpath, 'w') as file:
+        file.write("\n".join(lines(*args)))
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+"""
+Copyright © 2019 Sam Kennerly
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
