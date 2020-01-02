@@ -7,32 +7,14 @@ from collections import namedtuple
 from csv import reader
 from itertools import starmap
 from math import sqrt
+from os.path import relpath
 from pathlib import Path
 from sys import argv
 
 REPO = Path(__file__).resolve().parent.parent
 LAYOUT = REPO / "ready/graphs/brundle.csv"
-STYLE = """
-circle {
-    animation: pulse 1s ease-out;
-    fill-opacity: 0.5;
-    stroke: black;
-    stroke-width: 0.1;
-    transform: rotate(58deg);
-    transform-origin: 50% 50%;
-}
-@keyframes pulse {
-    10% { fill-opacity: 1; }
-}
-.d0 { fill: white; }
-.d1 { fill: red; animation-delay: .1s; }
-.d2 { fill: orange; animation-delay: .2s; }
-.d3 { fill: yellow; animation-delay: .3s; }
-.d4 { fill: green; animation-delay: .4s; }
-.d5 { fill: blue; animation-delay: .5s; }
-.d6 { fill: indigo; animation-delay: .6s; }
-.d7 { fill: violet; animation-delay: .7s; }
-"""
+OUTPATH = REPO / "proof/graphs/brundle.svg"
+CSSPATH = REPO / "proof/style.css"
 
 def readrows(path):
     """ Iterator[namedtuple]: Generate rows from a CSV file. """
@@ -42,10 +24,12 @@ def readrows(path):
         yield from starmap(Row, rows)
 
 
-def svglines(layout):
+def svglines(layout, outpath):
     """ Iterator[str]: Generate rows of an SVG file. """
+    layout, outpath = Path(layout), Path(outpath)
+
     yield '<svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
-    yield from ("<style>", STYLE, "</style>")
+    yield f'<style>@import url("{relpath(CSSPATH, outpath.parent)}")</style>'
 
     for row in readrows(layout):
         x = 50 * (1 + float(row.x))
@@ -60,20 +44,17 @@ def svglines(layout):
     yield "</svg>"
 
 
-def main(layout=LAYOUT):
+def main(layout=LAYOUT, outpath=OUTPATH):
     """ None: Generate SVG from layout and save a proof copy. """
-    layout = Path(layout)
-
-    joined = "\n".join
-    outpath = (REPO / "proof/graphs" / layout.name).with_suffix(".svg")
     with open(outpath, "w") as file:
         print("Save", outpath)
-        file.write(joined(svglines(layout)))
+        file.write("\n".join(svglines(layout, outpath)))
 
 
 if __name__ == "__main__":
     script, *args = argv
     main(*args)
+    print("Exit", script)
 
 """
 Copyright © 2020 Sam Kennerly

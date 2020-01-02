@@ -1,0 +1,43 @@
+svg circle {
+    animation: pulse 1s ease-out;
+    animation-delay: 1s;
+    fill-opacity: 0.5;
+    stroke: black;
+    stroke-width: 0.1;
+    transform: rotate(58deg);
+    transform-origin: 50% 50%;
+}
+@keyframes pulse {
+    10% { fill-opacity: 1; }
+}
+.d0 {
+  fill: white;
+}
+.d1 {
+  animation-delay: .1s;
+  fill: red;
+}
+.d2 {
+  animation-delay: .2s;
+  fill: orange;
+}
+.d3 {
+  animation-delay: .3s;
+  fill: yellow;
+}
+.d4 {
+  animation-delay: .4s;
+  fill: green;
+}
+.d5 {
+  animation-delay: .5s;
+  fill: blue;
+}
+.d6 {
+  animation-delay: .6s;
+  fill: indigo;
+}
+.d7 {
+  animation-delay: .7s;
+  fill: violet;
+}
