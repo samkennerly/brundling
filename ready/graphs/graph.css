@@ -6,10 +6,6 @@ circle {
   transform-origin: 50% 50%;
 }
 @keyframes spin {
-  transform: rotate(1turn);
-  from {
-    transform: rotate(0);
-  }
   to {
     transform: rotate(1turn);
   }
