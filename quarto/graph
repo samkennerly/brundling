@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Generate and save animated SVG from a graph layout CSV file.
+"""
 
 from collections import namedtuple
 from csv import reader
@@ -8,50 +11,54 @@ from pathlib import Path
 from sys import argv
 
 REPO = Path(__file__).resolve().parent.parent
-LAYOUT = REPO / 'ready/graphs/brundle.csv'
-STYLE = REPO / 'ready/graphs/graph.css'
-COLORS = 'white red orange yellow green blue indigo violet black'.split()
+LAYOUT = REPO / "ready/graphs/brundle.csv"
+STYLE = REPO / "ready/graphs/graph.css"
+COLORS = "white red orange yellow green blue indigo violet black".split()
+
 
 def readrows(path):
     """ Iterator[namedtuple]: Generate rows from a CSV file. """
     with open(path) as file:
         rows = reader(file)
-        Row = namedtuple('Row', next(rows))
+        Row = namedtuple("Row", next(rows))
         yield from starmap(Row, rows)
+
 
 def svglines(layout, style):
     """ Iterator[str]: Generate rows of an SVG file. """
     yield '<svg role="image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
 
-    yield '<style>'
+    yield "<style>"
     with open(style) as style:
         yield from map(str.rstrip, style)
-    yield '</style>'
+    yield "</style>"
 
     for row in readrows(layout):
         x = 50 * (1 + float(row.x))
         y = 50 * (1 + float(row.y))
         r = 0.25 * max(1, sqrt(float(row.nraces) / 10))
         color = COLORS[int(row.degree)]
-        x, y, r = ( round(z, 2) for z in (x, y, r) )
+        x, y, r = (round(z, 2) for z in (x, y, r))
 
         yield f'<a href="">'
-        yield f'<title>{row.driver}</title>'
+        yield f"<title>{row.driver}</title>"
         yield f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" /></a>'
 
-    yield '</svg>'
+    yield "</svg>"
+
 
 def main(layout=LAYOUT, style=STYLE):
     """ None: Generate SVG from layout and save a proof copy. """
     layout = Path(layout)
 
     joined = "\n".join
-    outpath = (REPO / 'proof/graphs' / layout.name).with_suffix('.svg')
+    outpath = (REPO / "proof/graphs" / layout.name).with_suffix(".svg")
     with open(outpath, "w") as file:
         print("Save", outpath)
         file.write(joined(svglines(layout, style)))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     script, *args = argv
     main(*args)
 
