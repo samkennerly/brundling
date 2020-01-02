@@ -1,11 +1,14 @@
 circle {
-  animation: spin 720s infinite linear;
-  fill-opacity: 0.5;
+  animation: spin 1s ease-out;
+  fill-opacity: 0.75;
   stroke: black;
   stroke-width: 0.1;
   transform-origin: 50% 50%;
 }
 @keyframes spin {
+  from {
+    transform: none;
+  }
   to {
     transform: rotate(1turn);
   }
