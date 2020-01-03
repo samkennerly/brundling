@@ -200,9 +200,7 @@ class Quire(Mapping):
             yield f'<script src="{urlpath(src)}" async></script>'
         yield "</section>"
 
-    def klf(
-        self, page, copyright="", email="", klftext=(), license=(), **kwargs
-    ):
+    def klf(self, page, copyright="", email="", klftext=(), license=(), **kwargs):
         """
         Iterator[str]: #klf section for copyright, license, and fine print.
         They're justified, and they're ancient. I hope you understand.
@@ -218,7 +216,7 @@ class Quire(Mapping):
         if klftext:
             yield '<span id="klftext">'
             yield "\n".join(klftext)
-            yield '</span>'
+            yield "</span>"
         if email:
             yield f"<address>{email}</address>"
         yield "</section>"
