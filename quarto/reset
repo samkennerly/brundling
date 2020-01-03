@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Delete and rebuild site.
+
+quarto/delete && quarto/clean && quarto/build && quarto/apply && quarto/graph
