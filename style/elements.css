@@ -24,7 +24,6 @@ a img:active {
 }
 /* formats */
 b,
-dfn,
 dt,
 mark,
 strong {
@@ -50,14 +49,13 @@ main blockquote cite {
 }
 main dd {
   margin-left: 0;
-  padding-left: 0;
 }
 main dt {
   margin: var(--marge);
 }
 main figure {
   background: var(--color-head);
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
 }
 main h1 {
@@ -72,15 +70,11 @@ main h3 {
 }
 main header {
   background: var(--color-head);
-  border: var(--border);
+  border-bottom: var(--border);
   padding: var(--puffy);
 }
 main img {
   max-width: 100%;
-}
-main ol,
-main ul {
-  list-style: square;
 }
 main summary {
   border-bottom: var(--border);
@@ -134,13 +128,14 @@ nav a[href="#"] {
 /* others */
 #icons {
   background: var(--color-head);
+  font-size: var(--font-yuge);
   grid-area: icons;
   padding: var(--puffy);
   text-align: right;
 }
 #icons img {
-  height: var(--font-yuge);
-  width: var(--font-yuge);
+  height: 1em;
+  width: 1em;
   vertical-align: top;
 }
 #jump {
