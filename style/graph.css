@@ -1,5 +1,5 @@
 svg {
-  transform: scale(-1, 1);
+  transform: scale(1, 1);
 }
 svg circle {
     animation: pulse 1s ease-out;
@@ -7,7 +7,7 @@ svg circle {
     fill-opacity: 0.6;
     stroke: black;
     stroke-width: 0.1;
-    transform: rotate(7deg);
+    transform: rotate(77deg);
     transform-origin: 50% 50%;
 }
 @keyframes pulse {
