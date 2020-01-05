@@ -15,6 +15,7 @@ Thumbs.db
 *.py[cod]
 *.so
 .cache/
+.ipynb_checkpoints/
 .pytest_cache/
 .tox/
 .venv/
