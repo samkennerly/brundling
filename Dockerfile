@@ -1,18 +1,23 @@
-FROM python:3.6.9
+FROM python:3.7.5
 LABEL description="Python development sandbox"
 LABEL maintainer="samkennerly@gmail.com"
 
 # Install system packages
 RUN apt-get -y update && apt-get -y install \
-    tidy=2:5.6.0-10
+    cmake gcc less tree tidy=2:5.6.0-10
 
-# Install Python packages
+# Install core Python packages
 RUN pip install --upgrade pip && pip install \
-  Cython==0.29.13 \
-  mistune==0.8.4
+    jupyter==1.0.0 \
+    scipy==1.3.3
 
-# Create project folder
-ARG WORKDIR=/context
-WORKDIR "${WORKDIR}"
+# Install extra Python packages
+COPY requirements.txt /tmp
+RUN pip install --upgrade pip && pip install --requirement /tmp/requirements.txt
+
+# Create user and context folder
+RUN useradd --create-home kos
+ENV PYTHONPATH=/context/code
+WORKDIR /context
 
 CMD ["/bin/bash"]

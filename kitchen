@@ -1,68 +1,70 @@
 #!/usr/bin/env sh
-# Build and run temporary containers.
 
-CONTEXT=$PWD                    # Build from CONTEXT folder
-TAGBASE=$(basename "$CONTEXT")  # Name image TAGBASE:sometag
-PKGFILE="requirements.txt"      # Install packages from PKGFILE
-WORKDIR="/context"              # Copy/mount files to WORKDIR in container
+CONTEXT=$PWD
+PROJECT=$(basename "$PWD")
+HELPMSG=$(cat <<-END
+Build a Docker image and run disposable containers.
 
-help() {
-  echo "Run disposable containers built from $CONTEXT"
-  echo
-  echo "COMMANDS"
-  echo "alamode [TAG] [CMD]   Bake $TAGBASE:TAG, freeze it, and serve CMD"
-  echo "bake [TAG]            Build $TAGBASE:TAG image from $CONTEXT"
-  echo "clean                 Delete all $TAGBASE containers and Docker leftovers"
-  echo "debug TAG SCRIPT      Debug SCRIPT in a $TAGBASE:TAG container"
-  echo "eightysix [TAG]       Delete $TAGBASE:TAG image, containers, and leftovers"
-  echo "freeze [TAG]          Update $PKGFILE and rebuild $TAGBASE:TAG image"
-  echo "help                  Show commands, examples, and Docker inventory"
-  echo "runit [TAG] [CMD]     Run CMD in an interactive $TAGBASE:TAG container"
-  echo "serve [TAG] [CMD]     runit [TAG] [CMD] with $CONTEXT mounted as $WORKDIR"
-  echo
-  echo "EXAMPLES"
-  echo "./kitchen bake latest"
-  echo "./kitchen serve latest"
-  echo "./kitchen serve latest python -m this"
-  echo
-  echo "INVENTORY"
+COMMANDS
+bake [TAG]              Build $PROJECT:TAG image from $CONTEXT
+clean                   Delete all $PROJECT containers and Docker leftovers
+debug TAG SCRIPT [ARGS] Debug Python SCRIPT in a $PROJECT:TAG container
+eightysix [TAG]         Delete $PROJECT:TAG containers, image, and leftovers
+freeze [TAG]            Update requirements.txt and rebuild $PROJECT:TAG
+menu                    Show all available Docker objects
+runit [TAG] [CMD]       Run CMD in an interactive $PROJECT:TAG container
+serve [TAG]             Serve Jupyter in a $PROJECT:TAG container with mounted folders
+
+DEFAULTS
+TAG 'latest'
+CMD See $CONTEXT/Dockerfile
+
+EXAMPLES
+./kitchen bake monty
+./kitchen freeze monty
+./kitchen serve monty
+./kitchen serve monty python -m test
+END
+)
+
+bake() {
+  touch requirements.txt &&
+  docker build --tag "$PROJECT:${1:-latest}" "$CONTEXT" &&
+  docker image prune --force
+}
+clean() {
+  docker ps --quiet --filter ancestor="$PROJECT" | xargs docker rm --force &&
+  docker system prune --force
+}
+debug() {
+  serve "$1" python -m pdb "${@:2}"
+}
+eightysix() {
+  clean &&
+  docker rmi --force "$PROJECT:${1:-latest}" &&
+  docker image prune --force
+}
+freeze() {
+  docker run --rm "$PROJECT:${1:-latest}" pip freeze > requirements.txt &&
+  bake "$1"
+}
+menu() {
   echo "---- Images ----" && docker image ls | sort
   echo "---- Volumes ----" && docker volume ls | sort
   echo "---- Networks ----" && docker network ls
   echo "---- Containers ----" && docker ps --all
 }
-alamode() {
-  bake "$1" && freeze "$1" && serve "$@"
-}
-bake() {
-  touch "$PKGFILE" &&
-  docker build --tag "$(tag $1)" --build-arg WORKDIR="$WORKDIR" "$CONTEXT" &&
-  docker image prune --force
-}
-clean() {
-  docker ps --quiet --filter ancestor="$TAGBASE" | xargs docker rm --force &&
-  docker system prune --force
-}
-debug() {
-  serve "${1:-latest}" python -m pdb "${@:2}"
-}
-eightysix() {
-  clean && docker rmi --force "$(tag $1)" && docker image prune --force
-}
-freeze() {
-  docker run --rm "$(tag $1)" pip freeze --exclude-editable > "$PKGFILE" && bake "$1"
-}
 runit() {
-  docker run --rm --interactive --tty "$(tag $1)" "${@:2}"
+  docker run --rm --interactive --tty "$PROJECT:${1:-latest}" "${@:2}"
 }
 serve() {
-  docker run --rm --interactive --tty \
-    --volume "${CONTEXT}:${WORKDIR}:delegated" \
-    --hostname "${TAGBASE}" \
-    "$(tag $1)" "${@:2}"
-}
-tag() {
-  echo "$TAGBASE:${1-latest}"
+  docker run --rm  --publish "127.0.0.1:8888:8888" --user 'kos' \
+    --volume "$HOME/.ipython:/home/kos/.ipython" \
+    --volume "$HOME/.jupyter:/home/kos/.jupyter" \
+    --hostname "${PROJECT}" \
+    --volume "${CONTEXT}:/context:delegated" \
+    "$PROJECT:${1:-latest}" \
+    jupyter notebook --no-browser --ip=0.0.0.0 --port=8888
 }
 
-if [ $# -eq 0 ]; then help; else "$@"; fi
+if [ $# -eq 0 ]; then echo "$HELPMSG"; else "$@"; fi
