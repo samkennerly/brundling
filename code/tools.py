@@ -13,8 +13,8 @@ from plot import Plot
 
 REPO = Path(__file__).resolve().parent.parent
 DATADIR = REPO / "data"
-ERGAST_API = DATADIR / "ergast/api"
-ERGAST_ZIP = DATADIR / "ergast/f1.zip"
+ERGAST_API = DATADIR / "cache"
+ERGAST_ZIP = DATADIR / "f1.zip"
 TABLEDIR = DATADIR / "tables"
 PLOTDIR = DATADIR / "plots"
 

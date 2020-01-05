@@ -7,7 +7,7 @@ Thumbs.db
 
 # Temporary data
 /data/*
-!/data/ergast/f1.*
+!/data/ergast
 
 # Python caches
 *.egg

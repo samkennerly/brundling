@@ -1,0 +1,189 @@
++----------------------+
+| Tables_in_f1db       |
++----------------------+
+| circuits             |
+| constructorResults   |
+| constructorStandings |
+| constructors         |
+| driverStandings      |
+| drivers              |
+| lapTimes             |
+| pitStops             |
+| qualifying           |
+| races                |
+| results              |
+| seasons              |
+| status               |
++----------------------+
+
+circuits.csv
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| circuitId  | int(11)      | NO   | PRI | NULL    | auto_increment |
+| circuitRef | varchar(255) | NO   |     |         |                |
+| name       | varchar(255) | NO   |     |         |                |
+| location   | varchar(255) | YES  |     | NULL    |                |
+| country    | varchar(255) | YES  |     | NULL    |                |
+| lat        | float        | YES  |     | NULL    |                |
+| lng        | float        | YES  |     | NULL    |                |
+| alt        | int(11)      | YES  |     | NULL    |                |
+| url        | varchar(255) | NO   | UNI |         |                |
++------------+--------------+------+-----+---------+----------------+
+
+constructor_results.csv
++----------------------+--------------+------+-----+---------+----------------+
+| Field                | Type         | Null | Key | Default | Extra          |
++----------------------+--------------+------+-----+---------+----------------+
+| constructorResultsId | int(11)      | NO   | PRI | NULL    | auto_increment |
+| raceId               | int(11)      | NO   |     | 0       |                |
+| constructorId        | int(11)      | NO   |     | 0       |                |
+| points               | float        | YES  |     | NULL    |                |
+| status               | varchar(255) | YES  |     | NULL    |                |
++----------------------+--------------+------+-----+---------+----------------+
+
+constructor_standings.csv
++------------------------+--------------+------+-----+---------+----------------+
+| Field                  | Type         | Null | Key | Default | Extra          |
++------------------------+--------------+------+-----+---------+----------------+
+| constructorStandingsId | int(11)      | NO   | PRI | NULL    | auto_increment |
+| raceId                 | int(11)      | NO   |     | 0       |                |
+| constructorId          | int(11)      | NO   |     | 0       |                |
+| points                 | float        | NO   |     | 0       |                |
+| position               | int(11)      | YES  |     | NULL    |                |
+| positionText           | varchar(255) | YES  |     | NULL    |                |
+| wins                   | int(11)      | NO   |     | 0       |                |
++------------------------+--------------+------+-----+---------+----------------+
+
+constructors.csv
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| constructorId  | int(11)      | NO   | PRI | NULL    | auto_increment |
+| constructorRef | varchar(255) | NO   |     |         |                |
+| name           | varchar(255) | NO   | UNI |         |                |
+| nationality    | varchar(255) | YES  |     | NULL    |                |
+| url            | varchar(255) | NO   |     |         |                |
++----------------+--------------+------+-----+---------+----------------+
+
+driver_standings.csv
++-------------------+--------------+------+-----+---------+----------------+
+| Field             | Type         | Null | Key | Default | Extra          |
++-------------------+--------------+------+-----+---------+----------------+
+| driverStandingsId | int(11)      | NO   | PRI | NULL    | auto_increment |
+| raceId            | int(11)      | NO   |     | 0       |                |
+| driverId          | int(11)      | NO   |     | 0       |                |
+| points            | float        | NO   |     | 0       |                |
+| position          | int(11)      | YES  |     | NULL    |                |
+| positionText      | varchar(255) | YES  |     | NULL    |                |
+| wins              | int(11)      | NO   |     | 0       |                |
++-------------------+--------------+------+-----+---------+----------------+
+
+drivers.csv
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| driverId    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| driverRef   | varchar(255) | NO   |     |         |                |
+| number      | int(11)      | YES  |     | NULL    |                |
+| code        | varchar(3)   | YES  |     | NULL    |                |
+| forename    | varchar(255) | NO   |     |         |                |
+| surname     | varchar(255) | NO   |     |         |                |
+| dob         | date         | YES  |     | NULL    |                |
+| nationality | varchar(255) | YES  |     | NULL    |                |
+| url         | varchar(255) | NO   | UNI |         |                |
++-------------+--------------+------+-----+---------+----------------+
+
+lap_times.csv
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| raceId       | int(11)      | NO   | PRI | NULL    |       |
+| driverId     | int(11)      | NO   | PRI | NULL    |       |
+| lap          | int(11)      | NO   | PRI | NULL    |       |
+| position     | int(11)      | YES  |     | NULL    |       |
+| time         | varchar(255) | YES  |     | NULL    |       |
+| milliseconds | int(11)      | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+pit_stops.csv
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| raceId       | int(11)      | NO   | PRI | NULL    |       |
+| driverId     | int(11)      | NO   | PRI | NULL    |       |
+| stop         | int(11)      | NO   | PRI | NULL    |       |
+| lap          | int(11)      | NO   |     | NULL    |       |
+| time         | time         | NO   |     | NULL    |       |
+| duration     | varchar(255) | YES  |     | NULL    |       |
+| milliseconds | int(11)      | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+qualifying.csv
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| qualifyId     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| raceId        | int(11)      | NO   |     | 0       |                |
+| driverId      | int(11)      | NO   |     | 0       |                |
+| constructorId | int(11)      | NO   |     | 0       |                |
+| number        | int(11)      | NO   |     | 0       |                |
+| position      | int(11)      | YES  |     | NULL    |                |
+| q1            | varchar(255) | YES  |     | NULL    |                |
+| q2            | varchar(255) | YES  |     | NULL    |                |
+| q3            | varchar(255) | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+
+races.csv
++-----------+--------------+------+-----+------------+----------------+
+| Field     | Type         | Null | Key | Default    | Extra          |
++-----------+--------------+------+-----+------------+----------------+
+| raceId    | int(11)      | NO   | PRI | NULL       | auto_increment |
+| year      | int(11)      | NO   |     | 0          |                |
+| round     | int(11)      | NO   |     | 0          |                |
+| circuitId | int(11)      | NO   |     | 0          |                |
+| name      | varchar(255) | NO   |     |            |                |
+| date      | date         | NO   |     | 0000-00-00 |                |
+| time      | time         | YES  |     | NULL       |                |
+| url       | varchar(255) | YES  | UNI | NULL       |                |
++-----------+--------------+------+-----+------------+----------------+
+
+results.csv
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| resultId        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| raceId          | int(11)      | NO   |     | 0       |                |
+| driverId        | int(11)      | NO   |     | 0       |                |
+| constructorId   | int(11)      | NO   |     | 0       |                |
+| number          | int(11)      | YES  |     | NULL    |                |
+| grid            | int(11)      | NO   |     | 0       |                |
+| position        | int(11)      | YES  |     | NULL    |                |
+| positionText    | varchar(255) | NO   |     |         |                |
+| positionOrder   | int(11)      | NO   |     | 0       |                |
+| points          | float        | NO   |     | 0       |                |
+| laps            | int(11)      | NO   |     | 0       |                |
+| time            | varchar(255) | YES  |     | NULL    |                |
+| milliseconds    | int(11)      | YES  |     | NULL    |                |
+| fastestLap      | int(11)      | YES  |     | NULL    |                |
+| rank            | int(11)      | YES  |     | 0       |                |
+| fastestLapTime  | varchar(255) | YES  |     | NULL    |                |
+| fastestLapSpeed | varchar(255) | YES  |     | NULL    |                |
+| statusId        | int(11)      | NO   |     | 0       |                |
++-----------------+--------------+------+-----+---------+----------------+
+
+seasons.csv
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| year  | int(11)      | NO   | PRI | 0       |       |
+| url   | varchar(255) | NO   | UNI |         |       |
++-------+--------------+------+-----+---------+-------+
+
+status.csv
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| statusId | int(11)      | NO   | PRI | NULL    | auto_increment |
+| status   | varchar(255) | NO   |     |         |                |
++----------+--------------+------+-----+---------+----------------+
