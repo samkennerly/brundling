@@ -31,6 +31,7 @@ def savehtml(data, name, **kwargs):
     print("Save", path)
     data.to_html(path, **kwargs)
 
+
 def savepng(axes, name, **kwargs):
     """ None: Save plot to PNG file. """
     path = PLOTDIR / f"{name}.png"
