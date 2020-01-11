@@ -3,6 +3,7 @@ Constants and utility functions.
 """
 from pathlib import Path
 
+from numpy import random
 from pandas import DataFrame, Series
 
 from ergast_api import ErgastAPI
@@ -20,11 +21,9 @@ PLOTDIR = DATADIR / "plots"
 
 
 def afew(data, n=5):
-    """ DataFrame: Print DataFrame metadata and return a few rows. """
-    schema = DataFrame({"dtype": data.dtypes, "nulls": data.isnull().sum()})
-    print(f"[{len(data)} rows x {len(schema)} columns]", schema, sep="\n")
+    """ DataFrame view: Select random rows from input DataFrame. """
+    return data.loc[random.choice(data.index, n)]
 
-    return data.tail(n)
 
 def savehtml(data, name, **kwargs):
     """ None: Save DataFrame to HTML file. """
