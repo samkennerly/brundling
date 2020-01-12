@@ -197,6 +197,7 @@ class Plot:
 
         return self(data, kind="line", **kwargs)
 
+
 # Copyright © 2020 Sam Kennerly
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

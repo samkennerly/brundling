@@ -198,6 +198,7 @@ class ErgastZIP:
 
         return data.sort_index(axis=1)
 
+
 # Copyright © 2020 Sam Kennerly
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

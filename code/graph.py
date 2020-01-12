@@ -102,6 +102,7 @@ class Graph:
         """ Index: Sorted union of sources and targets. """
         return self.links["source"].cat.categories
 
+
 # Copyright © 2020 Sam Kennerly
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

@@ -223,6 +223,7 @@ class ErgastAPI:
                     warn(f"Gave up after {retries} retries.")
                     raise err
 
+
 # Copyright © 2020 Sam Kennerly
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

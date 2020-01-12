@@ -383,6 +383,7 @@ class Quire(Mapping):
         with open(path, "w") as file:
             file.write(text)
 
+
 # Copyright © 2020 Sam Kennerly
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
