@@ -2,6 +2,11 @@
 
 This repo builds [brundling.neocities.org].
 
+<img
+  alt="7 Degrees of Martin Brundle"
+  src="https://raw.githubusercontent.com/samkennerly/posters/master/brundling.png"
+  title="You have to pretend you've really noticed that yellow flag.">
+
 [brundling.neocities.org]: https://brundling.neocities.org/
 
 ## books
