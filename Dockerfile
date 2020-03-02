@@ -8,8 +8,9 @@ RUN apt-get -y update && apt-get -y install \
 
 # Install core Python packages
 RUN pip install --upgrade pip && pip install \
-    jupyter==1.0.0 \
-    scipy==1.3.3
+    notebook==6.0.3 \
+    pandas==1.0.1 \
+    scipy==1.4.1
 
 # Install extra Python packages
 COPY requirements.txt /tmp
