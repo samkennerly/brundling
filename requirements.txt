@@ -1,7 +1,7 @@
 attrs==19.3.0
 backcall==0.1.0
 bcrypt==3.1.7
-bleach==3.1.1
+bleach==3.1.2
 boto3==1.12.11
 botocore==1.15.11
 Bottleneck==1.3.2
