@@ -47,7 +47,7 @@ oauthlib==3.1.0
 openpyxl==3.0.3
 pandas==1.0.3
 pandocfilters==1.4.2
-paramiko==2.7.1
+paramiko==2.10.1
 parso==0.6.2
 pexpect==4.8.0
 pickleshare==0.7.5
